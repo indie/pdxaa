@@ -1,0 +1,26 @@
+
+<table border="1">
+  <tr>
+    <th>ID</th>
+    <th>Day</th>
+    <th>Name</th>
+    <th>Address</th>
+    <th>City</th>
+    <th>Codes</th>
+    <th>Map</th>
+    <th>Notes</th>
+  </tr>
+  <% @meetings.each do |meeting| %>
+  <tr>
+    <td><%= meeting.id %></td>
+    <td><%= meeting.day %></td>
+    <td><%= meeting.name %></td>
+    <td><%= meeting.address %></td>
+    <td><%= meeting.city %></td>
+    <td><%= meeting.codes %></td>
+    <td><%= meeting.map %></td>
+    <td><%= meeting.notes %></td>
+  </tr>
+  <% end %>
+</table>
+

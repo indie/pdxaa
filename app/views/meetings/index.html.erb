@@ -1,0 +1,57 @@
+<h1>Listing meetings</h1>
+
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Day</th>
+    <th>Name</th>
+    <th>Address</th>
+    <th>City</th>
+    <th>Codes</th>
+    <th>Map</th>
+    <th>Notes</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @meetings.each do |meeting| %>
+  <tr>
+    <td><%= link_to meeting.id, meeting_path(meeting) %></td>
+    <td><%= meeting.day %></td>
+    <td><%= meeting.name %></td>
+    <td><%= meeting.address %></td>
+    <td><%= meeting.city %></td>
+    <td><%= meeting.codes %></td>
+    <td><%= meeting.map %></td>
+    <td><%= meeting.notes %></td>
+    <td><%= link_to 'Show', meeting %></td>
+    <td><%= link_to 'Edit', edit_meeting_path(meeting) %></td>
+    <td><%= link_to 'Destroy', meeting, method: :delete, data: { confirm: 'Do you really want to delete this meeting?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Meeting', new_meeting_path %>
+
+
+<p>
+  Download: |
+  <%= link_to "CSV", meetings_path(format: "csv") %> |
+  <%= link_to "Excel", meetings_path(format: "xls") %> | <br />
+  View : | <%= link_to "Plain Text", meetings_path(format: "txt") %> |
+
+</p>
+
+<h3>Import Meetings</h3>
+
+<%= form_tag import_meetings_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "Import" %>
+
+<% end %>
+
+
+

@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+  xmlns:o="urn:schemas-microsoft-com:office:office"
+  xmlns:x="urn:schemas-microsoft-com:office:excel"
+  xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+  xmlns:html="http://www.w3.org/TR/REC-html40">
+  <Worksheet ss:Name="Sheet1">
+    <Table>
+      <Row>
+        <Cell><Data ss:Type="String">ID</Data></Cell>
+        <Cell><Data ss:Type="String">Day</Data></Cell>
+        <Cell><Data ss:Type="String">Name</Data></Cell>	
+        <Cell><Data ss:Type="String">Address</Data></Cell>
+        <Cell><Data ss:Type="String">City</Data></Cell>
+        <Cell><Data ss:Type="String">Codes</Data></Cell>
+        <Cell><Data ss:Type="String">Map</Data></Cell>
+        <Cell><Data ss:Type="String">Notes</Data></Cell>
+      </Row>
+
+  <% @meetings.each do |meeting| %>
+
+  <Row>
+        <Cell><Data ss:Type="Number"><%= meeting.id %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= meeting.day %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= meeting.name %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= meeting.address %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= meeting.city %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= meeting.codes %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= meeting.map %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= meeting.notes %></Data></Cell>
+      </Row>
+    <% end %>
+    </Table>
+  </Worksheet>
+</Workbook>
