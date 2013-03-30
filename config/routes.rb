@@ -2,11 +2,11 @@ Aasj::Application.routes.draw do
   resources :meetings do 
     collection { post :import }
   end
-  root :to => 'meetings#index'
+#  root :to => 'meetings#index'
+# end
+
+ root to: 'meetings#index'
 end
-
-  # root to: 'meetings#index'
-
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
