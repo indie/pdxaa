@@ -2,22 +2,22 @@
 
 <%= search_form_for @search do |f| %>
   <div class="field">
-    <%= f.label :name_cont, "Meeting name contains" %>
-    <%= f.text_field :name_cont %>
+    <%= f.label :day_or_name_or_address_or_city_or_codes_cont, "Search days, meeting name, codes, etc" %>
+    <%= f.text_field :day_or_name_or_address_or_city_or_codes_cont %>
   </div>
   <div class="actions"><%= f.submit "Search" %>
 <% end %>
 
 <table>
   <tr>
-    <th>ID</th>
-    <th>Day</th>
-    <th>Name</th>
-    <th>Address</th>
-    <th>City</th>
-    <th>Codes</th>
+    <th><%= sort_link @search, :day, "Day or Time" %></th>
+    <th><%= sort_link @search, :name, "Meeting Name" %></th>
+    <th><%= sort_link @search, :address, "Address" %></th>
+    <th><%= sort_link @search, :city, "City" %></th>
+    <th><%= sort_link @search, :codes, "Codes" %></th>
     <th>Map</th>
-    <th>Notes</th>
+    <th><%= sort_link @search, :notes, "Notes" %></th>
+    <th>ID</th>
     <th></th>
     <th></th>
     <th></th>
@@ -25,7 +25,6 @@
 
 <% @meetings.each do |meeting| %>
   <tr>
-    <td><%= link_to meeting.id, meeting_path(meeting) %></td>
     <td><%= meeting.day %></td>
     <td><%= meeting.name %></td>
     <td><%= meeting.address %></td>
@@ -33,6 +32,7 @@
     <td><%= meeting.codes %></td>
     <td><%= meeting.map %></td>
     <td><%= meeting.notes %></td>
+    <td><%= link_to meeting.id, meeting_path(meeting) %></td>
     <td><%= link_to 'Show', meeting %></td>
     <td><%= link_to 'Edit', edit_meeting_path(meeting) %></td>
     <td><%= link_to 'Destroy', meeting, method: :delete, data: { confirm: 'Do you really want to delete this meeting?' } %></td>
@@ -41,10 +41,6 @@
 </table>
 
 <br />
-
-<%= link_to 'New Meeting', new_meeting_path %>
-
-
 <p>
   Download: |
   <%= link_to "CSV", meetings_path(format: "csv") %> |
@@ -52,14 +48,3 @@
   View : | <%= link_to "Plain Text", meetings_path(format: "txt") %> |
 
 </p>
-
-<h3>Import Meetings</h3>
-
-<%= form_tag import_meetings_path, multipart: true do %>
-  <%= file_field_tag :file %>
-  <%= submit_tag "Import" %>
-
-<% end %>
-
-
-
