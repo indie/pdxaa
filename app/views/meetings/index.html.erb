@@ -1,16 +1,33 @@
-<h1>Listing meetings</h1>
+<h1>Meetings in Santa Clara County</h1>
+
+<%= link_to "Meetings Home", meetings_path %>
 
 <%= search_form_for @search do |f| %>
+
   <div class="field">
-    <%= f.label :day_or_name_or_address_or_city_or_codes_cont, "Search days, meeting name, codes, etc" %>
-    <%= f.text_field :day_or_name_or_address_or_city_or_codes_cont %>
+    <%= f.text_field :name_or_day_or_address_or_city_or_codes_cont %>
+    <%= f.label :name_or_address_or_city_or_codes_cont, "Search by Meeting Name, Street Name, Codes, etc -- searches ALL meetings" %>
   </div>
+
+
+  <div class="field">
+    <%= f.text_field :day_cont %>
+    <%= f.label :day_cont, "(Optional) Add Day -- Partial OK i.e. Mon for Monday" %>
+  </div>
+
+  <div class="field">
+    <%= f.text_field :city_cont %>
+    <%= f.label :city_cont, "(Optional) Add City -- Partial OK e.g. Gil for Gilroy, " %>
+  </div>
+ 
+
   <div class="actions"><%= f.submit "Search" %>
+
 <% end %>
 
 <table>
   <tr>
-    <th><%= sort_link @search, :day, "Day or Time" %></th>
+    <th><%= sort_link @search, :day, "Day and Time" %></th>
     <th><%= sort_link @search, :name, "Meeting Name" %></th>
     <th><%= sort_link @search, :address, "Address" %></th>
     <th><%= sort_link @search, :city, "City" %></th>
