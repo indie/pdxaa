@@ -1,5 +1,13 @@
 <h1>Listing meetings</h1>
 
+<%= search_form_for @search do |f| %>
+  <div class="field">
+    <%= f.label :name_cont, "Meeting name contains" %>
+    <%= f.text_field :name_cont %>
+  </div>
+  <div class="actions"><%= f.submit "Search" %>
+<% end %>
+
 <table>
   <tr>
     <th>ID</th>

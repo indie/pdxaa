@@ -1,0 +1,24 @@
+<div id="counter"></div>
+
+<%= form_for :remote => true, :url => { :action => 'add_ajax' },
+  :complete => 'document.forms[0].reset();',
+  :update => 'counter' do |f|  %>
+  	<%= f.label :name %>
+  	<%= f.text_field :name %>
+
+  	<%= f.label :day %>
+    <%= f.text_field :day %>
+
+    <%= f.label :city %>
+    <%= f.text_field :city %>
+
+    <%= f.label :codes %>
+    <%= f.text_field :codes %>
+
+    <%= f.label :address %>
+    <%= f.text_field :address %>
+
+  	<%= f.submit %>
+<% end %>
+
+<%= Meeting.find(:all).length %> meetings now in database

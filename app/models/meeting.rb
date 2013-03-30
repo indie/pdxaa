@@ -1,6 +1,14 @@
 class Meeting < ActiveRecord::Base
   attr_accessible :id, :address, :city, :codes, :day, :map, :name, :notes, :created_at, :updated_at
 
+  # for AJAX search #
+  validates_presence_of :name
+  validates_presence_of :day
+  validates_presence_of :city
+  validates_presence_of :codes
+  validates_presence_of :address
+  # 
+  
   def self.to_csv( options = {})
   	CSV.generate(options) do |csv|
   		csv << column_names
