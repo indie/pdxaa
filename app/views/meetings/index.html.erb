@@ -51,8 +51,8 @@
     <td><%= meeting.notes %></td>
     <td><%= link_to meeting.id, meeting_path(meeting) %></td>
     <td><%= link_to 'Show', meeting %></td>
-    <td><%= link_to 'Edit', edit_meeting_path(meeting) %></td>
-    <td><%= link_to 'Destroy', meeting, method: :delete, data: { confirm: 'Do you really want to delete this meeting?' } %></td>
+    <%# <td><%= link_to 'Edit', edit_meeting_path(meeting) %></td> 
+    <%# <td><%= link_to 'Destroy', meeting, method: :delete, data: { confirm: 'Do you really want to delete this meeting?' } %></td>
   </tr>
 <% end %>
 </table>
