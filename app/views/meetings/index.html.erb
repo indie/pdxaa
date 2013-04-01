@@ -1,23 +1,12 @@
 <h1>Meetings in Santa Clara County</h1>
 
-<%= link_to "Meetings Home", meetings_path %>
-
 <%= search_form_for @search do |f| %>
-
   <div class="field">
-    <%= f.text_field :name_or_day_or_address_or_city_or_codes_cont %>
-    <%= f.label :name_or_address_or_city_or_codes_cont, "Enter 'chip' for chip meetings; enter full or partial street, location, meeting codes, etc." %>
-  </div>
-
-
-  <div class="field">
-    <%= f.text_field :day_cont %>
-    <%= f.label :day_cont, "(Optional) Add Day -- Partial OK i.e. Mon for Monday" %>
+    <%= f.text_field :name_or_day_or_address_or_city_or_codes_cont %> &nbsp; &nbsp; &nbsp; Search by meeting name, chip meetings, enter full or partial street, location, meeting codes, etc.
   </div>
 
   <div class="field">
-    <%= f.text_field :city_cont %>
-    <%= f.label :city_cont, "(Optional) Add City -- Partial OK e.g. Gil for Gilroy, " %>
+    <%= f.text_field :city_cont %> &nbsp; &nbsp; &nbsp; Add City (optional) -- Partial OK i.e. Gil for Gilroy 
   </div>
  
 
@@ -52,7 +41,7 @@
     <td><%= link_to meeting.id, meeting_path(meeting) %></td>
     <td><%= link_to 'Show', meeting %></td>
     <%# <td><%= link_to 'Edit', edit_meeting_path(meeting) %></td> 
-    <%# <td><%= link_to 'Destroy', meeting, method: :delete, data: { confirm: 'Do you really want to delete this meeting?' } %></td>
+    <%# <td><%= link_to 'Destroy', meeting, method: :delete, data: { confirm: 'Do you really want to delete this meeting?' } %></td> 
   </tr>
 <% end %>
 </table>
@@ -62,6 +51,6 @@
   Download: |
   <%= link_to "CSV", meetings_path(format: "csv") %> |
   <%= link_to "Excel", meetings_path(format: "xls") %> | <br />
-  View : | <%= link_to "Plain Text", meetings_path(format: "txt") %> |
+  View : | <%= link_to "Plain Text", meetings_path(format: "csv") %> |
 
 </p>

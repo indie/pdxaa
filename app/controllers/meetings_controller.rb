@@ -8,7 +8,7 @@ class MeetingsController < ApplicationController
     # @meetings = Meeting.order(:name)
     respond_to do |format|
       format.html # index.html.erb
-      format.txt  { render txt: @meetings.to_csv }   # make data render txt in browser -- might work, might not   
+      format.txt  { render csv: @meetings.to_csv }   # make data render txt in browser -- might work, might not   
       format.csv { send_data @meetings.to_csv } # make csv data exportable
       format.xls  # { send_data @meetings.to_csv(col_sep: "\t") }
       format.json { render json: @meetings }

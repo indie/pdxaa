@@ -1,3 +1,47 @@
+#storylinks-container {
+   opacity: 0.9737;
+   border-radius: 10px;
+   width: auto;
+   min-height: 81%;
+   margin-left: 3%;
+   margin-right: 3%;
+   padding: 5px;
+  border-top: 4px solid #48351C;
+  border-left: 4px solid #48351C;
+  border-bottom: 4px solid #48351C;
+  border-right: 3px solid #48351C;
+  background: #fcfcfc;
+  
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+  border-radius: 7px;
+}
+
+#storylinks {
+  opacity: 0.9723;
+  width: auto;
+  margin-left: 3%;
+  margin-right: 3%;
+  height: auto;
+  padding-top: 57px;
+  min-height: 75%;
+  padding: 2px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.outer {
+	width: auto;
+	align: center;
+    font-family: 'Source Sans Pro', sans-serif;
+	font-size: 93%;
+	font-weight: 400;
+	text-align: left;
+}
+
+
+
 #counter {
 	width: 250px;
 	height: 100px;
