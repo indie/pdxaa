@@ -1,0 +1,3 @@
+Aasj.Router.map(function() {
+
+});

@@ -12,37 +12,16 @@
 </head>
 <body>
 
-<div class="navbar navbar-fixed-top">
-    <div class="navbar-inner">
-      <div class="container">
-        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </a>
-        <a class="brand" href="http://meetings.aasjonline.com">MEETINGS</a>
-        <div class="nav-collapse">
-          <ul class="nav">
-            <li><%= link_to "Sun", '/meetings?utf8=%E2%9C%93&q[day_cont]=su&commit=Search' %></li>
-            <li><%= link_to "Mon", '/meetings?utf8=%E2%9C%93&q[day_cont]=mo&commit=Search' %></li>
-            <li><%= link_to "Tues", '/meetings?utf8=%E2%9C%93&q[day_cont]=ue&commit=Search' %></li>
-            <li><%= link_to "Wed", '/meetings?utf8=%E2%9C%93&q[day_cont]=we&commit=Search' %></li>
-            <li><%= link_to "Thur", '/meetings?utf8=%E2%9C%93&q[day_cont]=th&commit=Search' %></li>
-            <li><%= link_to "Fri", '/meetings?utf8=%E2%9C%93&q[day_cont]=fr&commit=Search' %></li>
-            <li><%= link_to "Sat", '/meetings?utf8=%E2%9C%93&q[day_cont]=sa&commit=Search' %></li>
-            <li><%= link_to "Any Day", meetings_path %></li>
-            <li><%= link_to "Home", 'http://www.aasjonline.com' %></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
+<%= render 'layouts/header' %>
 
 
-<div id="storylinks-container">
+<div class="container-fluid">
+	<div id="storylinks-container">
+
        <div class="outer">
 			<%= yield %>
-		</div>
+		</div>	
+	</div>
 </div>
 
 </body>

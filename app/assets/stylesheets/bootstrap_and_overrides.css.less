@@ -1,10 +1,13 @@
 @import "twitter/bootstrap/bootstrap";
 
-body {
-	padding-top: 5%;
+textarea:focus, input[type="text"]:focus, input[type="url"]:focus, input[type="search"]:focus, input[type="color"]:focus {   
+border-color: rgba(133, 137, 80, 0.8);
+box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(133, 137, 60, 0.99);
+outline: 0 none;
 }
 
 @import "twitter/bootstrap/responsive";
+
 
 // Set the correct sprite paths
 @iconSpritePath: asset-path("twitter/bootstrap/glyphicons-halflings.png");
@@ -14,16 +17,20 @@ body {
 
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600);
 
-// Glyphicons
-//@import "twitter/bootstrap/sprites.less";
 
-// Your custom LESS stylesheets goes here
-//
-// Since bootstrap was imported above you have access to its mixins which
-// you may use and inherit here
-//
-// If you'd like to override bootstrap's own variables, you can do so here as well
-// See http://twitter.github.com/bootstrap/customize.html#variables for their names and documentation
-//
-// Example:
-// @linkColor: #ff0000;
+.span9 {
+	max-width: 83%;
+	min-width: 17%;
+    margin-left: 2%;
+    margin-right: 2%;
+    padding-top: 7px;
+}
+
+.container {
+	width: auto;
+	margin-left: 1%;
+	margin-right: 1%;
+	text-wrap: normal;
+	padding-left: 10px;
+	padding-right: 10px;
+}
