@@ -13,13 +13,6 @@
     display: block;
     }
      
-    /* Headers outta-sight outta-mind */
-    #go-south thead tr {
-    position: absolute;
-    top: -9999px;
-    left: -9999px;
-    }
-
     #go-south th {
     text-align: right;
     float: right;
@@ -30,16 +23,16 @@
     #go-south td {
     border: none;
     position: relative;
-    padding-left: 50%;
+    padding-left: 23%;
     white-space: normal !important;
     text-align:left;
     }
      
     #go-south td:before {
     position: absolute;
-    top: 6px;
+    top: 1px;
     left: 6px;
-    width: 37%;
+    width: 43%;
     padding-top: 7px;
     padding-right: 11px;
     white-space: nowrap;
@@ -50,3 +43,7 @@
     #go-south td:before { content: attr(data-title); }
     }
 
+
+.table-striped tbody tr:nth-child(odd) td {
+   background-color: #f6f6e6;
+}

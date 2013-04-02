@@ -2,13 +2,7 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
-<script src="jquery.js"></script>
-<script src="bootstrap.js"></script>
-<script src="bootstrap-overflow-navs.js"></script>
-<script>
-    $("#menu").overflowNavs({
-        "more" : "More", 
-        "parent" : ".nav-collapse",
-        "override_width" : true
-    });
-</script>
+.table-striped tbody tr:nth-child(odd) td {
+   background-color: #f4f4dd;
+}
+
