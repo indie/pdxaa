@@ -2,3 +2,55 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+    @media only screen and (max-width: 800px) {
+    /* What parts of this columnar data do we want to go south */
+    #go-south table,
+    #go-south thead,
+    #go-south tbody,
+    #go-south th,
+    #go-south td,
+    #go-south tr {
+    display: block;
+    }
+     
+    /* Headers outta-sight outta-mind */
+    #go-south thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+    }
+
+    #go-south th {
+    text-align: right;
+    float: right;
+    }
+     
+    #go-south tr { border: 1px solid #eefee; }
+     
+    #go-south td {
+    /* Behave like a "row" */
+    border: none;
+    position: relative;
+    padding-left: 50%;
+    white-space: normal !important;
+    text-align:left;
+    }
+     
+    #go-south td:before {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 37%;
+    padding-top: 7px;
+    padding-right: 11px;
+    white-space: nowrap;
+    text-align:left;
+    font-weight: bold;
+    }
+     
+    /*
+    Label the data
+    */
+    #go-south td:before { content: attr(data-title); }
+    }
+
