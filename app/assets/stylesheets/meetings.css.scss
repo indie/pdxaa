@@ -28,7 +28,6 @@
     #go-south tr { border: 1px solid #eefee; }
      
     #go-south td {
-    /* Behave like a "row" */
     border: none;
     position: relative;
     padding-left: 50%;
@@ -48,9 +47,6 @@
     font-weight: bold;
     }
      
-    /*
-    Label the data
-    */
     #go-south td:before { content: attr(data-title); }
     }
 
