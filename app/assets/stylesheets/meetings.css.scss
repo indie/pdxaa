@@ -1,10 +1,13 @@
-// Place all the styles related to the meetings controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+// Have some sass (SCSS) here: http://sass-lang.com/
 
     @media only screen and (max-width: 800px) {
     /* What parts of this columnar data do we want to go south */
     #go-south table,
+    {
+    font-size: 13px;
+    font-family: 'Open Sans', sans-serif;
+ 
+    }
     #go-south thead,
     #go-south tbody,
     #go-south th,
@@ -18,32 +21,54 @@
     float: right;
     }
      
-    #go-south tr { border: 1px solid #eefee; }
+    #go-south tr { border: 1px solid #fcfcfc; }
      
     #go-south td {
     border: none;
     position: relative;
-    padding-left: 23%;
+    padding-left: 27%;
     white-space: normal !important;
     text-align:left;
+    wrap: normal;
     }
      
     #go-south td:before {
     position: absolute;
-    top: 1px;
-    left: 6px;
-    width: 43%;
-    padding-top: 7px;
+    top: 3px;
+    left: 5px;
+    width: 35%;
+    max-width: 39%;
+    min-width: 19%;
+    padding-top: 5px;
     padding-right: 11px;
+    margin-right: 13px;
     white-space: nowrap;
-    text-align:left;
     font-weight: bold;
     }
      
     #go-south td:before { content: attr(data-title); }
     }
 
+   #go-south td:after {
+    position: absolute;
+    left: 13px;
+    width: 63%;;
+    max-width: 75%;
+    min-width: 33%;
+    margin-left: 23%;
+    padding-top: -1px;
+    padding-left: 23px;
+    white-space: nowrap;
+    font-weight: bold;
+    color: #e0e0e0;
+    }
+
+
 
 .table-striped tbody tr:nth-child(odd) td {
-   background-color: #fafbed;
+   background-color: #f5f3f5;
+}
+
+.table-striped tbody tr:nth-child(even) td {
+   background-color: #fffeef;
 }

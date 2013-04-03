@@ -25,7 +25,7 @@
   </div>
 
   <div class="field">
-    <%= f.text_field :name_or_day_or_address_or_city_or_codes_cont %> &nbsp; &nbsp; &nbsp; Look up by meeting name, chip meetings, street, location, etc.
+    <%= f.text_field :name_or_day_or_address_or_city_or_notes_or_codes_cont %> &nbsp; &nbsp; &nbsp; Look up by meeting name, chip meetings, street, location, etc.
   </div>
  
   <div class="actions"><%= f.submit "Search" %></span>
@@ -36,22 +36,21 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th class="numeric"><%= model_class.human_attribute_name(:id) %></th>
       <th class="numeric"><%= sort_link @search, :daytime, "Day and Time" %></th>
       <th class="numeric"><%= sort_link @search, :name, "Meeting Name" %></th>
       <th class="numeric"><%= sort_link @search, :location, "Location"  %></th>
       <th class="numeric"><%= sort_link @search, :city, "City" %></th>
       <th class="numeric"><%= sort_link @search, :codes, "Codes" %></th>
       <th class="numeric"><%= model_class.human_attribute_name(:map) %></th>
-      <th class="numeric"><%= model_class.human_attribute_name(:notes) %></th>
+      <th class="numeric"><%= sort_link @search, :notes %></th>
       <th class="numeric"><%= sort_link @search, :created_at, "Added" %></th>
+      <th class="numeric"><%= model_class.human_attribute_name(:id) %></th>
       <th><%#=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
   <tbody>
     <% @meetings.each do |meeting| %>
       <tr>
-        <td data-title="ID"><%= link_to meeting.id, meeting_path(meeting) %></td>
         <td data-title="Day"><%= meeting.day %></td>
         <td data-title="Name"><%= link_to meeting.name, meeting_path(meeting) %></td>
         <td data-title="Address"><%= meeting.address %></td>
@@ -59,7 +58,8 @@
         <td data-title="Codes"><%= meeting.codes %></td>
         <td data-title="Map"><%= meeting.map %></td>
         <td data-title="Notes"><%= meeting.notes %></td>
-        <td data-title="Created At"><%=l meeting.created_at %></td>
+        <td data-title="Added"><%=l meeting.created_at %></td>
+        <td data-title="ID"><%= link_to meeting.id, meeting_path(meeting) %></td>
         <td>
           <%#= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_meeting_path(meeting), :class => 'btn btn-mini' %>
