@@ -1,29 +1,30 @@
 <%- model_class = Meeting -%>
-  <%#=t '.title in Santa Clara County,', :default => model_class.model_name.human.pluralize %>
-
-<h1>Meetings in Santa Clara County</h1>
-
-    <ul class="nav nav-pills">
-    <li class="active"><a href="#tab1" data-toggle="tab">All Days</a></li>
+  <%#=t '.titley,', :default => model_class.model_name.human.pluralize %>
+<div class="navbar">
+  <div class="navbar-inner">
+    <ul class="nav">
+    <li class="active"><%= link_to "All Days", meetings_path %></li>
     <li><%= link_to "Sunday", '/meetings?utf8=%E2%9C%93&q[day_cont]=sun&commit=Search' %></li>    
     <li><%= link_to "Monday", '/meetings?utf8=%E2%9C%93&q[day_cont]=mon&commit=Search' %></li>
     <li><%= link_to "Tuesday", '/meetings?utf8=%E2%9C%93&q[day_cont]=tue&commit=Search' %></li>
     <li><%= link_to "Wednesday", '/meetings?utf8=%E2%9C%93&q[day_cont]=wed&commit=Search' %></li>
-    <li><%= link_to "Thursday", '/meetings?utf8=%E2%9C%93&q[day_cont]=th&commit=Search' %></li>
-    <li><%= link_to "Friday", '/meetings?utf8=%E2%9C%93&q[day_cont]=fr&commit=Search' %></li>
+    <li><%= link_to "Thursday", '/meetings?utf8=%E2%9C%93&q[day_cont]=thu&commit=Search' %></li>
+    <li><%= link_to "Friday", '/meetings?utf8=%E2%9C%93&q[day_cont]=fri&commit=Search' %></li>
     <li><%= link_to "Saturday", '/meetings?utf8=%E2%9C%93&q[day_cont]=sat&commit=Search' %></li>
     </ul>
+  </div>
+</div>
 
 <%= search_form_for @search do |f| %>
 
   <div class="field">
-  <%= f.text_field :day_cont %> &nbsp; &nbsp; &nbsp; Day 
+    <%= f.text_field :day_cont %> &nbsp; &nbsp; &nbsp; Day 
 
   <div class="field">
-    <%= f.text_field :city_cont %> &nbsp; &nbsp; &nbsp; Add City <em>partial OK -- i.e. Gil for Gilroy </em>
+    <%= f.text_field :city_cont %> &nbsp; &nbsp; &nbsp; Add city -- <em>partial OK!</em> Gil = Gilroy, Pal = Palo Alto, etc.</em>
   </div>
 
-    <div class="field">
+  <div class="field">
     <%= f.text_field :name_or_day_or_address_or_city_or_codes_cont %> &nbsp; &nbsp; &nbsp; Look up by meeting name, chip meetings, street, location, etc.
   </div>
  
@@ -36,14 +37,14 @@
   <thead>
     <tr>
       <th class="numeric"><%= model_class.human_attribute_name(:id) %></th>
-      <th class="numeric"><%= model_class.human_attribute_name(:day) %></th>
-      <th class="numeric"><%= model_class.human_attribute_name(:name) %></th>
-      <th class="numeric"><%= model_class.human_attribute_name(:address) %></th>
-      <th class="numeric"><%= model_class.human_attribute_name(:city) %></th>
-      <th class="numeric"><%= model_class.human_attribute_name(:codes) %></th>
+      <th class="numeric"><%= sort_link @search, :daytime, "Day and Time" %></th>
+      <th class="numeric"><%= sort_link @search, :name, "Meeting Name" %></th>
+      <th class="numeric"><%= sort_link @search, :location, "Location"  %></th>
+      <th class="numeric"><%= sort_link @search, :city, "City" %></th>
+      <th class="numeric"><%= sort_link @search, :codes, "Codes" %></th>
       <th class="numeric"><%= model_class.human_attribute_name(:map) %></th>
       <th class="numeric"><%= model_class.human_attribute_name(:notes) %></th>
-      <th class="numeric"><%= model_class.human_attribute_name(:created_at) %></th>
+      <th class="numeric"><%= sort_link @search, :created_at, "Added" %></th>
       <th><%#=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
