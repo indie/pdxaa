@@ -1,8 +1,7 @@
 <%- model_class = Meeting -%>
   <%#=t '.titley,', :default => model_class.model_name.human.pluralize %>
 <div class="navbar">
-  <div class="navbar-inner">
-   <ul class="nav">
+   <ul class="nav nav-tabs">
     <li class="active"><%= link_to "All Meetings", meetings_path %></li>
     <li><%= link_to "Sunday", '/meetings?utf8=%E2%9C%93&q[day_cont]=sun&commit=Search' %></li>    
     <li><%= link_to "Monday", '/meetings?utf8=%E2%9C%93&q[day_cont]=mon&commit=Search' %></li>
@@ -13,7 +12,6 @@
     <li><%= link_to "Saturday", '/meetings?utf8=%E2%9C%93&q[day_cont]=sat&commit=Search' %></li>
     </ul>
   </div>
-</div>
 
 <div class="navbar">
   <div class="city-small">
@@ -36,8 +34,7 @@
 </div>
 
 
-
-<%= search_form_for @search do |f| %>
+<p><%= search_form_for @search do |f| %>
 
   <div class="field">
     <%= f.text_field :name_or_day_or_address_or_city_or_notes_or_codes_cont %> &nbsp; &nbsp; &nbsp; Look up by meeting name, chip meetings, street, location, etc.
@@ -46,6 +43,8 @@
   <div class="actions"><%= f.submit "Search" %></span>
 
 <% end %>
+
+</p>
 
 <div id="go-south">
 <table class="table table-striped">
