@@ -2,8 +2,8 @@
   <%#=t '.titley,', :default => model_class.model_name.human.pluralize %>
 <div class="navbar">
   <div class="navbar-inner">
-    <ul class="nav">
-    <li class="active"><%= link_to "All Days", meetings_path %></li>
+   <ul class="nav">
+    <li class="active"><%= link_to "All Meetings", meetings_path %></li>
     <li><%= link_to "Sunday", '/meetings?utf8=%E2%9C%93&q[day_cont]=sun&commit=Search' %></li>    
     <li><%= link_to "Monday", '/meetings?utf8=%E2%9C%93&q[day_cont]=mon&commit=Search' %></li>
     <li><%= link_to "Tuesday", '/meetings?utf8=%E2%9C%93&q[day_cont]=tue&commit=Search' %></li>
@@ -15,14 +15,29 @@
   </div>
 </div>
 
-<%= search_form_for @search do |f| %>
-
-  <div class="field">
-    <%= f.text_field :day_cont %> &nbsp; &nbsp; &nbsp; Day 
-
-  <div class="field">
-    <%= f.text_field :city_cont %> &nbsp; &nbsp; &nbsp; Add city -- <em>partial OK!</em> Gil = Gilroy, Pal = Palo Alto, etc.</em>
+<div class="navbar">
+  <div class="city-small">
+    <ul class="nav">
+    <li><%= link_to "Campbell", '/meetings?utf8=%E2%9C%93&q[city_cont]=camp&commit=Search' %></li>    
+    <li><%= link_to "Cupertino", '/meetings?utf8=%E2%9C%93&q[city_cont]=cuper&commit=Search' %></li>
+    <li><%= link_to "Gilroy", '/meetings?utf8=%E2%9C%93&q[city_cont]=gil&commit=Search' %></li>
+    <li><%= link_to "Los Altos", '/meetings?utf8=%E2%9C%93&q[city_cont]=los&commit=Search' %></li>
+    <li><%= link_to "Milpitas", '/meetings?utf8=%E2%9C%93&q[city_cont]=milpi&commit=Search' %></li>
+    <li><%= link_to "Morgan Hill", '/meetings?utf8=%E2%9C%93&q[city_cont]=morg&commit=Search' %></li>
+    <li><%= link_to "Mountain View", '/meetings?utf8=%E2%9C%93&q[city_cont]=moun&commit=Search' %></li>
+    <li><%= link_to "Palo Alto", '/meetings?utf8=%E2%9C%93&q[city_cont]=pal&commit=Search' %></li>
+    <li><%= link_to "San Jose", '/meetings?utf8=%E2%9C%93&q[city_cont]=jose&commit=Search' %></li>
+    <li><%= link_to "San Martin", '/meetings?utf8=%E2%9C%93&q[city_cont]=martin&commit=Search' %></li>
+    <li><%= link_to "Santa Clara", '/meetings?utf8=%E2%9C%93&q[city_cont]=clara&commit=Search' %></li>
+    <li><%= link_to "Saratoga", '/meetings?utf8=%E2%9C%93&q[city_cont]=sarat&commit=Search' %></li>
+    <li><%= link_to "Sunnyvale", '/meetings?utf8=%E2%9C%93&q[city_cont]=sunn&commit=Search' %></li>
+    </ul>
   </div>
+</div>
+
+
+
+<%= search_form_for @search do |f| %>
 
   <div class="field">
     <%= f.text_field :name_or_day_or_address_or_city_or_notes_or_codes_cont %> &nbsp; &nbsp; &nbsp; Look up by meeting name, chip meetings, street, location, etc.
