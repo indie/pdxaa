@@ -1,5 +1,4 @@
 <%- model_class = Meeting -%>
-  <%#=t '.titley,', :default => model_class.model_name.human.pluralize %>
 <div class="navbar">
    <ul class="nav nav-tabs">
     <li class="active"><%= link_to "All Meetings", meetings_path %></li>
@@ -36,6 +35,13 @@
 
 <p><%= search_form_for @search do |f| %>
 
+   <div class="field">
+    <%= f.text_field :day_cont %> &nbsp; &nbsp; &nbsp; Day 
+
+  <div class="field">
+    <%= f.text_field :city_cont %> &nbsp; &nbsp; &nbsp; Add city -- <em>partial OK!</em> Gil = Gilroy, Pal = Palo Alto, etc.</em>
+  </div>
+
   <div class="field">
     <%= f.text_field :name_or_day_or_address_or_city_or_notes_or_codes_cont %> &nbsp; &nbsp; &nbsp; Look up by meeting name, chip meetings, street, location, etc.
   </div>
@@ -59,7 +65,7 @@
       <th class="numeric"><%= sort_link @search, :notes %></th>
       <th class="numeric"><%= sort_link @search, :created_at, "Added" %></th>
       <th class="numeric"><%= model_class.human_attribute_name(:id) %></th>
-      <th><%#=t '.actions', :default => t("helpers.actions") %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
   <tbody>
@@ -75,15 +81,13 @@
         <td data-title="Added"><%=l meeting.created_at %></td>
         <td data-title="ID"><%= link_to meeting.id, meeting_path(meeting) %></td>
         <td>
-          <%#= link_to t('.edit', :default => t("helpers.links.edit")),
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_meeting_path(meeting), :class => 'btn btn-mini' %>
-          <%#= link_to t('.destroy', :default => t("helpers.links.destroy")),
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
                       meeting_path(meeting),
                       :method => :delete,
                       :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
-                      :class => 'btn btn-mini btn-danger' %>
-                    
-
+                      :class => 'btn btn-mini btn-danger' %>                    
         </td>
       </tr>
     <% end %>
@@ -91,6 +95,17 @@
 </table>
 </div>
 
-<%#= link_to t('.new', :default => t("helpers.links.new")),
+<h3>New Meeting</h3>
+
+
+<%= link_to t('.new', :default => t("helpers.links.new")),
             new_meeting_path,
             :class => 'btn btn-primary' %>
+
+<h3>Import Meetings</h3>
+
+<%= form_tag import_meetings_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "Import" %>
+
+<% end %>
