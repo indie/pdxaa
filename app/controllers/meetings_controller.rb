@@ -2,14 +2,15 @@ class MeetingsController < ApplicationController
   # GET /meetings
   # GET /meetings.json
   def index
-  #   @meetings = Meeting.all
-    @search = Meeting.search(params[:q]) 
-    @meetings = @search.result 
-    # @meetings = Meeting.order(:name)
+    @q = Meeting.search(params[:q])
+    @meetings = @q.result(:distinct => true)
+    # @search = Meeting.search(params[:q], :search_key => :log_search) 
+    @search = Meeting.search(params[:log_search], :search_key => :log_search)
+    
     respond_to do |format|
       format.html # index.html.erb
       format.txt  { render csv: @meetings.to_csv }   # make data render txt in browser -- might work, might not   
-      format.csv { send_data @meetings.to_csv } # make csv data exportable
+      format.csv { send_data @meetings.to_csv } # make csv data exportable like a text file
       format.xls  # { send_data @meetings.to_csv(col_sep: "\t") }
       format.json { render json: @meetings }
     end
@@ -102,12 +103,6 @@ class MeetingsController < ApplicationController
       :address => params[:meeting][:address] } )
   end
 
-  def search_ajax
-    @meetings = Meeting.find( :all,
-      :conditions => [ "name LIKE ?",
-         "%#{params[:meeting][:name]}%" ] )
-    render :layout=>false 
-  end
   # # # # # # # # # # # # # # # # # # 
 
 
