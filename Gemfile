@@ -5,6 +5,7 @@ gem 'rails', '3.2.13'
 # gems for dyn search #
 gem 'ember-rails'
 gem 'ransack'
+gem 'squeel'
 # # # # # # # # # # # #
 
 # Bundle edge Rails instead:

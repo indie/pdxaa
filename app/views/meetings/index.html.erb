@@ -1,7 +1,7 @@
 <%- model_class = Meeting -%>
 <div class="navbar">
    <ul class="nav nav-tabs">
-    <li class="active"><%= link_to "All Meetings", meetings_path %></li>
+    <li><%= link_to "All Meetings", meetings_path %></li>
     <li><%= link_to "Sunday", '/meetings?utf8=%E2%9C%93&q[day_cont]=sun' %></li>    
     <li><%= link_to "Monday", '/meetings?utf8=%E2%9C%93&q[day_cont]=mon' %></li>
     <li><%= link_to "Tuesday", '/meetings?utf8=%E2%9C%93&q[day_cont]=tue' %></li>
@@ -45,9 +45,12 @@
 </p>
 
 <div id="go-south">
+
+<%= form_tag edit_multiple_meetings_path, method: :get do %>
 <table class="table table-striped">
   <thead>
     <tr>
+      <th><%# check_box_tag "meeting_ids[]"%></th>
       <th class="numeric"><%= sort_link @search, :daytime, "Day and Time" %></th>
       <th class="numeric"><%= sort_link @search, :name, "Meeting Name" %></th>
       <th class="numeric"><%= sort_link @search, :location, "Location"  %></th>
@@ -63,6 +66,7 @@
   <tbody>
     <% @meetings.each do |meeting| %>
       <tr>
+        <td><%#= check_box_tag "meeting_ids[]", meeting.id %>
         <td data-title="Day"><%= meeting.day %></td>
         <td data-title="Name"><%= link_to meeting.name, meeting_path(meeting) %></td>
         <td data-title="Address"><%= meeting.address %></td>
@@ -85,19 +89,9 @@
     <% end %>
   </tbody>
 </table>
+
+<%#= submit_tag "Edit Checked" %>
+
+<% end %>
+
 </div>
-
-<!-- <h3>New Meeting</h3> -->
-
-
-<%#= link_to t('.new', :default => t("helpers.links.new")),
-            new_meeting_path,
-            :class => 'btn btn-primary' %>
-
-<!-- <h3>Import Meetings</h3> -->
-
-<%#= form_tag import_meetings_path, multipart: true do %>
-  <%#= file_field_tag :file %>
-  <%#= submit_tag "Import" %>
-
-<%# end %>

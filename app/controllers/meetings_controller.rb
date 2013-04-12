@@ -5,16 +5,18 @@ class MeetingsController < ApplicationController
     @q = Meeting.search(params[:q])
     @meetings = @q.result(:distinct => true)
     # @search = Meeting.search(params[:q], :search_key => :log_search) 
-    @search = Meeting.search(params[:log_search], :search_key => :log_search)
-    
+    @search = Meeting.search(params[:q])
+    @meetings = @search.result
+    # @meetings = Meeting.order(:name)
     respond_to do |format|
       format.html # index.html.erb
-      format.txt  { render csv: @meetings.to_csv }   # make data render txt in browser -- might work, might not   
-      format.csv { send_data @meetings.to_csv } # make csv data exportable like a text file
-      format.xls  # { send_data @meetings.to_csv(col_sep: "\t") }
+      format.txt { render txt: @meetings.to_csv } # make data render txt in browser -- might work, might not
+      format.csv { send_data @meetings.to_csv } # make csv data exportable
+      format.xls # { send_data @meetings.to_csv(col_sep: "\t") }
       format.json { render json: @meetings }
     end
   end
+
 
   def import 
     Meeting.import(params[:file])
@@ -94,17 +96,20 @@ class MeetingsController < ApplicationController
     end
   end
 
-  # kinda AJAX search
-  def add_ajax
-    Meeting.create ( { :name => params[:meeting][:name],
-      :day => params[:meeting][:day],
-      :city => params[:meeting][:city],
-      :codes => params[:meeting][:codes],
-      :address => params[:meeting][:address] } )
+
+
+  def edit_multiple
+    @meetings = Meeting.find(params[:meeting_ids])
   end
 
-  # # # # # # # # # # # # # # # # # # 
-
-
+  def update_multiple
+    @meetings = Meeting.update(params[:meetings].keys, params[:meetings].values)
+    @meetings.reject! { |p| p.errors.empty? }
+    if @meetings.empty?
+      redirect_to meetings_url
+    else
+      render "edit_multiple"
+    end
+  end
 
 end
