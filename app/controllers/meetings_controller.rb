@@ -98,20 +98,7 @@ class MeetingsController < ApplicationController
     end
   end
 
-
-
-  def edit_multiple
-    @meetings = Meeting.find(params[:meeting_ids])
-  end
-
-  def update_multiple
-    @meetings = Meeting.update(params[:meetings].keys, params[:meetings].values)
-    @meetings.reject! { |p| p.errors.empty? }
-    if @meetings.empty?
-      redirect_to meetings_url
-    else
-      render "edit_multiple"
-    end
+  def manage
   end
 
 end

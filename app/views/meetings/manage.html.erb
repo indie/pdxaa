@@ -1,4 +1,5 @@
-<%- model_class = Meeting -%>
+<h1> Manage Meetings </h1>
+
 <div class="navbar">
    <ul class="nav nav-tabs">
     <li><%= link_to "All Meetings", meetings_path %></li>
@@ -63,7 +64,7 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th class="numeric"><%= sort_link @search, :daytime, "Day and Time" %></th>
+      <th class="numeric"><%= sort_link @search, :day, "Day and Time" %></th>
       <th class="numeric"><%= sort_link @search, :name, "Meeting Name" %></th>
       <th class="numeric"><%= sort_link @search, :location, "Location"  %></th>
       <th class="numeric"><%= sort_link @search, :city, "City" %></th>
@@ -78,6 +79,7 @@
   <tbody>
     <% @meetings.each do |meeting| %>
       <tr>
+        <td><%= check_box_tag "meeting_ids[]", meeting.id %>
         <td data-title="Day"><%= meeting.day %></td>
         <td data-title="Name"><%= link_to meeting.name, meeting_path(meeting) %></td>
         <td data-title="Address"><%= meeting.address %></td>
@@ -100,5 +102,20 @@
     <% end %>
   </tbody>
 </table>
+
+<div class="page-header">
+Add a new meeting
+</div>
+
+
+<%= render :partial => 'form' %>
+
+<h3>Import a CSV of Meetings</h3>
+
+<%= form_tag import_meetings_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "Import" %>
+
+<% end %>
 
 </div>

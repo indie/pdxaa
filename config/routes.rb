@@ -8,6 +8,8 @@ Aasj::Application.routes.draw do
       match '/signup',  to: 'users#new'
       match '/signin',  to: 'sessions#new'
       match '/signout', to: 'sessions#destroy', via: :delete
+#     match '/manage', to: 'meetings/manage'
+
 
 # API versioning
 
@@ -21,12 +23,8 @@ Aasj::Application.routes.draw do
   resources :meetings do 
    root to: 'meetings#index'
     collection { post :import }
-    collection do
-      get :edit_multiple
-      put :update_multiple
     end
   end
-end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
