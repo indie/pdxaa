@@ -1,4 +1,6 @@
 class MeetingsController < ApplicationController
+  
+
   # GET /meetings
   # GET /meetings.json
   def index
@@ -6,7 +8,7 @@ class MeetingsController < ApplicationController
     @meetings = @q.result(:distinct => true)
     # @search = Meeting.search(params[:q], :search_key => :log_search) 
     @search = Meeting.search(params[:q])
-    @meetings = @search.result
+    # @meetings = @search.result
     # @meetings = Meeting.order(:name)
     respond_to do |format|
       format.html # index.html.erb

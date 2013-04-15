@@ -1,4 +1,18 @@
+require 'api_constraints'
+
 Aasj::Application.routes.draw do
+
+  get "users/new"
+  root to: 'meetings#index'
+  match '/signup',  to: 'users#new'
+
+# API versioning
+
+  namespace :api, defaults: {format: 'json'} do
+    scope module: :v1, constraints: ApiConstraints.new(version: 1) do
+      resources :meetings  
+    end
+  end  
 
 
   root to: 'meetings#index'

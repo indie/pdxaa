@@ -1,3 +1,19 @@
+# == Schema Information
+#
+# Table name: meetings
+#
+#  id         :integer          not null, primary key
+#  day        :string(255)
+#  name       :string(255)
+#  address    :string(255)
+#  city       :string(255)
+#  codes      :string(255)
+#  map        :string(255)
+#  notes      :text
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
 class Meeting < ActiveRecord::Base
   attr_accessible :id, :address, :city, :codes, :day, :map, :name, :notes, :created_at, :updated_at
 

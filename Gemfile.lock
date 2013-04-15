@@ -30,18 +30,15 @@ GEM
     activesupport (3.2.13)
       i18n (= 0.6.1)
       multi_json (~> 1.0)
+    annotate (2.5.0)
+      rake
     arel (3.0.2)
     barber (0.4.1)
       ember-source
       execjs
       handlebars-source
+    bcrypt-ruby (3.0.1)
     builder (3.0.4)
-    capistrano (2.14.2)
-      highline
-      net-scp (>= 1.0.0)
-      net-sftp (>= 2.0.0)
-      net-ssh (>= 2.0.14)
-      net-ssh-gateway (>= 1.1.0)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
       railties (~> 3.2.0)
@@ -65,7 +62,6 @@ GEM
     execjs (1.4.0)
       multi_json (~> 1.0)
     handlebars-source (1.0.0.rc3)
-    highline (1.6.16)
     hike (1.2.1)
     i18n (0.6.1)
     journey (1.0.4)
@@ -85,13 +81,6 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.21)
     multi_json (1.7.2)
-    net-scp (1.1.0)
-      net-ssh (>= 2.6.5)
-    net-sftp (2.1.1)
-      net-ssh (>= 2.6.5)
-    net-ssh (2.6.6)
-    net-ssh-gateway (1.2.0)
-      net-ssh (>= 2.6.5)
     pg (0.14.1)
     polyamorous (0.5.0)
       activerecord (~> 3.0)
@@ -149,6 +138,8 @@ GEM
     treetop (1.4.12)
       polyglot
       polyglot (>= 0.3.1)
+    turbolinks (1.1.1)
+      coffee-rails
     twitter-bootstrap-rails (2.2.6)
       actionpack (>= 3.1)
       execjs
@@ -162,7 +153,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  capistrano
+  annotate (= 2.5.0)
+  bcrypt-ruby
   coffee-rails (~> 3.2.1)
   ember-rails
   jquery-rails
@@ -174,5 +166,6 @@ DEPENDENCIES
   sqlite3
   squeel
   therubyracer
+  turbolinks
   twitter-bootstrap-rails
   uglifier (>= 1.0.3)

@@ -30,14 +30,29 @@
     <li><%= link_to "Sunnyvale", '/meetings?utf8=%E2%9C%93&q[city_cont]=sunn&commit=Search' %></li>
     </ul>
   </div>
-</div>
 
+<div class="navbar">
+  <div class="city-small nav-tabs">
+    <ul class="nav">
+    <li><%= link_to "Open", '/meetings?utf8=%E2%9C%93&q[codes_cont]=O&commit=Search' %></li>    
+    <li><%= link_to "Closed", '/meetings?utf8=%E2%9C%93&q[codes_cont]=C&commit=Search' %></li>
+    <li><%= link_to "Men", '/meetings?utf8=%E2%9C%93&q[codes_cont]=M&commit=Search' %></li>
+    <li><%= link_to "Women", '/meetings?utf8=%E2%9C%93&q[codes_cont]=W&q[codes_neq]=Wh&commit=Search' %></li>
+    <li><%= link_to "LGBT", '/meetings?utf8=%E2%9C%93&q[codes_cont]=G&commit=Search' %></li>
+    <li><%= link_to "Wheelchair Access", '/meetings?utf8=%E2%9C%93&q[codes_cont]=Wh&commit=Search' %></li>
+    
+    </ul>
+  </div>
+</div>
+</div>
 
 <p><%= search_form_for @q do |f| %>
 
     <%= f.text_field :day_cont, placeholder: "Add Day" %> &nbsp; &nbsp; &nbsp;  <%#= @q.day_cont %>
     <%= f.text_field :city_cont, placeholder: "Add City" %> &nbsp; &nbsp; &nbsp;
-    <%= f.text_field :name_or_day_or_address_or_city_or_notes_or_codes_cont, placeholder: "Add mtg name, chip, street, etc.", width: '222'  %> &nbsp;
+    <%= f.text_field :name_or_day_or_address_or_city_or_notes_or_codes_cont, placeholder: "Add mtg name, chip, street, etc.", width: '222'  %> &nbsp; &nbsp; &nbsp; &nbsp;
+    <%= f.text_field :codes_cont, placeholder: "Add Code"  %>
+
     <%= f.submit "Search" %>
 <% end %>
 
@@ -66,7 +81,7 @@
   <tbody>
     <% @meetings.each do |meeting| %>
       <tr>
-        <td><%#= check_box_tag "meeting_ids[]", meeting.id %>
+        <td><%= check_box_tag "meeting_ids[]", meeting.id %>
         <td data-title="Day"><%= meeting.day %></td>
         <td data-title="Name"><%= link_to meeting.name, meeting_path(meeting) %></td>
         <td data-title="Address"><%= meeting.address %></td>
@@ -77,9 +92,9 @@
         <td data-title="Added"><%=l meeting.created_at %></td>
         <td data-title="ID"><%= link_to meeting.id, meeting_path(meeting) %></td>
         <td>
-          <%#= link_to t('.edit', :default => t("helpers.links.edit")),
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_meeting_path(meeting), :class => 'btn btn-mini' %>
-          <%#= link_to t('.destroy', :default => t("helpers.links.destroy")),
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
                       meeting_path(meeting),
                       :method => :delete,
                       :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
@@ -90,8 +105,10 @@
   </tbody>
 </table>
 
-<%#= submit_tag "Edit Checked" %>
+<%= submit_tag "Edit Checked" %>
 
 <% end %>
 
 </div>
+
+<%= link_to "Admin", signup_path %>

@@ -1,15 +1,15 @@
-<%#- model_class = Meeting -%>
+<%- model_class = Meeting -%>
 <div class="page-header">
 Add a new meeting
 </div>
 
 
-<%#= render :partial => 'form' %>
+<%= render :partial => 'form' %>
 
-<!-- commenting this out for now on prod <h3>Import a CSV of Meetings</h3> -->
+<h3>Import a CSV of Meetings</h3>
 
-<%#= form_tag import_meetings_path, multipart: true do %>
-  <%#= file_field_tag :file %>
-  <%#= submit_tag "Import" %>
+<%= form_tag import_meetings_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "Import" %>
 
-<%# end %>
+<% end %>
