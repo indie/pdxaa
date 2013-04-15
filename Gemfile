@@ -1,11 +1,12 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.13'
+gem 'bcrypt-ruby'
 
-# gems for dyn search #
-gem 'ember-rails'
+# # # # # # # # # # # #
 gem 'ransack'
 gem 'squeel'
+gem 'ember-rails'
 gem 'turbolinks'
 # # # # # # # # # # # #
 
@@ -13,7 +14,6 @@ gem 'turbolinks'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
-gem 'bcrypt-ruby'
 
 # Gems used only for assets and not required
 # in production environments by default.

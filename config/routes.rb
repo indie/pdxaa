@@ -2,9 +2,12 @@ require 'api_constraints'
 
 Aasj::Application.routes.draw do
 
-  get "users/new"
-  root to: 'meetings#index'
-  match '/signup',  to: 'users#new'
+  resources :users
+  resources :sessions, only: [:new, :create, :destroy]
+    root to: 'meetings#index'
+      match '/signup',  to: 'users#new'
+      match '/signin',  to: 'sessions#new'
+      match '/signout', to: 'sessions#destroy', via: :delete
 
 # API versioning
 
@@ -15,8 +18,8 @@ Aasj::Application.routes.draw do
   end  
 
 
-  root to: 'meetings#index'
   resources :meetings do 
+   root to: 'meetings#index'
     collection { post :import }
     collection do
       get :edit_multiple
