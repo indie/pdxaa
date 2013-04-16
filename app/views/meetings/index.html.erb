@@ -86,7 +86,7 @@
         <td data-title="Map"><%= link_to image_tag("gmaps.png", alt: "map", height: "37", width: "37"), url_for(meeting.map), target: "_blank" %></td>
         <td data-title="Notes"><%= meeting.notes %></td>
         <td data-title="Added"><%=l meeting.created_at %></td>
-        <td data-title="ID"><%= link_to meeting.id, meeting_path(meeting) %></td>
+        <td data-title="ID"><%#= link_to meeting.id, meeting_path(meeting) %><%= meeting.id %></td>
         <td>
           <%#= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_meeting_path(meeting), :class => 'btn btn-mini' %>
