@@ -18,6 +18,5 @@
 //= require ember-data
 //= require_self
 //= require aasj
-require turbolinks
 Aasj = Ember.Application.create();
 //= require_tree .

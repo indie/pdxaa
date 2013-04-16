@@ -9,7 +9,6 @@ gem  'rails_autolink'
 gem 'ransack'
 gem 'squeel'
 gem 'ember-rails'
-gem 'turbolinks'
 # # # # # # # # # # # #
 
 # Bundle edge Rails instead:
