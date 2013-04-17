@@ -1,4 +1,13 @@
 <%- model_class = Meeting -%>
+
+
+
+<div id="user_header">
+  <% if current_user %>
+    Logged in as: <%= current_user.email %>.
+   <% end %>
+</div>
+
 <div class="navbar">
    <ul class="nav nav-tabs">
     <li><%= link_to "All Meetings", meetings_path %></li>
@@ -38,7 +47,8 @@
     <li><%= link_to "Closed", '/meetings?utf8=%E2%9C%93&q[codes_cont]=C&commit=Search' %></li>
     <li><%= link_to "Men", '/meetings?utf8=%E2%9C%93&q[codes_cont]=M&commit=Search' %></li>
     <li><%= link_to "Women", '/meetings?utf8=%E2%9C%93&q[codes_cont]=W&q[codes_not_cont]=Wh&commit=Search' %></li>
-    <li><%= link_to "LGBT", '/meetings?utf8=%E2%9C%93&q[codes_cont]=G&commit=Search' %></li>
+    <li><%= link_to "Gay", '/meetings?utf8=%E2%9C%93&q[codes_cont]=G&commit=Search' %></li>
+    <li><%= link_to "Lesbian", '/meetings?utf8=%E2%9C%93&q[codes_cont]=L&commit=Search' %></li>
     <li><%= link_to "Wheelchair Access", '/meetings?utf8=%E2%9C%93&q[codes_cont]=Wh&commit=Search' %></li>
     
     </ul>
@@ -72,7 +82,6 @@
       <th class="numeric"><%= sort_link @search, :notes, "Notes" %></th>
       <th class="numeric"><%= sort_link @search, :created_at, "Added" %></th>
       <th class="numeric"><%= model_class.human_attribute_name(:id) %></th>
-      <th><%#=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
   <tbody>
@@ -87,20 +96,9 @@
         <td data-title="Notes"><%= meeting.notes %></td>
         <td data-title="Added"><%=l meeting.created_at %></td>
         <td data-title="ID"><%#= link_to meeting.id, meeting_path(meeting) %><%= meeting.id %></td>
-        <td>
-          <%= link_to t('.edit', :default => t("helpers.links.edit")),
-                      edit_meeting_path(meeting), :class => 'btn btn-mini' %>
-          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
-                      meeting_path(meeting),
-                      :method => :delete,
-                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
-                      :class => 'btn btn-mini' %>                    
-        </td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<%= will_paginate %>
 
 </div>

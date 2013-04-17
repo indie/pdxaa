@@ -7,16 +7,16 @@ class SessionsController < ApplicationController
   user = User.find_by_email(params[:session][:email].downcase)
   if user && user.authenticate(params[:session][:password])
      sign_in user
-     redirect_to user
+     redirect_to root_url, notice: "Signin success!"
   else
-     flash[:error] = 'Invalid email/password combination' # Not quite right!
+     flash[:error] = 'Invalid email/password combination'
      render 'new'
     end
   end
 
   def destroy
     sign_out
-    redirect_to root_url
+    redirect_to root_url, notice: "Logged out!"
   end
 
 

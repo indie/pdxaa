@@ -7,19 +7,8 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
-    def new
+  def new
     @user = User.new
-  end
-
-  def create
-    user = User.find_by_email(params[:session][:email].downcase)
-    if user && user.authenticate(params[:session][:password])
-      sign_in user
-      redirect_back_or user
-    else
-      flash.now[:error] = 'Invalid email/password combination'
-      render 'new'
-    end
   end
 
   def create
@@ -27,7 +16,7 @@ class UsersController < ApplicationController
     if @user.save
       sign_in @user
       flash[:success] = "Welcome!"
-      redirect_to @user
+      redirect_to @user, notice: "Thanks for signing up!"
     else
       render 'new'
     end

@@ -1,5 +1,7 @@
 <%- model_class = Meeting -%>
 
+<% if current_user %>
+
 <div class="page-header">
 Add a new meeting
 </div>
@@ -12,5 +14,11 @@ Add a new meeting
 <%= form_tag import_meetings_path, multipart: true do %>
   <%= file_field_tag :file %>
   <%= submit_tag "Import" %>
+
+<% end %>
+<% else %>
+
+<p> You must be signed in and authorized to add meeting and update meetings. </p>
+
 
 <% end %>
