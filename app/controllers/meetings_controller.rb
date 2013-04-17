@@ -16,6 +16,7 @@ class MeetingsController < ApplicationController
       format.csv { send_data @meetings.to_csv } # make csv data exportable
       format.xls # { send_data @meetings.to_csv(col_sep: "\t") }
       format.json { render json: @meetings }
+    @meetings = Meeting.paginate(page: params[:page])
     end
   end
 
