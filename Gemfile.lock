@@ -107,8 +107,6 @@ GEM
       activesupport (= 3.2.13)
       bundler (~> 1.0)
       railties (= 3.2.13)
-    rails_autolink (1.0.9)
-      rails (~> 3.1)
     railties (3.2.13)
       actionpack (= 3.2.13)
       activesupport (= 3.2.13)
@@ -124,7 +122,6 @@ GEM
     rdoc (3.12.2)
       json (~> 1.4)
     ref (1.0.4)
-    rmagick (2.13.2)
     sass (3.2.7)
     sass-rails (3.2.5)
       railties (~> 3.2.0)
@@ -172,9 +169,7 @@ DEPENDENCIES
   nifty-generators
   pg
   rails (= 3.2.13)
-  rails_autolink
   ransack
-  rmagick
   sass-rails (~> 3.2.3)
   sqlite3
   squeel

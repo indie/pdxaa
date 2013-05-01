@@ -8,8 +8,12 @@ set :deploy_to, "/home/hub/public/aasjonline.com/public/meetings/#{application}"
 set :deploy_via, :remote_cache
 set :use_sudo, false
 
-default_environment['PATH'] = '/home/hub/.rbenv/versions/1.9.3-p194/bin:$PATH'
+#default_environment['PATH'] = '/home/hub/.rbenv/versions/1.9.3-p194/bin:$PATH'
+set :default_environment, { 'PATH' => "/home/hub/.rbenv/versions/1.9.3-p194/bin:$PATH" }
 default_environment['GEM_PATH']= '/home/hub/.gem/ruby/1.9.1'
+#set :default_environment, {
+#      'PATH' => "home/hub/.rbenv/versions/1.9.3-p194/bin:$PATH"
+#    }
 
 set :scm, "git"
 set :repository, "git@github.com:indie/#{application}.git"
@@ -52,7 +56,13 @@ namespace :deploy do
   before "deploy", "deploy:check_revision"
 end
 
-# Passenger love
+# if you want to clean up old releases on each deploy uncomment this:
+# after "deploy:restart", "deploy:cleanup"
+
+# if you're still using the script/reaper helper you will need
+# these http://github.com/rails/irs_process_scripts
+
+# If you are using Passenger mod_rails uncomment this:
 namespace :deploy do
    task :start do ; end
    task :stop do ; end
@@ -60,5 +70,3 @@ namespace :deploy do
      run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
    end
  end
-
- 
