@@ -3,12 +3,14 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.13'
 gem 'bcrypt-ruby'
-gem  'rails_autolink'
+gem 'rails_autolink'
 
 # # # # # # # # # # # #
 gem 'ransack'
 gem 'squeel'
 gem 'ember-rails'
+gem 'carrierwave'
+gem 'nifty-generators'
 # # # # # # # # # # # #
 
 # Bundle edge Rails instead:
@@ -25,11 +27,11 @@ group :assets do
   gem 'less-rails'
   gem 'uglifier', '>= 1.0.3'
   gem 'twitter-bootstrap-rails'
-
-
 end
 
 gem 'jquery-rails'
+gem 'jquery-fileupload-rails'
+
 
 group :development do
   gem 'annotate', '2.5.0'

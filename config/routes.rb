@@ -19,12 +19,12 @@ Aasj::Application.routes.draw do
     end
   end  
 
-
   resources :meetings do 
    root to: 'meetings#index'
     collection { post :import }
-    end
-  end
+   end
+
+end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

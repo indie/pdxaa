@@ -1,14 +1,14 @@
-<%= form_for @meeting, :html => { :class => 'form-horizontal' } do |f| %>
+<%= search_form_for @q, :html => { :class => 'form-horizontal' } do |f| %>
   <div class="control-group">
     <%= f.label :day, :class => 'control-label' %>
     <div class="controls">
-      <%= f.text_field :day, :class => 'text_field', placeholder: "format Sunday, 08:00 PM" %>
+      <%= f.text_field :day_cont, :class => 'text_field', placeholder: "format Sunday, 08:00 PM" %>
     </div>
   </div>
   <div class="control-group">
     <%= f.label :name, :class => 'control-label' %>
     <div class="controls">
-      <%= f.text_field :name, :class => 'text_field' %>
+      <%= f.text_field &&:name, :class => 'text_field' %>
     </div>
   </div>
   <div class="control-group">
@@ -48,3 +48,5 @@
                 meetings_path, :class => 'btn btn-custom' %>
   </div>
 <% end %>
+
+<%= @q.day_cont %>

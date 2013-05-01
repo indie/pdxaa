@@ -22,7 +22,7 @@
 <div class="navbar">
   <div class="city-small">
     <ul class="nav">
-    <li><%= link_to "Campbell", '/meetings?utf8=%E2%9C%93&q[city_cont]=camp&commit=Search' %></li>    
+    <li><%= link_to "Campbell", '&q[city_cont]=camp&commit=Search' %></li>    
     <li><%= link_to "Cupertino", '/meetings?utf8=%E2%9C%93&q[city_cont]=cuper&commit=Search' %></li>
     <li><%= link_to "Gilroy", '/meetings?utf8=%E2%9C%93&q[city_cont]=gil&commit=Search' %></li>
     <li><%= link_to "Los Altos", '/meetings?utf8=%E2%9C%93&q[city_cont]=los&commit=Search' %></li>
@@ -55,15 +55,16 @@
 </div>
 
 <p><%= search_form_for @q do |f| %>
-
-    <%= f.text_field :day_cont, placeholder: "Add Day" %> &nbsp; &nbsp; &nbsp;  <%#= @q.day_cont %>
+  <%#= search_form_for @q, :url => request.fullpath, :method => :get, :html => { :class => 'form-search' } do |f| %>
+    <%= f.text_field :day_cont, placeholder: "Add Day" %> &nbsp; &nbsp; &nbsp;  <%= @q.day_cont %>
     <%= f.text_field :city_cont, placeholder: "Add City" %> &nbsp; &nbsp; &nbsp;
     <%= f.text_field :name_or_day_or_address_or_city_or_notes_or_codes_cont, placeholder: "Add mtg name, chip, street, etc.", width: '222'  %> &nbsp; &nbsp; &nbsp; &nbsp;
     <%= f.text_field :codes_cont, placeholder: "Add Code"  %>
 
-    <%= f.submit "Search" %>
+    <%= f.submit "Search »" %>
 <% end %>
 
+<%= @q.day_cont %>
 
 </p>
 
@@ -96,8 +97,8 @@
         <td data-title="Map"><%= link_to image_tag("gmaps.png", alt: "map", height: "37", width: "37"), url_for(meeting.map), target: "_blank" %></td>
         <td data-title="Notes"><%= meeting.notes %></td>
         <% if signed_in? %>
-          <td data-title="Added"><%=l meeting.created_at %></td>
-          <td data-title="ID"><%#= link_to meeting.id, meeting_path(meeting) %><%= meeting.id %></td>
+          <td data-title="Added"><%=l meeting.created_at %></td>          
+          <td data-title="ID"><%= link_to meeting.id, meeting_path(meeting) %></td>
            <td>
             <%= link_to t('.edit', :default => t("helpers.links.edit")),
                         edit_meeting_path(meeting), :class => 'btn btn-mini' %>
@@ -111,6 +112,12 @@
       </tr>
     <% end %>
   </tbody>
+
 </table>
-<div class="adminin"><%= link_to "Sign In", signin_path %></div>
+
 </div>
+<p>
+  Download ALL:
+  <%= link_to "CSV", meetings_path(format: "csv") %> |
+  <%= link_to "Excel", meetings_path(format: "xls") %>
+</p>

@@ -1,5 +1,5 @@
 class MeetingsController < ApplicationController
-    before_filter :authorize, only: [:edit, :update, :new, :destroy]
+  before_filter :authorize, only: [:edit, :update, :new, :destroy]
 
   # GET /meetings
   # GET /meetings.json
