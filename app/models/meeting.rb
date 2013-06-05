@@ -41,4 +41,5 @@ class Meeting < ActiveRecord::Base
 		meeting.save!
   	end
   end
+
 end

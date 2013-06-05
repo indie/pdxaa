@@ -1,0 +1,48 @@
+
+<div class="navbar">
+<ul class="nav nav-tabs">
+    <li><%= link_to "All Meetings", meetings_path %></li>
+    <li><%= link_to "Sunday", '/meetings?utf8=%E2%9C%93&q[day_cont]=sun&&' %></li>    
+    <li><%= link_to "Monday", '/meetings?utf8=%E2%9C%93&q[day_cont]=mon' %></li>
+    <li><%= link_to "Tuesday", '/meetings?utf8=%E2%9C%93&q[day_cont]=tue' %></li>
+    <li><%= link_to "Wednesday", '/meetings?utf8=%E2%9C%93&q[day_cont]=wed' %></li>
+    <li><%= link_to "Thursday", '/meetings?utf8=%E2%9C%93&q[day_cont]=thu' %></li>
+    <li><%= link_to "Friday", '/meetings?utf8=%E2%9C%93&q[day_cont]=fri' %></li>
+    <li><%= link_to "Saturday", '/&q[day_cont]=sat' %></li>
+    </ul>
+  </div>
+
+<div class="navbar">
+  <div class="city-small">
+    <ul class="nav">
+    <li><%= link_to "Campbell", '#&&q[city_cont]=camp'  %></li>   
+    <li><%= link_to "Cupertino", '/meetings?utf8=%E2%9C%93&q[city_cont]=cuper&commit=Search' %></li>
+    <li><%= link_to "Gilroy", '/meetings?utf8=%E2%9C%93&q[city_cont]=gil&commit=Search' %></li>
+    <li><%= link_to "Los Altos", '/meetings?utf8=%E2%9C%93&q[city_cont]=los&commit=Search' %></li>
+    <li><%= link_to "Milpitas", '/meetings?utf8=%E2%9C%93&q[city_cont]=milpi&commit=Search' %></li>
+    <li><%= link_to "Morgan Hill", '/meetings?utf8=%E2%9C%93&q[city_cont]=morg&commit=Search' %></li>
+    <li><%= link_to "Mountain View", '/meetings?utf8=%E2%9C%93&q[city_cont]=mou&commit=Search' %></li>
+    <li><%= link_to "Palo Alto", '/meetings?utf8=%E2%9C%93&q[city_cont]=pal&commit=Search' %></li>
+    <li><%= link_to "San Jose", '/meetings?utf8=%E2%9C%93&q[city_cont]=jose&commit=Search' %></li>
+    <li><%= link_to "San Martin", '/meetings?utf8=%E2%9C%93&q[city_cont]=martin&commit=Search' %></li>
+    <li><%= link_to "Santa Clara", '/meetings?utf8=%E2%9C%93&q[city_cont]=clara&commit=Search' %></li>
+    <li><%= link_to "Saratoga", '/meetings?utf8=%E2%9C%93&q[city_cont]=sarat&commit=Search' %></li>
+    <li><%= link_to "Sunnyvale", '/meetings?utf8=%E2%9C%93&q[city_cont]=sunn&commit=Search' %></li>
+    </ul>
+  </div>
+
+<div class="navbar">
+  <div class="city-small nav-tabs">
+    <ul class="nav">
+    <li><%= link_to "Open", '/meetings?utf8=%E2%9C%93&q[codes_cont]=O&commit=Search' %></li>    
+    <li><%= link_to "Closed", '/meetings?utf8=%E2%9C%93&q[codes_cont]=C&commit=Search' %></li>
+    <li><%= link_to "Men", '/meetings?utf8=%E2%9C%93&q[codes_cont]=M&commit=Search' %></li>
+    <li><%= link_to "Women", '/meetings?utf8=%E2%9C%93&q[codes_cont]=W&q[codes_not_cont]=Wh&commit=Search' %></li>
+    <li><%= link_to "Gay", '/meetings?utf8=%E2%9C%93&q[codes_cont]=G&commit=Search' %></li>
+    <li><%= link_to "Lesbian", '/meetings?utf8=%E2%9C%93&q[codes_cont]=L&commit=Search' %></li>
+    <li><%= link_to "Wheelchair Access", '/meetings?utf8=%E2%9C%93&q[codes_cont]=Wh&commit=Search' %></li>
+    
+    </ul>
+  </div>
+</div>
+</div>
