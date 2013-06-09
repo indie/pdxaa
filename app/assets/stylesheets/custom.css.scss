@@ -20,7 +20,7 @@ textarea:focus,
 
 body {
   font-family: 'Open Sans', sans-serif;
-  background-image: url(hope-arrives.png);
+  background-image: url(background.png);
   height: 100%;
   padding-top: 55px;
 }
@@ -34,10 +34,10 @@ body {
    margin-left: 3%;
    margin-right: 3%;
    padding: 5px;
-   border-top: 4px solid #584126;
-   border-left: 4px solid #584126;
-   border-bottom: 4px solid #584126;
-   border-right: 3px solid #48351C;
+   border-top: 4px solid #c47018;
+   border-left: 4px solid #c47018;
+   border-bottom: 4px solid #c47018;
+   border-right: 3px solid #c47018;
    background: #fff;
 	 -webkit-border-radius: 7px;
 	 -moz-border-radius: 7px;
@@ -194,3 +194,60 @@ aside {
 }
 
 }
+
+
+/**/
+
+@media handheld {
+  #content {
+    images: none;
+    width:100%;
+    margin: 1px;
+    }
+  #storylinks {
+    width:100%;
+    float:center;
+    }
+  #landpage-container{
+  width: 100%;
+  margin: 1px;
+  float: center;
+  }
+  #footer {
+    width:100%;
+    float:none;
+    }
+  }
+
+
+.copyright {
+    font-family: monospace;
+    font-size: 91%;
+    color: #000;
+    margin-right: 5%;
+    float: right;
+}
+
+.website {
+    font-family: monospace;
+    font-size: 73%;
+    color: #f2e1cf;
+    margin-right: 1%;
+    float: right; 
+      a:link {
+        color: #f2e1cf;
+      a:active {
+        color: #f2e1cf;
+      a:hover {
+        color: #dfd2c2;
+      a:visited {
+        color: #dfd2c2;
+          }
+        }
+      }
+   }
+}
+
+
+
+
