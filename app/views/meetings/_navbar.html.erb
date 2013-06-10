@@ -2,19 +2,21 @@
 <div class="navbar">
     <ul class="nav nav-tabs">
         <% @param_data["day_cont"].each do | key, val | %>
-        <li><%= link_to key, render_link("day_cont", val, @extra_q) %></li>
+        <li><%= link_to key, render_link("day_cont", val, @extra_q), 
+        :style => render_css("day_cont", val, @extra_q) %></li>
         <% end %>
     </ul>
   </div>
 
-<%= @meeting_params.inspect %>    
-<%= @extra_q.inspect %>    
+<%#= @meeting_params.inspect %>    
+<%#= @extra_q.inspect %>    
 
 <div class="navbar">
   <div class="city-small">
     <ul class="nav">
      <% @param_data["city_cont"].each do | key, val | %>
-     <li style="color:green"><%= link_to key, render_link("city_cont", val, @extra_q) %></li>
+     <li><%= link_to key, render_link("city_cont", val, @extra_q), 
+        :style => render_css("city_cont", val, @extra_q) %></li>
     <% end %>
     </ul>
   </div>
@@ -23,7 +25,8 @@
   <div class="city-small nav-tabs">
     <ul class="nav">
      <% @param_data["codes_cont"].each do | key, val | %>
-        <li><%= link_to key, render_link("codes_cont", val, @extra_q)  %></li>
+        <li><%= link_to key, render_link("codes_cont", val, @extra_q), 
+        :style => render_css("codes_cont", val, @extra_q)  %></li>
      <% end %>
     
     </ul>
