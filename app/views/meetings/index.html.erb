@@ -9,9 +9,10 @@
 <%= render 'meetings/navbar' %>
 
 <p><%= search_form_for @q do |f| %>
-    <%= f.text_field :day_cont, placeholder: "Enter Day" %> &nbsp; &nbsp; &nbsp;
-    <%= f.text_field :city_cont, placeholder: "Enter City" %> &nbsp; &nbsp; &nbsp; 
-    <%= f.text_field :name_or_day_or_address_or_city_or_notes_or_codes_cont, placeholder: "Meeting name, chip, street, etc.", width: "200" %>&nbsp; &nbsp; &nbsp; &nbsp;
+  <%= f.text_field :name_or_day_or_address_or_city_or_notes_or_codes_cont, placeholder: "Meeting Search", width: "200" %>&nbsp; &nbsp; &nbsp;
+    <div class="search-instructions">    
+      Look-up by meeting name, find chip meetings, find by street, etc.
+    </div>
     
     <%= f.submit "Search" %>
 <% end %>
