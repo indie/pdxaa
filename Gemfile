@@ -7,6 +7,7 @@ gem 'rails_autolink'
 gem 'nokogiri'
 gem 'crack'
 gem 'rest-client'
+gem 'simple_form'
 
 # # # # # # # # # # # #
 gem 'ransack'

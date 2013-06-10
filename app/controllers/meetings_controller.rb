@@ -1,9 +1,58 @@
+
 class MeetingsController < ApplicationController
   before_filter :authorize, only: [:edit, :update, :new, :destroy]
-
   # GET /meetings
   # GET /meetings.json
-  def index
+  
+  def index 
+    if not session[:meeting_params] 
+      session[:meeting_params] = {}
+    end
+    @extra_q = ""
+    if params[:q]
+      (params[:q]).each do |key, value|
+        session[:meeting_params][key]=value
+       end 
+    end
+    session[:meeting_params].each do |key, value|
+      @extra_q = @extra_q + key + '=' + value + '&'
+    end 
+
+    @param_data = {
+      "day_cont" => {
+        "Monday" => "Monday",
+        "Tuesday" => "Tuesday",
+        "Wednesday" => "Wednesday",
+        "Thursday" => "Thursday",
+        "Friday" => "Friday",
+        "Saturday" => "Saturday",
+        "Sunday" => "Sunday"}, 
+
+      "city_cont" => {
+        "Campbell" => "Campbell", 
+        "Cupertino" => "Cupertino", 
+        "Gilroy" => "Gilroy",
+        "Los Altos" => "Los Altos", 
+        "Milpitas" => "Milpitas", 
+        "Morgan Hill" => "Morgan Hill", 
+        "Mountain View" => "Mountain View", 
+        "Palo Alto" => "Palo Alto",
+        "San Jose" => "San Jose", 
+        "San Martin" => "San Martin", 
+        "Santa Clara" => "Santa Clara", 
+        "Saratoga" => "Saratoga", 
+        "Sunnyvale" => "Sunnyvale"}, 
+
+      "codes_cont" => {
+        "Open" => "O",
+        "Closed" => "C",
+        "Men" => "M",
+        "Women" => "W",
+        "Gay" => "G",
+        "Lesbian" => "L",
+        "Spanish" => "S"}
+      }
+
     @q = Meeting.search(params[:q])
     @meetings = @q.result(:distinct => true)
     # @search = Meeting.search(params[:q], :search_key => :log_search) 
@@ -18,7 +67,6 @@ class MeetingsController < ApplicationController
       format.json { render json: @meetings }
     end
   end
-
 
   def import 
     Meeting.import(params[:file])

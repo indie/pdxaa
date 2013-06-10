@@ -4,4 +4,17 @@ module MeetingsHelper
   "/meetings?utf8=%E2%9C%93&q[#{code}]=#{value}&commit=Search&" +
     current_params.map { |cp| "q[#{cp}]=#{params['q'][cp]}" }.join("&")
   end
+
+  # param_type :day_cont link_val mon stored_vals in session
+  def render_link(param_type, link_val, stored_vals)
+    link = "/meetings?utf8=%E2%9C%93&q[#{param_type}]=#{link_val}&commit=Search"
+    stored_vals.each do |key, value|
+      if key == param_type
+        next
+      else
+        link += "&q[%s]=%s" % [key, value]
+      end
+    end
+    link
+  end
 end
