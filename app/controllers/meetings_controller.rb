@@ -1,4 +1,3 @@
-
 class MeetingsController < ApplicationController
   before_filter :authorize, only: [:edit, :update, :new, :destroy]
   # GET /meetings
@@ -8,15 +7,20 @@ class MeetingsController < ApplicationController
     if not session[:meeting_params] 
       session[:meeting_params] = {}
     end
-    @extra_q = ""
+    @meeting_params = session[:meeting_params]
     if params[:q]
+      @first = true 
       (params[:q]).each do |key, value|
-        session[:meeting_params][key]=value
-       end 
+        if @first == true and session[:meeting_params][key] == value
+          session[:meeting_params].delete(key) 
+          params[:q].delete(key)
+        else  
+          session[:meeting_params][key]=value
+        end
+        @first = false 
+       end
     end
-    session[:meeting_params].each do |key, value|
-      @extra_q = @extra_q + key + '=' + value + '&'
-    end 
+    @extra_q = session[:meeting_params]
 
     @param_data = {
       "day_cont" => {
@@ -50,7 +54,8 @@ class MeetingsController < ApplicationController
         "Women" => "W",
         "Gay" => "G",
         "Lesbian" => "L",
-        "Spanish" => "S"}
+        "Spanish" => "S",
+        "Wheelchair" => "Wh"}
       }
 
     @q = Meeting.search(params[:q])

@@ -7,7 +7,10 @@ module MeetingsHelper
 
   # param_type :day_cont link_val mon stored_vals in session
   def render_link(param_type, link_val, stored_vals)
-    link = "/meetings?utf8=%E2%9C%93&q[#{param_type}]=#{link_val}&commit=Search"
+    link = "/meetings?utf8=%E2%9C%93&q[#{param_type}]=#{link_val}"
+    if link_val == "W" 
+    	link += "&q[codes_not_cont]=Wh"
+    end
     stored_vals.each do |key, value|
       if key == param_type
         next
@@ -15,6 +18,7 @@ module MeetingsHelper
         link += "&q[%s]=%s" % [key, value]
       end
     end
+    link += "&commit=Search"
     link
   end
 end
