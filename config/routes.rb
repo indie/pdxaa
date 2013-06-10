@@ -3,7 +3,6 @@ require 'api_constraints'
 Aasj::Application.routes.draw do
 
 # infopages
-  root :to => 'info_pages#home'
 
   match '/home', to: 'info_pages#home'
   match '/colophon', to: 'info_pages#colophon'
@@ -17,19 +16,18 @@ Aasj::Application.routes.draw do
       match '/signout', to: 'sessions#destroy', via: :delete
       match '/new', to: 'meetings#new'
 
+  resources :meetings do 
+   root to: 'meetings#index'
+    collection { post :import }
+   end
 
-# API versioning
+  # API versioning
 
   namespace :api, defaults: {format: 'json'} do
     scope module: :v1, constraints: ApiConstraints.new(version: 1) do
       resources :meetings  
     end
   end  
-
-  resources :meetings do 
-   root to: 'meetings#index'
-    collection { post :import }
-   end
 
 end
 

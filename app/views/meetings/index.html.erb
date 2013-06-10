@@ -5,18 +5,20 @@
     Logged in as: <%= current_user.email %>.
    <% end %>
 </div>
+<div class="search-instructions">    
+   <strong>How to find meetings:</strong>
+   <ul>
+      <li> Add and remove options below -- click/tap once to add an item to the search; click/tap again to remove it
+      <li> Look-up meeting name, chip, or street name using the search box below
+  
+   </ul> 
+   </div>
 
 <%= render 'meetings/navbar' %>
 
 <p><%= search_form_for @q do |f| %>
-  <%= f.text_field :name_or_day_or_address_or_city_or_notes_or_codes_cont, placeholder: "Meeting Search", width: "200" %>&nbsp; &nbsp; &nbsp;
-    <div class="search-instructions">    
-      Look-up by meeting name, find chip meetings, find by street, etc.
-    </div>
-    
-    <%= f.submit "Search" %>
+  <%= f.text_field :name_or_day_or_address_or_city_or_notes_or_codes_cont, placeholder: "chip", width: "200" %><%= f.submit "Search", class: 'btn btn-small' %>  
 <% end %>
-
 </p>
 
 <div id="go-south">

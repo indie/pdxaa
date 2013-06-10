@@ -31,7 +31,7 @@ module MeetingsHelper
     link
   end
 
-  # can be overridden with bootstrap
+  # active style can be overridden with bootstrap
 
   def render_css(param_type, link_val, stored_vals)
   	stored_vals.each do |key, value|
