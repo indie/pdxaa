@@ -11,7 +11,6 @@
        margin-right: 3px;
        }
 
-     }
 
     #go-south table,
     {
@@ -53,7 +52,7 @@
     padding-right: 11px;
     margin-right: 14px;
     white-space: nowrap;
-    font-weight: bold;
+    font-size: 79%;
     }
      
     #go-south td:before { content: attr(data-title); }
@@ -69,7 +68,7 @@
     padding-top: -1px;
     padding-left: 25px;
     white-space: nowrap;
-    font-weight: bold;
+    font-size: 79%;
     color: #e0e0e0;
     }
 
@@ -82,3 +81,4 @@
 .table-striped tbody tr:nth-child(even) td {
    background-color: #fffeef;
 }
+     }
