@@ -38,6 +38,6 @@ module MeetingsHelper
   		if stored_vals[param_type]==link_val
   			return "color:blue"
   		end 
-	end 
+   	end 
   end
 end

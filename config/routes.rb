@@ -7,6 +7,8 @@ Aasj::Application.routes.draw do
   match '/home', to: 'info_pages#home'
   match '/colophon', to: 'info_pages#colophon'
   match '/literature', to: 'info_pages#literature'
+  match '/clear', to: 'meetings#clear_options'
+
 
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
@@ -20,6 +22,7 @@ Aasj::Application.routes.draw do
    root to: 'meetings#index'
     collection { post :import }
    end
+
 
   # API versioning
 

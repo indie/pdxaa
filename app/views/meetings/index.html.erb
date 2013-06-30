@@ -16,10 +16,16 @@
 
 <%= render 'meetings/navbar' %>
 
-<p><%= search_form_for @q do |f| %>
-  <%= f.text_field :name_or_day_or_address_or_city_or_notes_or_codes_cont, placeholder: "chip", width: "200" %><%= f.submit "Search", class: 'btn btn-small' %>  
-<% end %>
+<%= link_to 'Clear Options', 'clear' %>
+ 
+<p>
+  <%= search_form_for @q do |f| %>
+  <%= f.text_field :name_or_day_or_address_or_city_or_notes_or_codes_cont, width: "200" %><%= f.submit "Search", class: 'btn btn-small' %>  
+  <% end %>
+
 </p>
+
+
 
 <div id="go-south">
 <table class="table table-striped">
@@ -31,7 +37,7 @@
       <th class="numeric"><%= sort_link @search, :city, "City" %></th>
       <th class="numeric"><%= sort_link @search, :codes, "Codes" %></th>
       <th class="numeric"><%= sort_link @search, :map, "Map"  %> </th>
-      <th class="numeric"><%= sort_link @search, :notes, "" %></th>
+      <th class="numeric"><%#= sort_link @search, :notes, "" %></th>
       <% if signed_in? %>
         <th class="numeric"><%= sort_link @search, :created_at, "Added" %></th>
         <th class="numeric"><%= model_class.human_attribute_name(:id) %></th>
@@ -48,7 +54,7 @@
         <td data-title="City"><%= meeting.city %></td>
         <td data-title="Codes"><%= meeting.codes %></td>
         <td data-title="Map"><%= link_to image_tag("gmaps.png", alt: "map", height: "37", width: "37"), url_for(meeting.map), target: "_blank" %></td>
-        <td data-title="Notes"><%= meeting.notes %></td>
+        <td data-title="Notes"><%#= meeting.notes %></td>
         <% if signed_in? %>
           <td data-title="Added"><%=l meeting.created_at %></td>          
           <td data-title="ID"><%= link_to meeting.id, meeting_path(meeting) %></td>

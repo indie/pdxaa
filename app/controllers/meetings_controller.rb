@@ -18,9 +18,18 @@ class MeetingsController < ApplicationController
           session[:meeting_params][key]=value
         end
         @first = false 
-       end
+        end
+        if params[:q].include? :name_or_day_or_address_or_city_or_notes_or_codes_cont
+          # session.delete(:meeting_params)
+          (session[:meeting_params]).each do | key, value | 
+            session[:meeting_params].delete key
+          end
+        end  
+
     end
+
     @extra_q = session[:meeting_params]
+
 
     @param_data = {
       "day_cont" => {
@@ -31,6 +40,8 @@ class MeetingsController < ApplicationController
         "Friday" => "Friday",
         "Saturday" => "Saturday",
         "Sunday" => "Sunday"}, 
+
+# Obviously any custom CMS would need to manually change this library
 
       "city_cont" => {
         "Campbell" => "Campbell", 
@@ -60,10 +71,7 @@ class MeetingsController < ApplicationController
 
     @q = Meeting.search(params[:q])
     @meetings = @q.result(:distinct => true)
-    # @search = Meeting.search(params[:q], :search_key => :log_search) 
     @search = Meeting.search(params[:q])
-    # @meetings = @search.result
-    # @meetings = Meeting.order(:name)
     respond_to do |format|
       format.html # index.html.erb
       format.txt { render txt: @meetings.to_csv } # make data render txt in browser -- might work, might not
@@ -73,6 +81,14 @@ class MeetingsController < ApplicationController
     end
   end
 
+  def clear_options
+      # session.delete(:meeting_params)
+      (session[:meeting_params]).each do | key, value | 
+        session[:meeting_params].delete key
+      end
+      redirect_to meetings_path
+  end
+  
   def import 
     Meeting.import(params[:file])
     redirect_to meetings_path, notice: "Meetings imported successfully"
@@ -149,9 +165,6 @@ class MeetingsController < ApplicationController
       format.html { redirect_to meetings_url }
       format.json { head :no_content }
     end
-  end
-
-  def manage
   end
 
 end
