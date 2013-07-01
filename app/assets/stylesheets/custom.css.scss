@@ -1,14 +1,31 @@
-textarea:focus, 
-  input[type="text"]:focus, input[type="url"]:focus, input[type="search"]{   
-    border-color: rgba(133, 137, 80, 0.8);
-    box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(133, 137, 60, 0.99);
-    outline: 0 none;
-  }
+.btn-small {
+  p {
+        color: #2e1813;
+        padding: 3px;
+        margin-left: 7px;
+        margin: 5px;
+        font-size: 117%;
+        text-wrap: wrap;}
+        a:link, a:active, a:visited {
+        color: #aa7737;
+        background: transparent;
+        }
+        a:hover {
+        color: #24A1D6;
+        text-decoration: none;
+        }
+  
+}
+
 
 .refine {
   font-family: 'Open Sans', sans-serif;
   size: 11px;
   padding: 3px;
+}
+
+.clear {
+  
 }
 
 .password_field {
@@ -78,7 +95,7 @@ body {
         background: transparent;
         }
         a:hover {
-        color: #114577;
+        color: #24A1D6;
         text-decoration: none;
         }
         p img_right {
