@@ -1,6 +1,6 @@
 
-<div class="navbar">
-    <ul class="nav nav-tabs">
+<div class="navbar-city">
+    <ul class="city-small nav nav-tabs">
         <% @param_data["day_cont"].each do | key, val | %>
         <li><%= link_to key, render_link("day_cont", val, @extra_q), 
         :style => render_css("day_cont", val, @extra_q) %></li>
@@ -13,9 +13,8 @@
 <%#= @extra_q.inspect %>    
 <!-- end debug -->
 
-<div class="navbar">
-  <div class="city-small">
-    <ul class="nav">
+<div class="navbar-city">
+    <ul class="city-small nav nav-tabs">
      <% @param_data["city_cont"].each do | key, val | %>
      <li><%= link_to key, render_link("city_cont", val, @extra_q), 
         :style => render_css("city_cont", val, @extra_q) %></li>
@@ -23,19 +22,14 @@
     </ul>
   </div>
 
-<div class="navbar">
-  <div class="city-small nav-tabs">
-    <ul class="nav">
+<div class="navbar-city">
+    <ul class="city-small nav nav-tabs">
      <% @param_data["codes_cont"].each do | key, val | %>
         <li><%= link_to key, render_link("codes_cont", val, @extra_q), 
         :style => render_css("codes_cont", val, @extra_q)  %></li>
      <% end %>
-    
+
+
     </ul>
-  </div>
-
-  <div class="btn btn-small"><%= link_to 'Clear Options', 'clear' %></div>
-
-
 </div>
 </div>

@@ -36,7 +36,7 @@ module MeetingsHelper
   def render_css(param_type, link_val, stored_vals)
   	stored_vals.each do |key, value|
   		if stored_vals[param_type]==link_val
-  			return "color:#24A1D6"
+  			return "color:#16497A"
   		end 
    	end 
   end

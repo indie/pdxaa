@@ -8,21 +8,28 @@
    </div>
  </div>
 
+
    <div id="twocols">
-    <div class="span3"></div>
     <div class="span4">
-      <div class="meetings">
+      <h3>Welcome</h3>
+      <div class="welcome">
+        Alcoholics Anonymous is a fellowship of men and women who share their experience, strength and hope with each other that they may solve their common problem and help others to recover from alcoholism. The only requirement for membership is a desire to stop drinking. There are no dues or fees for AA membership; we are self-supporting through our own contributions. AA is not allied with any sect, denomination, politics, organization or institution; does not wish to engage in any controversy; neither endorses nor opposes any causes. Our primary purpose is to stay sober and help other alcoholics to achieve sobriety.
+      </div>
+    </div>
+    <div class="span4">
       <h3>Meetings</h3>
+      <div class="meetings">
         Santa Clara County has nearly 600 meetings every week.  Meetings are searchable by day, time, and city.
          <p></p>
             <%= link_to "Find a Meeting", meetings_path, class: "btn btn-custom" %>
 
   
       </div></div>
-        <div class="span4">
-    <div class="centraloffice">
+    <div class="span4">
     <h3>Central Office</h3>
-      <%= link_to 'The Intergroup Office of Santa Clara County, Inc.', 'http://aasjonline.com/central-office/' %> is here to serve the fellowship of Alcoholics Anonymous in Santa Clara County.  Follow the link above to learn more about your local service office.    
+    <div class="centraloffice">
+      <%= link_to 'The Intergroup Office of Santa Clara County, Inc.', 
+      'http://aasjonline.com/central-office/' %> is here to serve the fellowship of Alcoholics Anonymous in Santa Clara County.  Follow the link above to learn more about your local service office.    
   </div></div>
 </div>
 </div>

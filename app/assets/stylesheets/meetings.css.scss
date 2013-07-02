@@ -35,7 +35,7 @@
     #go-south td {
     border: none;
     position: relative;
-    padding-left: 27%;
+    padding-left: 23%;
     white-space: normal !important;
     text-align:left;
     wrap: normal;
@@ -82,3 +82,30 @@
    background-color: #fffeef;
 }
      }
+
+
+
+.navbar-city {
+  .city-small {
+    ul {
+    border: none;
+    li {
+      font-size: 100%;
+      text-transform: uppercase;
+      a:link {  
+      color: #224D66;
+      }
+      a:active {
+      color: #224D66;
+      }
+      a:hover {
+      color: #224D66;
+      text-decoration: underline;
+      }
+      a:visited {
+      color: #224D66;
+      }
+    }
+    }
+  }
+}

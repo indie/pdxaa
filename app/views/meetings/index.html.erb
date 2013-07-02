@@ -6,7 +6,7 @@
    <% end %>
 </div>
 <div class="search-instructions">    
-   <strong>How to find meetings:</strong>
+   <strong>&nbsp;&nbsp;How to find meetings:</strong>
    <ul>
       <li> Add and remove options below -- click/tap once to add an item to the search; click/tap again to remove it
       <li> Look-up meeting name, chip, or street name using the search box below
@@ -20,8 +20,7 @@
   <%= search_form_for @q do |f| %>
   <%= f.text_field :name_or_day_or_address_or_city_or_notes_or_codes_cont, width: "200" %><%= f.submit "Search", class: 'btn btn-small' %>  
   <% end %>
-  <br />
-
+  <div class="search-options btn btn-small"><%= link_to 'Clear Options', 'clear' %></div>
 </p>
 
 
@@ -53,7 +52,7 @@
         <td data-title="City"><%= meeting.city %></td>
         <td data-title="Codes"><%= meeting.codes %></td>
         <td data-title="Map"><%= link_to image_tag("gmaps.png", alt: "map", height: "37", width: "37"), url_for(meeting.map), target: "_blank" %></td>
-        <td data-title="Notes"><%#= meeting.notes %></td>
+        <td data-title=""><%#= meeting.notes %></td>
         <% if signed_in? %>
           <td data-title="Added"><%=l meeting.created_at %></td>          
           <td data-title="ID"><%= link_to meeting.id, meeting_path(meeting) %></td>

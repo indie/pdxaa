@@ -11,7 +11,7 @@
         background: transparent;
         }
         a:hover {
-        color: #24A1D6;
+        color: #16497A;
         text-decoration: none;
         }
   
@@ -71,18 +71,20 @@ body {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
+
 }
 
 .outer {
 	width: auto;
 	align: center;
   font-family: 'Open Sans', sans-serif;
-	font-size:111%;
+	font-size:117%;
 	font-weight: 400;
 	text-align: left;
   margin-left: 1%;
   min-width: 10%;
   max-width: 98%;
+
   p {
         color: #2e1813;
         padding: 3px;
@@ -95,7 +97,7 @@ body {
         background: transparent;
         }
         a:hover {
-        color: #24A1D6;
+        color: #16497A;
         text-decoration: none;
         }
         p img_right {
@@ -154,7 +156,9 @@ h3 {
 
 .city-small {
   font-size: 77%;
+  height: 19px;
   padding: -3px;
+  border: none;
 }
 
 .adminin {
@@ -270,7 +274,36 @@ aside {
    }
 }
 
+form {
+  margin-left: 2%;
+}
 
+.search-options {
+  margin-left: 2%;
+  margin-top: -px;
+}
 
-
-
+.navbar-city {
+  .city-small {
+    ul {
+    border: none;
+    li {
+      font-size: 100%;
+      text-transform: uppercase;
+      a:link {  
+      color: #16497A;
+      }
+      a:active {
+      color: #16497A;
+      }
+      a:hover {
+      color: #16497A;
+      text-decoration: underline;
+      }
+      a:visited {
+      color: #16497A;
+      }
+    }
+    }
+  }
+}

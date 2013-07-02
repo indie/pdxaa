@@ -1,6 +1,10 @@
+
 #landpage-container {
   	background-image: url(background_gradient.png);
     background-repeat:  repeat-x;
+        -moz-border-radius: 7px;
+        -webkit-border-radius: 7px;
+        border-radius: 7px;
 }
 
 .landpage-content {
@@ -58,30 +62,19 @@ background: -ms-linear-gradient(top, #c47018 0%,#ed9017 100%); /* IE10+ */
 background: linear-gradient(to bottom, #c47018 0%,#ed9017 100%); /* W3C */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c47018', endColorstr='#ed9017',GradientType=0 ); /* IE6-9 */
 width: auto;
-height: 243px;
+height: auto;
+min-height: 353px;
 h3 {
-  color: #000;
+  color: #060605;
+  font-size: 137%;
   font-weight: bold;
   text-transform: uppercase;
   text-align: left;
   margin-left: -2px;}
-  .meetings {
-    max-width: 333px;
-    font-family: 'Open Sans', sans;
-  	color: #fcfcfc;
-  	font-size: 91%;
-  	padding:  4px;
-  }
-  .centraloffice {
-    max-width: 333px;
-    font-family: 'Open Sans', sans;
-  	color: #fcfcfc;
-  	font-size: 91%;
-  	padding:  4px;
-}
 
   .btn-custom { 
     text-decoration: none;
+    font-size: 101%;
     -moz-border-radius: 7px;
     -webkit-border-radius: 7px;
     border-radius: 7px;
@@ -100,4 +93,35 @@ h3 {
     -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity = 94);
     filter: alpha(opacity = 94);
   }
+        -moz-border-radius: 7px;
+        -webkit-border-radius: 7px;
+        border-radius: 7px;
+
+}
+
+   .welcome {
+    max-width: 333px;
+    font-family: 'Open Sans', sans;
+    color: #fcfcfc;
+    font-size: 91%;
+    padding:  4px;
+  }
+
+  .meetings {
+    max-width: 333px;
+    font-family: 'Open Sans', sans;
+    color: #fcfcfc;
+    font-size: 97%;
+    padding:  4px;
+  }
+  .centraloffice {
+    max-width: 333px;
+    font-family: 'Open Sans', sans;
+    color: #fcfcfc;
+    font-size: 97%;
+    padding:  4px;
+    a:hover {
+      color: #224D66;
+  }
+
 }
