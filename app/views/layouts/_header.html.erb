@@ -11,17 +11,39 @@
           <ul class="nav">
             <li><%= link_to "Home", home_path %></li>
             <li><%= link_to "Search Meetings", meetings_path %></li>
-            <li><%= link_to "Local Chapter", 'http://aasjonline.com' %></li>
-            <li><%= link_to "Events", 'http://aasjonline.com/events/' %></li>
-            <li><%= link_to "Service", 'http://aasjonline.com/service/' %></li>
-            <li><%= link_to "The COIN", 'http://aasjonline.com/coin/' %></li>
-            <li><%= link_to "AA World Services", 'http://www.aa.org', target: 'blank' %></li>
+            <li><%= link_to "Central Office", 'http://aasjonline.com/central-office/' %></li>
+      
+            <li id="fat-menu" class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                The COIN <b class="caret"></b>
+              </a>
+                <ul class="dropdown-menu">
+                <li><%= link_to "Current Year, 2013", 'http://aasjonline.com/coin/' %>
+                <li><%= link_to "Archives:  2006-2012", 'http://aasjonline.com/coin-archives/' %></li>
+              </ul>
+            <li><%= link_to "Literature", 'http://aasjonline.com/literature' %></li>  
+            <li><%= link_to "Events", 'http://aasjonline.com/events' %></li>
+            <li><%= link_to "Service", 'http://aasjonline.com/service' %></li>
+            <li><%= link_to "Donate", 'http://aasjonline.com/donate' %></li>
+
+           <li id="fat-menu" class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                More Info <b class="caret"></b>
+              </a>
+                <ul class="dropdown-menu">
+                <li><%= link_to "More About AA", 'http://aasjonline.com/more-about-aa/' %></li>
+                <li><%= link_to "Anonymity Letter", 'http://aasjonline.com/events/' %></li>
+                <li><%= link_to "Alcoholic in Your Life?", 'http://aasjonline.com/alcoholic-in-your-life/' %></li>
+                <li><%= link_to "Info en Espanol", 'http://aasjonline.com/en-espanol/' %></li>
+                <li><%= link_to "AA World Services", 'http://www.aa.org', target: 'blank' %></li>  
+                  <li><%= link_to "Admin", signin_path %></li>
+              </ul>
 
             <% if signed_in? %>
             <li><%= link_to "Add New Meeting", new_path %></li>
             <li id="fat-menu" class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                Account <b class="caret"></b>
+                Admin <b class="caret"></b>
               </a>
                 <ul class="dropdown-menu">
                 <li><%= link_to "Profile", current_user %></li>
@@ -32,8 +54,6 @@
                 </li>
               </ul>
             </li>
-          <% else %>
-            <li><%= link_to "Admin", signin_path %></li>
           <% end %>
 
         </ul>

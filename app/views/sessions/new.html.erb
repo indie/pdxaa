@@ -1,8 +1,14 @@
 <% provide(:title, "Sign in") %>
-<h1>Admin</h1>
+
+
 
 <div class="row">
   <div class="span6 offset3">
+
+    <h2>Authorized to sign in?</h2>
+    <div class="inst"> An aasanjose.org authorization is required</div>
+
+
     <%= form_for(:session, url: sessions_path) do |f| %>
 
       <%= f.label :email %>
@@ -13,7 +19,7 @@
 
       <br />
 
-      <%= f.submit "Sign in", class: "btn btn-custom" %>
+      <%= f.submit "Sign in", class: "btn" %>
     <% end %>
 
     <!-- <p>Authorized to be an admin for this site?<br />

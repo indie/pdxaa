@@ -9,6 +9,7 @@
         a:link, a:active, a:visited {
         color: #aa7737;
         background: transparent;
+        text-decoration: none;
         }
         a:hover {
         color: #16497A;
@@ -16,6 +17,7 @@
         }
   
 }
+
 
 
 .refine {
@@ -84,6 +86,13 @@ body {
   margin-left: 1%;
   min-width: 10%;
   max-width: 98%;
+  .inst {
+  font-family: monospace;
+  font-size: 13px;
+  color: #959595;
+  padding: 3px;
+  margin-left: 1%;
+  }
 
   p {
         color: #2e1813;
@@ -108,6 +117,7 @@ body {
         float: left;
         margin-left: 20px;
   }
+
   .numeric {
   padding: 5px;
   }
@@ -116,11 +126,11 @@ body {
 /* h-styling */
 
 h1 {
-  font-size: 173%;
+  font-size: 153%;
   padding: 13px;
   letter-spacing: -2px;
   text-align: left;
-  color: #583020;
+  color: #16497A;
 }
 
 h2 {
@@ -130,7 +140,7 @@ h2 {
   margin-top: 10px;
   text-align: left;
   font-weight: normal;
-  color: #583020;
+  color: #16497A;
 }
 
 h3 {
@@ -169,7 +179,7 @@ h3 {
 }
 
 
-.btn-custom { background-color: hsl(58, 31%, 39%) !important; background-repeat: repeat-x; filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#afad68", endColorstr="#828044"); background-image: -khtml-gradient(linear, left top, left bottom, from(#afad68), to(#828044)); background-image: -moz-linear-gradient(top, #afad68, #828044); background-image: -ms-linear-gradient(top, #afad68, #828044); background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #afad68), color-stop(100%, #828044)); background-image: -webkit-linear-gradient(top, #afad68, #828044); background-image: -o-linear-gradient(top, #afad68, #828044); background-image: linear-gradient(#afad68, #828044); border-color: #828044 #828044 hsl(58, 31%, 35%); color: #fff !important; text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.26); -webkit-font-smoothing: antialiased; }
+.btn-custom { background-color: hsl(58, 31%, 39%) !important; background-repeat: repeat-x; filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#afad68", endColorstr="#828044"); background-image: -khtml-gradient(linear, left top, left bottom, from(#afad68), to(#828044)); background-image: -moz-linear-gradient(top, #afad68, #828044); background-image: -ms-linear-gradient(top, #afad68, #828044); background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #afad68), color-stop(100%, #828044)); background-image: -webkit-linear-gradient(top, #afad68, #828044); background-image: -o-linear-gradient(top, #afad68, #828044); background-image: linear-gradient(#afad68, #828044); border-color: #828044 #828044 hsl(58, 31%, 35%); color: #fff !important; text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.26); -webkit-font-smoothing: antialiased; text-decoration: none;}
 
 
 /* sidebar */
@@ -216,7 +226,7 @@ aside {
 
 .search-instructions {
   font-family: Droid Sans, sans-serif;
-  font-size: 15px;
+  font-size: 1.07em;
   padding: 3px;
 }
 
@@ -280,7 +290,7 @@ form {
 
 .search-options {
   margin-left: 2%;
-  margin-top: -px;
+  margin-top: -3px;
 }
 
 .navbar-city {
@@ -288,7 +298,7 @@ form {
     ul {
     border: none;
     li {
-      font-size: 100%;
+      font-size: 1.03em;
       text-transform: uppercase;
       a:link {  
       color: #16497A;

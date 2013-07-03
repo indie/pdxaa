@@ -5,19 +5,19 @@
 </div>
 
 <dl class="dl-horizontal">
-  <dt><strong><%= model_class.human_attribute_name(:day) %>:</strong></dt>
+  <dt><strong><%= model_class.human_attribute_name(:day) %></strong></dt>
   <dd><%= @meeting.day %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:name) %>:</strong></dt>
+  <dt><strong><%= model_class.human_attribute_name(:name) %></strong></dt>
   <dd><%= @meeting.name %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:address) %>:</strong></dt>
+  <dt><strong><%= model_class.human_attribute_name(:address) %></strong></dt>
   <dd><%= @meeting.address %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:city) %>:</strong></dt>
+  <dt><strong><%= model_class.human_attribute_name(:city) %></strong></dt>
   <dd><%= @meeting.city %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:codes) %>:</strong></dt>
+  <dt><strong><%= model_class.human_attribute_name(:codes) %></strong></dt>
   <dd><%= @meeting.codes %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:map) %>:</strong></dt>
-  <dd><%= @meeting.map %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:notes) %>:</strong></dt>
+  <dt><strong><%= model_class.human_attribute_name(:map) %></strong></dt>
+  <dd><%= link_to 'Map', url_for(@meeting.map), target: "_blank" %> </dd>
+  <dt><strong><%= model_class.human_attribute_name(:notes) %></strong></dt>
   <dd><%= @meeting.notes %></dd>
 </dl>
 
