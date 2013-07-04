@@ -12,7 +12,17 @@
             <%= link_to image_tag("square.png", alt: "ico", height: "32", width: "32") %>
             <li><%= link_to "Home", home_path %></li>
             <li><%= link_to "Meetings", meetings_path %></li>
-            <li><%= link_to "Central Office", 'http://aasjonline.com/central-office/' %></li>
+            <li id="fat-menu" class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                Central Office <b class="caret"></b>
+              </a>
+                <ul class="dropdown-menu">
+                <li><%= link_to "Map & Hours", 'http://aasjonline.com/central-office/' %></li>  
+                <li><%= link_to "Meeting Update Form", 'https://docs.google.com/a/aasanjose.org/forms/d/1kG_v6Z3YGrtUVxFVpsNyx-mYgu12o7rhHLAvw1Of6Ao/viewform' %></li>
+                <li><%= link_to "Group Insurance Application", '' %></li>  
+                <ul class="divider"></ul>
+                <li><%= link_to "Admin", signin_path %></li>
+              </ul>
       
             <li id="fat-menu" class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -36,8 +46,6 @@
                 <li><%= link_to "Anonymity Letter", 'http://aasjonline.com/events/' %></li>
                 <li><%= link_to "Alcoholic in Your Life?", 'http://aasjonline.com/alcoholic-in-your-life/' %></li>
                 <li><%= link_to "AA World Services", 'http://www.aa.org', target: 'blank' %></li>  
-                <ul class="divider"></ul>
-                <li><%= link_to "Admin", signin_path %></li>
               </ul>
 
               <li id="fat-menu" class="dropdown">
