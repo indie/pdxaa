@@ -1,3 +1,19 @@
+.hotline {
+  padding-top: 3px;
+  margin-right: 0.13em;
+  float: right;
+  color: #414141;
+  text-align: right;
+  font-family: 'Droid Sans';
+  text-transform: small-caps;
+  font-size: 137%;
+  .helpline {
+  font-size: 88%;
+  padding-top: 2px;
+}
+}
+
+
 .btn-small {
   p {
         color: #2e1813;
@@ -52,10 +68,10 @@ body {
    margin-left: 2%;
    margin-right: 2%;
    padding: 5px;
-   border-top: 4px solid #c47018;
-   border-left: 4px solid #c47018;
-   border-bottom: 4px solid #c47018;
-   border-right: 4px solid #c47018;
+   border-top: 4px solid #d5dadb;
+   border-left: 4px solid #d5dadb;
+   border-bottom: 4px solid #d5dadb;
+   border-right: 4px solid #d5dadb;
    background: #fff;
 	 -webkit-border-radius: 7px;
 	 -moz-border-radius: 7px;
@@ -306,13 +322,13 @@ form {
 
 .navbar-city {
   .city-small {
-  font-size: 81%;
-  height: 1.4em;
+  font-size: 88%;
+  height: 1.23em;
   border: none;
     ul {
     border: none;
     li {
-      font-size: 1.63em;
+      font-size: 1.53em;
       text-transform: uppercase;
       a:link {  
       color: #16497A;

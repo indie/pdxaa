@@ -48,6 +48,7 @@ class MeetingsController < ApplicationController
         "Cupertino" => "Cupertino", 
         "Gilroy" => "Gilroy",
         "Los Altos" => "Los Altos", 
+        "Los Gatos" => "Los Gatos", 
         "Milpitas" => "Milpitas", 
         "Morgan Hill" => "Morgan Hill", 
         "Mountain View" => "Mountain View", 

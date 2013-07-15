@@ -1,5 +1,13 @@
 //* Hackeress Creative Stuido likes some sass *//
 
+.inst {
+  font-family: monospace;
+  font-size: 13px;
+  color: #959595;
+  margin-left: 3px;
+  }
+
+
     @media only screen and (max-width: 800px) {
     /* What parts of this columnar data do we want to go south? */
     #storylinks-container{
@@ -79,7 +87,7 @@
 }
 
 .table-striped tbody tr:nth-child(even) td {
-   background-color: #fffeef;
+   background-color: #ffedd9;
 }
      }
 
@@ -93,19 +101,29 @@
       font-size: 100%;
       text-transform: uppercase;
       a:link {  
-      color: #224D66;
+      color: #DB841C;
       }
       a:active {
-      color: #224D66;
+      color: #DB841C;
       }
       a:hover {
-      color: #224D66;
+      color: #DB841C;
       text-decoration: underline;
       }
       a:visited {
-      color: #224D66;
+      color: #DB841C;
       }
     }
     }
   }
+}
+
+
+
+.numeric {
+  font-weight: bold;
+  font-size: 93%;
+  background-color: #d5dadb; 
+  text-transform: uppercase;
+  a:link { color: #000; }
 }
