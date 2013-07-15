@@ -1,57 +1,3 @@
-.hotline {
-  padding-top: 3px;
-  margin-right: 0.13em;
-  float: right;
-  color: #414141;
-  text-align: right;
-  font-family: 'Droid Sans';
-  text-transform: small-caps;
-  font-size: 137%;
-  .helpline {
-  font-size: 88%;
-  padding-top: 2px;
-}
-}
-
-
-.btn-small {
-  p {
-        color: #2e1813;
-        padding: 3px;
-        margin-left: 7px;
-        margin: 5px;
-        font-size: 117%;
-        text-wrap: wrap;}
-        a:link, a:active, a:visited {
-        color: #aa7737;
-        background: transparent;
-        text-decoration: none;
-        }
-        a:hover {
-        color: #16497A;
-        text-decoration: none;
-        }
-  
-}
-
-
-
-.refine {
-  font-family: 'Open Sans', sans-serif;
-  size: 11px;
-  padding: 3px;
-}
-
-.clear {
-  
-}
-
-.password_field {
-    border-color: rgba(133, 137, 80, 0.8);
-    box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(133, 137, 60, 0.99);
-    outline: 0 none;
-}
-
 body {
   font-family: 'Open Sans', sans-serif;
   background-image: url(background.png);
@@ -94,7 +40,6 @@ body {
 
 .outer {
 	width: auto;
-	align: center;
   font-family: 'Open Sans', sans-serif;
 	font-size:117%;
 	font-weight: 400;
@@ -135,7 +80,7 @@ body {
   }
 
   .numeric {
-  padding: 5px;
+  padding: 3px;
   }
 }
 
@@ -149,8 +94,7 @@ h1 {
   color: #16497A;
 }
 
-h2 {
- 
+h2 { 
   font-size: 1.33em;
   padding: 3px;
   margin-top: 10px;
@@ -240,6 +184,12 @@ aside {
   padding: 3px;
 }
 
+.searchbox {
+  margin-right: 61%;
+  align: left;
+  justify: left;
+  margin-bottom: -7px;
+}
 
 /**/
 
@@ -300,7 +250,7 @@ form {
 
 .search-options {
   margin-left: 2%;
-  margin-top: -3px;
+  margin-top: -4px;
 }
 
 .nav-tabs {
@@ -315,17 +265,39 @@ form {
     -webkit-border-radius: 0.17em;
     -moz-border-radius: 0.17em;
      border-radius: 0.17em;
-
     }
 }
 
+.navbar-day {
+  font-size: 93%;
+  height: 1.23em;
+  border: none; 
+  ul {
+    border: none;
+    li {
+      font-size: 1.53em;
+      text-transform: smallcaps;
+      a:link {  
+      color: #16497A;
+      }
+      a:active {
+      color: #16497A;
+      }
+      a:hover {
+      color: #16497A;
+      }
+      a:visited {
+      color: #16497A;
+      }
+    }
+  }
+}
 
 .navbar-city {
-  .city-small {
-  font-size: 88%;
-  height: 1.23em;
+  font-size: 79%;
+  height: 1.13em;
   border: none;
-    ul {
+  ul {
     border: none;
     li {
       font-size: 1.53em;
@@ -338,12 +310,81 @@ form {
       }
       a:hover {
       color: #16497A;
-      text-decoration: underline;
       }
       a:visited {
       color: #16497A;
       }
     }
-    }
   }
+}
+
+
+.hotline {
+  padding-top: 3px;
+  margin-right: 0.13em;
+  float: right;
+  color: #414141;
+  text-align: right;
+  font-family: 'Droid Sans';
+  text-transform: small-caps;
+  font-size: 137%;
+  .helpline {
+  font-size: 88%;
+  padding-top: 2px;
+  }
+}
+
+
+.btn-small {
+  color: #454545;
+  padding: 3px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+
+    a:active {
+    color: #454545;
+    text-decoration: none;
+    }
+    a:link {
+    color: #454545;
+    text-decoration: none;
+    }
+    a:hover {
+    color: #454545;
+    text-decoration: none;
+    }
+    a:visited {
+    color: #454545;
+    text-decoration: none;
+    }
+
+
+
+  
+}
+
+.refine {
+  font-family: 'Open Sans', sans-serif;
+  size: 11px;
+  padding: 3px;
+}
+
+.clear {
+  text-decoration: none;
+  background: #e0e0e0;
+  margin: 1px;
+  padding: 2px; 
+  width: 75px;
+  text-align: center;
+  webkit-border-radius: 3px;
+  border-radius: 3px;
+  border: solid 1px #959595;
+}
+
+.password_field {
+    border-color: rgba(133, 137, 80, 0.8);
+    box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(133, 137, 60, 0.99);
+    outline: 0 none;
 }
