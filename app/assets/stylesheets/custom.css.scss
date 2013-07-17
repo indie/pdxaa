@@ -1,12 +1,15 @@
 /** 
- this styling is responsive, mobile-friendly awesomeness  
- ; custom code created by s/css superstar hackeress.com 
+ This styling is responsive, mobile-friendly awesomeness  
+ ; custom code created by s/css superstar lsc@hackeress.com 
  renders lovely on your tablets, iPhone, Android, etc.
+ likey?  Send a gittip:  https://www.gittip.com/indie/ 
 **/
+
 
 body {
   font-family: 'Open Sans', sans-serif;
-  background-image: url(background.png);
+  background-color: #c48923;
+  background-repeat: no-repeat;
   height: 100%;
   padding-top: 55px;
 }
@@ -19,15 +22,15 @@ body {
    margin-left: 2%;
    margin-right: 2%;
    padding: 5px;
-   /* #D6DBDB */
+   /* #D6DBDB 
    border-top: 4px solid #e9eaeb;
    border-left: 4px solid #e9eaeb;
    border-bottom: 4px solid #e9eaeb;
-   border-right: 4px solid #e9eaeb;
+   border-right: 4px solid #e9eaeb; */
    background: #fff;
-	 -webkit-border-radius: 7px;
-	 -moz-border-radius: 7px;
-   border-radius: 7px;
+	 -webkit-border-radius: 3px;
+	 -moz-border-radius: 3px;
+   border-radius: 3px;
 }
 
 #storylinks {
@@ -219,16 +222,16 @@ form {
     li {
       font-size: 1.53em;
       a:link {  
-      color: #16497A;
+      color: #ca9548;
       }
       a:active {
-      color: #16497A;
+      color: #ca9548;
       }
       a:hover {
-      color: #16497A;
+      color: #ca9548;
       }
       a:visited {
-      color: #16497A;
+      color: #ca9548;
       }
     }
   }
@@ -243,16 +246,16 @@ form {
     li {
       font-size: 1.53em;
       a:link {  
-      color: #16497A;
+      color: #ca9548;
       }
       a:active {
-      color: #16497A;
+      color: #ca9548;
       }
       a:hover {
-      color: #16497A;
+      color: #ca9548;
       }
       a:visited {
-      color: #16497A;
+      color: #ca9548;
       }
     }
   }
