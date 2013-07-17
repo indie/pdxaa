@@ -116,6 +116,7 @@ h3 {
     color: #171614;
     font-size: 91%;
     padding:  4px;
+    margin-left: 3px;
     a:link {
       font-size: 91%;
       color: #c48923; }
@@ -123,13 +124,15 @@ h3 {
       color: #c48923;
     }
 }
-.splash {
-    position:fixed;
-    margin-left: 150px;
-    margin-top: -27px;
-
+.img-left {
+  padding: 3px;
+  float: left;
+  margin-right: 9px;
 }
-
+.latest {
+  font-size: 80%;
+  font-family: 'Open Sans', sans-serif;
+}
 
 
 
