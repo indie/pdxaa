@@ -11,18 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130429225346) do
-
-  create_table "coins", :force => true do |t|
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
-  create_table "galleries", :force => true do |t|
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-    t.string   "name"
-  end
+ActiveRecord::Schema.define(:version => 20130718174008) do
 
   create_table "meetings", :force => true do |t|
     t.string   "day"
@@ -34,14 +23,6 @@ ActiveRecord::Schema.define(:version => 20130429225346) do
     t.text     "notes"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
-  end
-
-  create_table "newsletters", :force => true do |t|
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-    t.string   "image"
-    t.integer  "gallery_id"
-    t.string   "name"
   end
 
   create_table "users", :force => true do |t|
