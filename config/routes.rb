@@ -2,6 +2,8 @@ require 'api_constraints'
 
 Aasj::Application.routes.draw do
 
+  root to: 'info_pages#home'
+
 # infopages
 
   match '/home', to: 'info_pages#home'
@@ -19,7 +21,7 @@ Aasj::Application.routes.draw do
       match '/new', to: 'meetings#new'
 
   resources :meetings do 
-   root to: 'meetings#index'
+    root to: 'meetings#index'
     collection { post :import }
    end
 

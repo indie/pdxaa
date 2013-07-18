@@ -107,27 +107,28 @@ h3 {
     max-width: 333px;
     font-family: 'Open Sans', sans;
     color: #171614;
+    padding:  1px;
     font-size: 91%;
-    padding:  4px;
+
   }
   .centraloffice {
     max-width: 333px;
     font-family: 'Open Sans', sans;
     color: #171614;
-    font-size: 91%;
     padding:  4px;
     margin-left: 3px;
     a:link {
-      font-size: 91%;
       color: #c48923; }
     a:active {
       color: #c48923;
     }
+    a:hover {
+    color: #114577; }
 }
 .img-left {
   padding: 3px;
   float: left;
-  margin-right: 9px;
+  margin-right: 7px;
 }
 .latest {
   font-size: 80%;
