@@ -1,31 +1,31 @@
 <% provide(:title, 'Sign up') %>
 
- 
-
-<!-- Uncomment to allow a GUI for admin signup, or just create admins via the command line -->
 
 <h1>Sign up</h1>
 
+<h2>Nope.</h2>
+    <div class="inst"> An aasanjose.org authorization is required</div>
+
 <div class="row">
     <div class="span6 offset3">
-    <%= form_for(@user) do |f| %>
-    <%= render 'shared/error_messages' %>
+    <%#= form_for(@user) do |f| %>
+    <%#= render 'shared/error_messages' %>
 
-      <%= f.label :name %>
-      <%= f.text_field :name %>
+      <%#= f.label :name %>
+      <%#= f.text_field :name %>
 
-      <%= f.label :email %>
-      <%= f.text_field :email %>
+      <%#= f.label :email %>
+      <%#= f.text_field :email %>
 
-      <%= f.label :password, class: "textarea" %>
-      <%= f.password_field :password %>
+      <%#= f.label :password, class: "textarea" %>
+      <%#= f.password_field :password %>
 
-      <%= f.label :password_confirmation, "Confirmation" %>
-      <%= f.password_field :password_confirmation %>
+      <%#= f.label :password_confirmation, "Confirmation" %>
+      <%#= f.password_field :password_confirmation %>
 
       <br />
 
-      <%= f.submit "Create my account", class: "btn btn-custom" %>
-    <% end %>
+      <%#= f.submit "Create my account", class: "btn btn-custom" %>
+    <%# end %>
   </div>
 </div>
