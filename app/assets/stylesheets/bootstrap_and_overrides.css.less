@@ -1,9 +1,11 @@
+/* 
+Bootstrap is stupid and uses pixels for spans; this custom style overrides relevant (to this design only) span widths to percents.  
+
+Like a boss.  
+*/
+
 @import "twitter/bootstrap/bootstrap";
 @import "twitter/bootstrap/responsive";
-
-// Set the correct sprite paths
-@iconSpritePath: asset-path("twitter/bootstrap/glyphicons-halflings.png");
-@iconWhiteSpritePath: asset-path("twitter/bootstrap/glyphicons-halflings-white.png");
 
 /* fonts */
 
@@ -22,6 +24,12 @@ a {
     margin-right: 2%;
     padding-top: 7px;
 }
+
+.span4 {
+	width: 30%;
+	margin-left: 1%;
+}
+
 
 .container {
 	width: auto;

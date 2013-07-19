@@ -2,7 +2,6 @@
  This styling is responsive, mobile-friendly awesomeness  
  ; custom code created by s/css superstar lsc@hackeress.com 
  renders lovely on your tablets, iPhone, Android, etc.
- likey?  Send a gittip:  https://www.gittip.com/indie/ 
 **/
 
 
@@ -262,7 +261,7 @@ form {
   float: right;
   color: #414141;
   text-align: right;
-  font-family: 'Droid Sans';
+  font-family: 'Droid Sans', sans, Verdana, 'Lucida Grande';
   text-transform: small-caps;
   font-size: 137%;
   .helpline {
@@ -277,11 +276,14 @@ form {
 @media handheld {
   #content {
     images: none;
-    width:100%;
-    margin: 1px;
+    width:auto;
+    margin: 1%;
+    padding: 2px;
     }
   #storylinks {
     width:100%;
+    margin: 1%;
+    padding: 2px;
     float:center;
     .navbar {
     padding: 1px;
