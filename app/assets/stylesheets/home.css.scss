@@ -5,6 +5,10 @@
         -moz-border-radius: 2px;
         -webkit-border-radius: 2px;
         border-radius: 2px;
+ .span4 {
+  width: 30%;
+  margin-left: 1.33%;
+}
 }
 
 .landpage-content {
@@ -60,7 +64,7 @@ min-height: 370px;
    text-shadow: rgba(0,0,0,.4) 0 1px 0;
    color: white;
    font-size: 16px;
-   font-family: 'Lucida Grande', 'Open Sans', sans-serif;
+   font-family: 'Open Sans', sans;
    text-decoration: none;
    vertical-align: middle;
    }
@@ -72,8 +76,6 @@ min-height: 370px;
 .button:active {
    border-top-color: #1b435e;
    background: #1b435e; 
-
-
     a:hover {
     color: #000;
     }
@@ -93,7 +95,10 @@ h3 {
   margin-left: -2px;
   -moz-border-radius: 7px;
   -webkit-border-radius: 7px;
-  border-radius: 7px; } }
+  border-radius: 7px; } 
+
+  }
+
    .welcome {
     color: #171614;
     font-size: 91%;

@@ -10,6 +10,52 @@
         <div class="nav-collapse">
           <ul class="nav">
             <%= link_to image_tag("square-headerbar.png", alt: "ico", height: "32", width: "32") %>&nbsp;&nbsp;&nbsp;
+            
+            <% if signed_in? %>
+            <li><%= link_to "Edit Meetings", meetings_path %></li>
+            <li><%= link_to "Add New Meeting", new_path %></li>
+            <li><%= link_to "Home", home_path %></li>
+            <li id="fat-menu" class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                Central Office <b class="caret"></b>
+              </a>
+                <ul class="dropdown-menu">
+                <li><%= link_to "Map & Hours", 'http://info.aasjonline.com/central-office/' %></li>  
+                <li><%= link_to "Meeting Update Form", 'https://docs.google.com/a/aasanjose.org/forms/d/1kG_v6Z3YGrtUVxFVpsNyx-mYgu12o7rhHLAvw1Of6Ao/viewform' %></li>
+                <li><%= link_to "Group Insurance Application", 'http://meetings.aasjonline.com/group-application.pdf' %></li> 
+                <li><%= link_to "Insurance Flyer", 'http://meetings.aasjonline.com/insurance-flyer.pdf' %></li>
+                <li><%= link_to "Literature", 'http://info.aasjonline.com/literature' %></li>  
+                <li><%= link_to "Donate", 'http://info.aasjonline.com/donate' %></li>
+                <li><%= link_to "Events", 'http://info.aasjonline.com/events' %></li>
+                <li><%= link_to "Service", 'http://info.aasjonline.com/service' %></li>
+                </ul>
+      
+            <li id="fat-menu" class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                The COIN <b class="caret"></b>
+              </a>
+                <ul class="dropdown-menu">
+                <li><%= link_to "Current Year, 2013", 'http://info.aasjonline.com/coin/' %>
+                <li><%= link_to "Archives:  2006-2012", 'http://info.aasjonline.com/coin-archives/' %></li>
+              </ul>
+
+            <li id="fat-menu" class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                Account <b class="caret"></b>
+              </a>
+                <ul class="dropdown-menu">
+                <li><%= link_to "Profile", current_user %></li>
+                <li><%= link_to "Settings", edit_user_path(current_user) %></li>
+                <li class="divider"></li>
+                <li><%= link_to "Sign out", signout_path, method: "delete" %></li>
+                <li><%= link_to "Sign In", signin_path %></li>
+
+              </ul>
+            </li>
+
+
+            <% else %>
+
             <li><%= link_to "Home", home_path %></li>
             <li><%= link_to "Meetings", meetings_path %></li>
             <li id="fat-menu" class="dropdown">
@@ -58,21 +104,6 @@
                 <li><%= link_to "Nuestra Historias", ' http://info.aasjonline.com/nuestras-historias/' %></li>
               </ul>
 
-            <% if signed_in? %>
-            <li><%= link_to "Add New Meeting", new_path %></li>
-            <li id="fat-menu" class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                Admin <b class="caret"></b>
-              </a>
-                <ul class="dropdown-menu">
-                <li><%= link_to "Profile", current_user %></li>
-                <li><%= link_to "Settings", edit_user_path(current_user) %></li>
-                <li class="divider"></li>
-                <li>
-                  <%= link_to "Sign out", signout_path, method: "delete" %>
-                </li>
-              </ul>
-            </li>
           <% end %>
 
         </ul>

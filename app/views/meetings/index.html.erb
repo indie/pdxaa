@@ -17,7 +17,7 @@
 
    <strong>&nbsp;&nbsp;How to find meetings:</strong>
    <ul>
-      <li> Click or tap once to add an option to the search; click/tap again to remove it, or use the <%= link_to 'clear all', 'clear' %> button
+      <li> Click or tap once to add an option to the search; click/tap again to remove it, or use the <div class="btn btn-mini"><%= link_to 'Clear All', 'clear' %></div> button
       <li> Look-up meeting or group name, building, street name or <%= link_to 'chip', '/meetings?utf8=%E2%9C%93&q[name_or_notes_or_codes_cont]=chip&commit=Search' %> meetings using the search box
    </ul> 
    </div>
@@ -41,7 +41,7 @@
       <th class="numeric"><%= sort_link @search, :notes, "Notes" %></th>
       <% if signed_in? %>
         <th class="numeric"><%= sort_link @search, :created_at, "Added" %></th>
-        <th class="numeric"><%= model_class.human_attribute_name(:id) %></th>
+        <th class="numeric"><%= sort_link @search, :id, "ID" %></th>
         <th class="numeric">Admin</th>
       <% end %>
     </tr>

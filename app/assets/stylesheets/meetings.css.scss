@@ -22,7 +22,7 @@
 
     #go-south table,
     {
-    font-size: 13px;
+    font-size: 100%;
     font-family: 'Open Sans', sans-serif; 
     }
     #go-south thead,
@@ -97,5 +97,9 @@
   font-size: 93%;
   background-color: #d5dadb; 
   text-transform: uppercase;
-  a:link { color: #000; }
+  a:link { color: #444340; }
+  a:active { color: #444340; }
+  a:hover { color: #444340; }
+  a:visited { color: #444340; }
+
 }
