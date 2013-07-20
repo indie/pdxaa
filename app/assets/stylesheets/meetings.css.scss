@@ -1,4 +1,4 @@
-//* Hackeress Creative Stuido likes some sass *//
+//* Hackeress Creative Studio kicks some sass *//
 
 .inst {
   font-family: monospace;
@@ -43,7 +43,7 @@
     #go-south td {
     border: none;
     position: relative;
-    padding-left: 23%;
+    padding-left: 11%;
     white-space: normal !important;
     text-align:left;
     wrap: normal;
@@ -53,14 +53,15 @@
     position: absolute;
     top: 3px;
     left: 5px;
-    width: 35%;
-    max-width: 39%;
-    min-width: 19%;
-    padding-top: 5px;
-    padding-right: 11px;
-    margin-right: 14px;
+    width: 10%;
+    max-width: 13%;
+    min-width: 5%;
+    padding-top: 10px;
+    padding-right: 3px;
+    margin-right: 3px;
     white-space: nowrap;
-    font-size: 79%;
+    font-size: 99%;
+    visibility: hidden;
     }
      
     #go-south td:before { content: attr(data-title); }
@@ -83,14 +84,13 @@
 
 
 .table-striped tbody tr:nth-child(odd) td {
-   background-color: #f5f3f5;
+   background-color: #ece7ff;
 }
 
 .table-striped tbody tr:nth-child(even) td {
-   background-color: #ffedd9;
+   background-color: #fcfcfc;
 }
      }
-
 
 .numeric {
   font-weight: bold;

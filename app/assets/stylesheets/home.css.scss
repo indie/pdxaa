@@ -84,6 +84,7 @@ min-height: 370px;
 
 
 h3 {
+  font-family: 'Open Sans', sans;
   color: #060605;
   font-size: 137%;
   font-weight: bold;
@@ -93,27 +94,19 @@ h3 {
   -moz-border-radius: 7px;
   -webkit-border-radius: 7px;
   border-radius: 7px; } }
-
-
    .welcome {
-    max-width: 333px;
-    font-family: 'Open Sans', sans;
     color: #171614;
     font-size: 91%;
     padding:  4px;
   }
 
   .meetings {
-    max-width: 333px;
-    font-family: 'Open Sans', sans;
     color: #171614;
     padding:  1px;
     font-size: 91%;
 
   }
   .centraloffice {
-    max-width: 333px;
-    font-family: 'Open Sans', sans;
     color: #171614;
     padding:  4px;
     margin-left: -3px;

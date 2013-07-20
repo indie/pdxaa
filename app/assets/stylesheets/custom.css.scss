@@ -6,7 +6,7 @@
 
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans', sans;
   background-color: #c48923;
   background-repeat: no-repeat;
   height: 100%;
@@ -15,7 +15,6 @@ body {
 
 #storylinks-container {
    opacity: 0.97337;
-/*  border-radius: 10px; */
    width: auto;
    min-height: 81%;
    margin-left: 2%;
@@ -188,68 +187,6 @@ form {
 .search-options {
   margin-left: 2%;
   margin-top: -4px;
-}
-
-.nav-tabs {
-    border: none;
-    a:hover {
-    color: #224D66;
-    background: transparent;
-    -webkit-transition: all 0.3s ease; 
-    -moz-transition: all 0.3s ease; 
-    -o-transition: all 0.3s ease; 
-    -webkit-border-radius: 0.23em;
-    -moz-border-radius: 0.23em;
-     border-radius: 0.23em;
-    }
-}
-
-.navbar-day {
-  font-size: 93%;
-  height: 1.23em;
-  border: none; 
-  ul {
-    border: none;
-    li {
-      font-size: 1.53em;
-      a:link {  
-      color: #ca9548;
-      }
-      a:active {
-      color: #ca9548;
-      }
-      a:hover {
-      color: #ca9548;
-      }
-      a:visited {
-      color: #ca9548;
-      }
-    }
-  }
-}
-
-.navbar-city {
-  font-size: 79%;
-  height: 1.13em;
-  border: none;
-  ul {
-    border: none;
-    li {
-      font-size: 1.53em;
-      a:link {  
-      color: #ca9548;
-      }
-      a:active {
-      color: #ca9548;
-      }
-      a:hover {
-      color: #ca9548;
-      }
-      a:visited {
-      color: #ca9548;
-      }
-    }
-  }
 }
 
 

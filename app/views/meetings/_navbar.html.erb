@@ -3,21 +3,21 @@
 <%#= @extra_q.inspect %>    
 <!-- end debug -->
 
+<div id="responsive-shorts">
+
     <ul class="navbar-day nav nav-tabs">
         <% @param_data["day_cont"].each do | key, val | %>
         <li><%= link_to key, render_link("day_cont", val, @extra_q), 
         :style => render_css("day_cont", val, @extra_q) %></li>
         <% end %>
     </ul>
-
     <ul class="navbar-city nav nav-tabs">
         <% @param_data["city_cont"].each do | key, val | %>
         <li><%= link_to key, render_link("city_cont", val, @extra_q), 
         :style => render_css("city_cont", val, @extra_q) %></li>
         <% end %>
     </ul>
-
-    <ul class="navbar-city nav nav-tabs">
+    <ul class="navbar-codes nav nav-tabs">
         <% @param_data["codes_cont"].each do | key, val | %>
         <li><%= link_to key, render_link("codes_cont", val, @extra_q), 
         :style => render_css("codes_cont", val, @extra_q)  %></li>
@@ -32,4 +32,6 @@
    
       <% end %>
     </div>
+  </div>
+
 </div>

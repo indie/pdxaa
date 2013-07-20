@@ -32,13 +32,13 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th class="numeric"><%= sort_link @search, :day, "Day and Time" %></th>
+      <th class="numeric"><%= sort_link @search, :day, "Day & Time" %></th>
       <th class="numeric"><%= sort_link @search, :name, "Meeting Name" %></th>
       <th class="numeric"><%= sort_link @search, :location, "Location"  %></th>
       <th class="numeric"><%= sort_link @search, :city, "City" %></th>
       <th class="numeric"><%= sort_link @search, :codes, "Codes" %></th>
       <th class="numeric"><%= sort_link @search, :map, "Map"  %> </th>
-      <th class="numeric"><%#= sort_link @search, :notes, "" %></th>
+      <th class="numeric"><%= sort_link @search, :notes, "Notes" %></th>
       <% if signed_in? %>
         <th class="numeric"><%= sort_link @search, :created_at, "Added" %></th>
         <th class="numeric"><%= model_class.human_attribute_name(:id) %></th>
@@ -50,12 +50,12 @@
     <% @meetings.each do |meeting| %>
       <tr>
         <td data-title="Day"><%= meeting.day %></td>
-        <td data-title="Name"><%= link_to meeting.name, meeting_path(meeting) %></td>
+        <td data-title="Name"><strong><%= link_to meeting.name, meeting_path(meeting) %></strong></td>
         <td data-title="Address"><%= meeting.address %></td>
         <td data-title="City"><%= meeting.city %></td>
         <td data-title="Codes"><%= meeting.codes %></td>
         <td data-title="Map"><%= link_to image_tag("gmaps.png", alt: "map", height: "37", width: "37"), url_for(meeting.map), target: "_blank" %></td>
-        <td data-title=""><%#= meeting.notes %></td>
+        <td data-title="Notes"><%= meeting.notes %></td>
         <% if signed_in? %>
           <td data-title="Added"><%=l meeting.created_at %></td>          
           <td data-title="ID"><%= link_to meeting.id, meeting_path(meeting) %></td>
