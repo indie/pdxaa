@@ -16,6 +16,7 @@ body {
 #storylinks-container {
    opacity: 0.97337;
    width: auto;
+   height: auto;
    min-height: 81%;
    margin-left: 2%;
    margin-right: 2%;
@@ -39,7 +40,8 @@ body {
 
 .outer {
 	width: auto;
-  font-family: 'Open Sans', sans-serif;
+  height: auto;
+  min-height: 90%;
 	font-size:117%;
 	font-weight: 400;
 	text-align: left;

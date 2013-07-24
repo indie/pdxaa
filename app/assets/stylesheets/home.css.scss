@@ -1,27 +1,25 @@
-
 #landpage-container {
-  	background-image: url(background_gradient.png);
-    background-repeat:  repeat-x;
+   background-image: url(background_gradient.png);
+    background-repeat: repeat-x;
         -moz-border-radius: 2px;
         -webkit-border-radius: 2px;
         border-radius: 2px;
    .span4 {
-    width: 30%;
+    width: 28%;
     margin-left: 2px;
-
   }
-}
-
 .landpage-content {
   padding: 10px;
   float: right;
-  margin-right: 10px;
+  margin-right: 7px;
   font-size: 1.7em;
-  color: #fff;
   text-transform: uppercase;
   letter-spacing: -1px;
   font-weight: bold;
   line-height: 1;
+} 
+
+
 /* 24 Hour Help Line Available */
   h2 {
   font-family: 'Droid Sans', sans-serif;
@@ -32,7 +30,7 @@
   margin-right: 25px;
   }
 
-/* Phone Number Styling */ 
+/* Phone Number Styling */
 
   h3 {
   font-family: 'Droid Sans', sans-serif;
@@ -50,8 +48,8 @@
 background: #fff; /* Old browsers */
 width: auto;
 height: auto;
-min-height: 370px;
-  .btn-custom { 
+min-height: 442px;
+  .btn-custom {
     border-top: 1px solid #96d1f8;
    background: #65a9d7;
    background: -webkit-gradient(linear, left top, left bottom, from(#3e779d), to(#65a9d7));
@@ -80,7 +78,7 @@ min-height: 370px;
    }
 .button:active {
    border-top-color: #1b435e;
-   background: #1b435e; 
+   background: #1b435e;
     a:hover {
     color: #4B3D2B;
     }
@@ -100,25 +98,27 @@ h3 {
   margin-left: -2px;
   -moz-border-radius: 7px;
   -webkit-border-radius: 7px;
-  border-radius: 7px; } 
+  border-radius: 7px; }
 
   }
 
    .welcome {
     color: #171614;
     font-size: 91%;
-    padding:  3px;
+    padding: 3px;
   }
 
   .meetings {
     color: #171614;
-    padding:  3px;
+    padding: 3px;
     font-size: 91%;
+
 
   }
   .centraloffice {
     color: #171614;
-    padding:  3px;
+    font-size: 91%;
+    padding: 3px;
     margin-left: -3px;
     a:link {
       color: #c48923; }
@@ -137,6 +137,3 @@ h3 {
   font-size: 80%;
   font-family: 'Open Sans', sans-serif;
 }
-
-
-
