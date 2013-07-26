@@ -8,7 +8,6 @@
 body {
   font-family: 'Open Sans', sans;
   background-color: #c48923;
-  background-repeat: no-repeat;
   height: 100%;
   padding-top: 55px;
 }
@@ -53,7 +52,7 @@ body {
   font-size: 13px;
   color: #959595;
   padding: 3px;
-  margin-left: 1%;
+  margin-left: 2px;
   }
 
   p {
@@ -120,35 +119,8 @@ h3 {
   max-width: 93%;
 }
 
-.navbar {
-  border: none;
-}
 
-/* sidebar */
-
-aside {
-  section {
-    padding: 10px 0;
-    border-top: 1px solid #e0e0e0;
-    &:first-child {
-      border: 0;
-      padding-top: 0;
-    }
-    span {
-      display: block;
-      margin-bottom: 3px;
-      line-height: 1;
-    }
-    h1 {
-      font-size: 1.4em;
-      text-align: left;
-      letter-spacing: -1px;
-      margin-bottom: 3px;
-      margin-top: 0px;
-    }
-  }
-
-/* users */
+/* admin view */
 
 .users {
   list-style: none;
@@ -161,8 +133,6 @@ aside {
       border-bottom: 1px solid #888;
     }
   }
-}
-
 }
 
 
@@ -179,7 +149,6 @@ form {
 }
 
 .searchbox {
-  margin-right: 61%;
   align: left;
   justify: left;
   margin-bottom: -7px;
@@ -202,10 +171,10 @@ form {
   font-family: 'Droid Sans', sans, Verdana, 'Lucida Grande';
   text-transform: small-caps;
   font-size: 137%;
-  .helpline {
-  font-size: 88%;
-  padding-top: 2px;
-  }
+    .helpline {
+    font-size: 88%;
+    padding-top: 2px;
+    }
 }
 
 
@@ -228,10 +197,10 @@ form {
     }
     }
   #landpage-container{
-  width: 100%;
-  margin: 1px;
-  float: center;
-  background-color: #e0e0e0;
+    width: 100%;
+    margin: 1px;
+    float: center;
+    background-color: #e0e0e0;
   }
   #footer {
     width:100%;
@@ -267,4 +236,14 @@ form {
         }
       }
    }
+}
+
+
+.meeting-count {
+  font-family: monospace;
+  font-size: 91%;
+  color: #444340;
+  background-color: #d8a54c;
+  padding: 3px;
+  float: right;
 }

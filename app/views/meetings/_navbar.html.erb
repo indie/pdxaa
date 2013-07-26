@@ -5,33 +5,43 @@
 
 <div id="responsive-shorts">
 
-    <ul class="navbar-day nav nav-tabs">
+    <ul class="navbar-day nav nav-pills">
         <% @param_data["day_cont"].each do | key, val | %>
         <li><%= link_to key, render_link("day_cont", val, @extra_q), 
         :style => render_css("day_cont", val, @extra_q) %></li>
         <% end %>
     </ul>
-    <ul class="navbar-city nav nav-tabs">
+
+    <br />
+
+    <ul class="navbar-city nav nav-pills">
         <% @param_data["city_cont"].each do | key, val | %>
         <li><%= link_to key, render_link("city_cont", val, @extra_q), 
         :style => render_css("city_cont", val, @extra_q) %></li>
         <% end %>
     </ul>
-    <ul class="navbar-codes nav nav-tabs">
+
+    <br />
+
+    <ul class="navbar-codes nav nav-pills">
         <% @param_data["codes_cont"].each do | key, val | %>
         <li><%= link_to key, render_link("codes_cont", val, @extra_q), 
         :style => render_css("codes_cont", val, @extra_q)  %></li>
         <% end %>
     </ul>
 
+    <br />
+
     <div class="searchbox">
       <%= search_form_for @q do |f| %>
       <%= f.text_field :name_or_day_or_address_or_city_or_notes_or_codes_cont %>&nbsp;
       <%= f.submit "Search", class: 'btn btn-small' %>
       <div class="btn btn-mini"><%= link_to 'Clear All', 'clear' %></div>
-   
+
       <% end %>
+
     </div>
   </div>
 
 </div>
+

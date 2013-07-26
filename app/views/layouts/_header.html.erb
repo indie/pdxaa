@@ -9,8 +9,10 @@
 
         <div class="nav-collapse">
           <ul class="nav">
-            <%= link_to image_tag("square-headerbar.png", alt: "ico", height: "32", width: "32") %>&nbsp;&nbsp;&nbsp;
+            <%= link_to image_tag("square-headerbar.png", alt: "ico", height: "32", width: "32") %>
             
+            <!-- This is the signed in admin user menu view -->
+
             <% if signed_in? %>
             <li><%= link_to "Edit Meetings", meetings_path %></li>
             <li><%= link_to "Add New Meeting", new_path %></li>
@@ -56,34 +58,55 @@
 
             <% else %>
 
+            <!-- This is the default visitor menu view -->
+
             <li><%= link_to "Home", home_path %></li>
-            <li><%= link_to "Meetings", meetings_path %></li>
-            <li id="fat-menu" class="dropdown">
+            <li><%= link_to "Meetings", 'clear' %></li>
+
+            <li id="fat-menu" class="dropdown">    
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                 Central Office <b class="caret"></b>
               </a>
                 <ul class="dropdown-menu">
-                <li><%= link_to "Map & Hours", 'http://info.aasjonline.com/central-office/' %></li>  
-                <li><%= link_to "Meeting Update Form", 'https://docs.google.com/a/aasanjose.org/forms/d/1kG_v6Z3YGrtUVxFVpsNyx-mYgu12o7rhHLAvw1Of6Ao/viewform' %></li>
-                <li><%= link_to "Donate", 'http://info.aasjonline.com/donate' %></li>
-                <li><%= link_to "Group Insurance Application", 'http://meetings.aasjonline.com/group-application.pdf' %></li> 
-                <li><%= link_to "Insurance Flyer", 'http://meetings.aasjonline.com/insurance-flyer.pdf' %></li>  
-                <ul class="divider"></ul>
-                <li><%= link_to "Admin", signin_path %></li>
-              </ul>
-      
-            <li id="fat-menu" class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                The COIN <b class="caret"></b>
+                  <li><%= link_to "Map & Hours", 'http://info.aasjonline.com/central-office/' %></li>  
+                  <li><%= link_to "Meeting Update Form", 'https://docs.google.com/a/aasanjose.org/forms/d/1kG_v6Z3YGrtUVxFVpsNyx-mYgu12o7rhHLAvw1Of6Ao/viewform' %></li>
+                  <li><%= link_to "Literature", 'http://info.aasjonline.com/literature' %></li>  
+                  <li><%= link_to "Donate", 'http://info.aasjonline.com/donate' %></li>
+                  <li><%= link_to "Service", 'http://info.aasjonline.com/service' %></li>
+                  <li><%= link_to "Group Insurance Application", 'http://meetings.aasjonline.com/group-application.pdf' %></li> 
+                  <li><%= link_to "Insurance Flyer", 'http://meetings.aasjonline.com/insurance-flyer.pdf' %></li>  
+                  <ul class="divider"></ul>
+                  <li><%= link_to "ICOSCC sign-in ", signin_path %></li>
+                </ul>
+            </li>
+            
+           <li id="fat-menu" class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">COIN<b class="caret"></b>
               </a>
                 <ul class="dropdown-menu">
                 <li><%= link_to "Current Year, 2013", 'http://info.aasjonline.com/coin/' %>
                 <li><%= link_to "Archives:  2006-2012", 'http://info.aasjonline.com/coin-archives/' %></li>
               </ul>
-            <li><%= link_to "Literature", 'http://info.aasjonline.com/literature' %></li>  
-            <li><%= link_to "Events", 'http://info.aasjonline.com/events' %></li>
-            <li><%= link_to "Service", 'http://info.aasjonline.com/service' %></li>
+            <li><%= link_to "Latest & Greatest", 'http://info.aasjonline.com/latest-greatest' %></li>
 
+            <li id="fat-menu" class="dropdown">              
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                Nearby Areas <b class="caret"></b>
+              </a>
+                <ul class="dropdown-menu">
+                 <li id="fat-menu" class="dropdown">
+                  <li><%= link_to "San Mateo Intergroup", 'http://aa-san-mateo.org/' %></li>
+                  <li><%= link_to "San Mateo Meetings", 'http://aa-san-mateo.org/cgi-local/craig.pl?sort=day' %></li>
+                  <ul class="divider"></ul>
+                  <li><%= link_to "East Bay Intergroup", 'http://eastbayaa.org/' %></li>
+                  <li><%= link_to "East Bay Meetings", 'http://eastbayaa.org/Menu2/meetings3.html' %></li>
+                  <ul class="divider"></ul>
+                  <li><%= link_to "San Francisco Intergroup", 'http://aasf.org/' %></li>
+                  <li><%= link_to "San Francisco Meetings", 'http://aasf.org/meetingsBrowse.cfm?getRegion=SF&getTimeCode=N&s=h' %></li>
+                 </li>
+                </ul>
+            <li>
+            
            <li id="fat-menu" class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">About AA <b class="caret"></b>
             </a>
@@ -91,8 +114,12 @@
                 <li><%= link_to "More About AA", 'http://info.aasjonline.com/more-about-aa/' %></li>
                 <li><%= link_to "FAQ for the Newcomer", 'http://info.aasjonline.com/FAQ/' %></li>
                 <li><%= link_to "Anonymity Letter", 'http://info.aasjonline.com/anonymity-letter/' %></li>
-                <li><%= link_to "Alcoholic in Your Life?", 'http://aasjonline.com/alcoholic-in-your-life/' %></li>
+                <li><%= link_to "Alcoholic in Your Life?", 'http://info.aasjonline.com/alcoholic-in-your-life/' %></li>
+                <li><%= link_to "Court Cards & Attendance Slips", 'http://info.aasjonline.com/more-about-aa/court-cards/' %>
+                <ul class="divider"></ul>
+                <div class="offsite">&nbsp;&nbsp;&nbsp;&nbsp;offsite links</div>
                 <li><%= link_to "AA World Services", 'http://www.aa.org', target: 'blank' %></li>  
+                <li><%= link_to "Grapevine Meeting in a Magazine", 'http://www.aagrapevine.org' %></li>                
               </ul>
 
               <li id="fat-menu" class="dropdown">
@@ -103,7 +130,7 @@
                 <li><%= link_to "Info en Espanol", 'http://info.aasjonline.com/en-espanol/' %></li>
                 <li><%= link_to "Nuestra Historias", ' http://info.aasjonline.com/nuestras-historias/' %></li>
               </ul>
-
+             <li><%= link_to "Demo", 'http://demo.aasjonline.com/home' %></li>
           <% end %>
 
         </ul>
