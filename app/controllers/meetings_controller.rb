@@ -30,7 +30,6 @@ class MeetingsController < ApplicationController
 
     @extra_q = session[:meeting_params]
 
-
     @param_data = {
       "day_cont" => {
         "Monday" => "Monday",

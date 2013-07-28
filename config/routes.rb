@@ -2,7 +2,7 @@ require 'api_constraints'
 
 Aasj::Application.routes.draw do
 
-  root to: 'info_pages#home'
+  root to: 'meetings#index'
 
 # infopages
 
@@ -24,7 +24,6 @@ Aasj::Application.routes.draw do
     root to: 'meetings#index'
     collection { post :import }
    end
-
 
   # API versioning
 

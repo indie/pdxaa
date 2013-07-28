@@ -1,3 +1,7 @@
+<!-- will be fixed -->
+
+<% base_url = "http://info.aasjonline.com" %>
+
 <div class="navbar navbar-fixed-top">
     <div class="navbar-inner">
       <div class="container">
@@ -22,14 +26,14 @@
                 Central Office <b class="caret"></b>
               </a>
                 <ul class="dropdown-menu">
-                <li><%= link_to "Map & Hours", 'http://info.aasjonline.com/central-office/' %></li>  
+                <li><%= link_to "Map & Hours", base_url+'/central-office/' %></li>  
                 <li><%= link_to "Meeting Update Form", 'https://docs.google.com/a/aasanjose.org/forms/d/1kG_v6Z3YGrtUVxFVpsNyx-mYgu12o7rhHLAvw1Of6Ao/viewform' %></li>
                 <li><%= link_to "Group Insurance Application", 'http://meetings.aasjonline.com/group-application.pdf' %></li> 
                 <li><%= link_to "Insurance Flyer", 'http://meetings.aasjonline.com/insurance-flyer.pdf' %></li>
-                <li><%= link_to "Literature", 'http://info.aasjonline.com/literature' %></li>  
-                <li><%= link_to "Donate", 'http://info.aasjonline.com/donate' %></li>
-                <li><%= link_to "Events", 'http://info.aasjonline.com/events' %></li>
-                <li><%= link_to "Service", 'http://info.aasjonline.com/service' %></li>
+                <li><%= link_to "Literature", base_url+'/literature' %></li>  
+                <li><%= link_to "Donate", base_url+'/donate' %></li>
+                <li><%= link_to "Events", base_url+'/events' %></li>
+                <li><%= link_to "Service", base_url+'/service' %></li>
                 </ul>
       
             <li id="fat-menu" class="dropdown">
@@ -37,8 +41,8 @@
                 The COIN <b class="caret"></b>
               </a>
                 <ul class="dropdown-menu">
-                <li><%= link_to "Current Year, 2013", 'http://info.aasjonline.com/coin/' %>
-                <li><%= link_to "Archives:  2006-2012", 'http://info.aasjonline.com/coin-archives/' %></li>
+                <li><%= link_to "Current Year, 2013", base_url+'/coin/' %>
+                <li><%= link_to "Archives:  2006-2012", base_url+'/coin-archives/' %></li>
               </ul>
 
             <li id="fat-menu" class="dropdown">
@@ -68,11 +72,11 @@
                 Central Office <b class="caret"></b>
               </a>
                 <ul class="dropdown-menu">
-                  <li><%= link_to "Map & Hours", 'http://info.aasjonline.com/central-office/' %></li>  
+                  <li><%= link_to "Map & Hours", base_url+'/central-office/' %></li>  
                   <li><%= link_to "Meeting Update Form", 'https://docs.google.com/a/aasanjose.org/forms/d/1kG_v6Z3YGrtUVxFVpsNyx-mYgu12o7rhHLAvw1Of6Ao/viewform' %></li>
-                  <li><%= link_to "Literature", 'http://info.aasjonline.com/literature' %></li>  
-                  <li><%= link_to "Donate", 'http://info.aasjonline.com/donate' %></li>
-                  <li><%= link_to "Service", 'http://info.aasjonline.com/service' %></li>
+                  <li><%= link_to "Literature", base_url+'/literature' %></li>  
+                  <li><%= link_to "Donate", base_url+'/donate' %></li>
+                  <li><%= link_to "Service", base_url+'/service' %></li>
                   <li><%= link_to "Group Insurance Application", 'http://meetings.aasjonline.com/group-application.pdf' %></li> 
                   <li><%= link_to "Insurance Flyer", 'http://meetings.aasjonline.com/insurance-flyer.pdf' %></li>  
                   <ul class="divider"></ul>
@@ -84,10 +88,10 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">COIN<b class="caret"></b>
               </a>
                 <ul class="dropdown-menu">
-                <li><%= link_to "Current Year, 2013", 'http://info.aasjonline.com/coin/' %>
-                <li><%= link_to "Archives:  2006-2012", 'http://info.aasjonline.com/coin-archives/' %></li>
+                <li><%= link_to "Current Year, 2013", base_url+'/coin/' %>
+                <li><%= link_to "Archives:  2006-2012", base_url+'/coin-archives/' %></li>
               </ul>
-            <li><%= link_to "Latest & Greatest", 'http://info.aasjonline.com/latest-greatest' %></li>
+            <li><%= link_to "Latest & Greatest", base_url+'/latest-greatest' %></li>
 
             <li id="fat-menu" class="dropdown">              
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -111,11 +115,11 @@
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">About AA <b class="caret"></b>
             </a>
               <ul class="dropdown-menu">  
-                <li><%= link_to "More About AA", 'http://info.aasjonline.com/more-about-aa/' %></li>
-                <li><%= link_to "FAQ for the Newcomer", 'http://info.aasjonline.com/FAQ/' %></li>
-                <li><%= link_to "Anonymity Letter", 'http://info.aasjonline.com/anonymity-letter/' %></li>
-                <li><%= link_to "Alcoholic in Your Life?", 'http://info.aasjonline.com/alcoholic-in-your-life/' %></li>
-                <li><%= link_to "Court Cards & Attendance Slips", 'http://info.aasjonline.com/more-about-aa/court-cards/' %>
+                <li><%= link_to "More About AA", base_url+'/more-about-aa/' %></li>
+                <li><%= link_to "FAQ for the Newcomer", base_url+'/FAQ/' %></li>
+                <li><%= link_to "Anonymity Letter", base_url+'/anonymity-letter/' %></li>
+                <li><%= link_to "Alcoholic in Your Life?", base_url+'/alcoholic-in-your-life/' %></li>
+                <li><%= link_to "Court Cards & Attendance Slips", base_url+'/more-about-aa/court-cards/' %>
                 <ul class="divider"></ul>
                 <div class="offsite">&nbsp;&nbsp;&nbsp;&nbsp;offsite links</div>
                 <li><%= link_to "AA World Services", 'http://www.aa.org', target: 'blank' %></li>  
@@ -127,7 +131,7 @@
                 en Espanol <b class="caret"></b>
               </a>
               <ul class="dropdown-menu">
-                <li><%= link_to "Info en Espanol", 'http://info.aasjonline.com/en-espanol/' %></li>
+                <li><%= link_to "Info en Espanol", base_url+'/en-espanol/' %></li>
                 <li><%= link_to "Nuestra Historias", ' http://info.aasjonline.com/nuestras-historias/' %></li>
               </ul>
           <% end %>
