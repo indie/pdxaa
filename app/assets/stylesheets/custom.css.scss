@@ -86,7 +86,7 @@ body {
 /* h-styling */
 
 h1 {
-  font-size: 153%;
+  font-size: 133%;
   padding: 13px;
   letter-spacing: -2px;
   text-align: left;
@@ -165,6 +165,7 @@ form {
 .hotline {
   padding-top: 3px;
   margin-right: 0.13em;
+  font-weight: bold;
   float: right;
   color: #414141;
   text-align: right;
@@ -174,6 +175,7 @@ form {
     .helpline {
     font-size: 88%;
     padding-top: 2px;
+    font-weight: normal;
     }
 }
 
@@ -236,14 +238,4 @@ form {
         }
       }
    }
-}
-
-
-.meeting-count {
-  font-family: monospace;
-  font-size: 91%;
-  color: #444340;
-  background-color: #d8a54c;
-  padding: 3px;
-  float: right;
 }

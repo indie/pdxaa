@@ -4,12 +4,14 @@
         -moz-border-radius: 2px;
         -webkit-border-radius: 2px;
         border-radius: 2px;
+    height: auto;    
    .span4 {
-    width: 28%;
+    width: 30%;
     margin-left: 2px;
   }
 .landpage-content {
   padding: 10px;
+  height: auto;
   float: right;
   margin-right: 7px;
   font-size: 1.7em;
@@ -49,44 +51,6 @@ background: #fff; /* Old browsers */
 width: auto;
 height: auto;
 min-height: 442px;
-  .btn-custom {
-    border-top: 1px solid #96d1f8;
-   background: #65a9d7;
-   background: -webkit-gradient(linear, left top, left bottom, from(#3e779d), to(#65a9d7));
-   background: -webkit-linear-gradient(top, #3e779d, #65a9d7);
-   background: -moz-linear-gradient(top, #3e779d, #65a9d7);
-   background: -ms-linear-gradient(top, #3e779d, #65a9d7);
-   background: -o-linear-gradient(top, #3e779d, #65a9d7);
-   padding: 5px 10px;
-   -webkit-border-radius: 8px;
-   -moz-border-radius: 8px;
-   border-radius: 8px;
-   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
-   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
-   box-shadow: rgba(0,0,0,1) 0 1px 0;
-   text-shadow: rgba(0,0,0,.4) 0 1px 0;
-   color: white;
-   font-size: 16px;
-   font-family: 'Open Sans', sans;
-   text-decoration: none;
-   vertical-align: middle;
-   }
-.button:hover {
-   border-top-color: #28597a;
-   background: #28597a;
-   color: #ccc;
-   }
-.button:active {
-   border-top-color: #1b435e;
-   background: #1b435e;
-    a:hover {
-    color: #4B3D2B;
-    }
-    a:link {
-    color: #4B3D2B;
-    }
-  }
-
 
 h3 {
   font-family: 'Open Sans', sans;
@@ -99,10 +63,7 @@ h3 {
   -moz-border-radius: 7px;
   -webkit-border-radius: 7px;
   border-radius: 7px; }
-
-  }
-
-   .welcome {
+     .welcome {
     color: #171614;
     font-size: 91%;
     padding: 3px;
@@ -112,9 +73,32 @@ h3 {
     color: #171614;
     padding: 3px;
     font-size: 91%;
+    .button {
+        font-family: 'Open Sans', sans-serif;
+        color: #FFFFFF !important;
+        font-size: 15px;
+        box-shadow: 1px 1px 1px #BEE2F9;
+        padding: 10px 25px;
+        -moz-border-radius: 7px;
+        -webkit-border-radius: 7px;
+        border-radius: 7px;
+        border: 1px ridge #B1BFEB;
+        background: #63B8EE;
+        background: linear-gradient(top,  #B1BFEB,  #114577);
+        background: -ms-linear-gradient(top,  #B1BFEB,  #114577);
+        background: -webkit-gradient(linear, left top, left bottom, from(#B1BFEB), to(#114577));
+        background: -moz-linear-gradient(top,  #B1BFEB,  #114577);
+      }
+      .button:hover {
+        color: #FCFCFC !important;
+        background: #468CCF;
+        background: linear-gradient(top,  #114577,  #B1BFEB);
+        background: -ms-linear-gradient(top,  #114577,  #B1BFEB);
+        background: -webkit-gradient(linear, left top, left bottom, from(#114577), to(#B1BFEB));
+        background: -moz-linear-gradient(top,  #114577,  #B1BFEB);
+      }
+    }  
 
-
-  }
   .centraloffice {
     color: #171614;
     font-size: 91%;
@@ -136,4 +120,5 @@ h3 {
 .latest {
   font-size: 80%;
   font-family: 'Open Sans', sans-serif;
+}
 }
