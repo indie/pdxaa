@@ -23,8 +23,6 @@ class Meeting < ActiveRecord::Base
   validates_presence_of :codes
   validates_presence_of :address
   # 
-  
-  default_scope :order => 'meeting.day ASC'
 
   def self.to_csv( options = {})
   	CSV.generate(options) do |csv|
