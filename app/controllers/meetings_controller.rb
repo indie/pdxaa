@@ -72,7 +72,7 @@ class MeetingsController < ApplicationController
 
     @q = Meeting.search(params[:q])
     @meetings = @q.result(:distinct => true)
-    @search = Meeting.search(params[:q])
+    @search = Meeting.search(params[:q]) 
     respond_to do |format|
       format.html # index.html.erb
       format.txt { render txt: @meetings.to_csv } # make data render txt in browser -- might work, might not

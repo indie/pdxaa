@@ -24,6 +24,8 @@ class Meeting < ActiveRecord::Base
   validates_presence_of :address
   # 
   
+  default_scope :order => 'meeting.day ASC'
+
   def self.to_csv( options = {})
   	CSV.generate(options) do |csv|
   		csv << column_names
@@ -40,6 +42,10 @@ class Meeting < ActiveRecord::Base
 		meeting.attributes = row.to_hash.slice(*accessible_attributes)
 		meeting.save!
   	end
+  end
+
+  def self.pagination(page, sort = nil, dir = 'ASC')
+    paginate :page => page, :per_page => 200, :order => sort ? "#{sort} #{dir}" : 'day, name ASC'
   end
 
 end

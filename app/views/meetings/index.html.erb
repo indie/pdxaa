@@ -38,7 +38,7 @@
   <thead>
     <tr>
       <%#= @search.inspect %>
-      <th class="numeric"><%= sort_link @search, :day, "Day & Time", { :controller => 'meetings', action: "index" }  %></th>
+      <th class="numeric" data-sort_order="day asc"><%= sort_link @search, :day, "Day & Time", { :controller => 'meetings', action: "index" }  %></th>
       <th class="numeric"><%= sort_link @search, :name, "Meeting Name" %></th>
       <th class="numeric"><%= sort_link @search, :location, "Location"  %></th>
       <th class="numeric"><%= sort_link @search, :city, "City" %></th>
