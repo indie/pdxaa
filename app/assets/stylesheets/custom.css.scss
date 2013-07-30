@@ -144,8 +144,14 @@ form {
 
 .search-instructions {
   font-family: Droid Sans, sans-serif;
-  font-size: 1.02em;
-  padding: 3px;
+  font-size: 0.95em;
+  ul {
+  padding: 2px;
+  li {
+  padding-top: 2px;
+  btn-mini { size: 75%; }
+  }
+  }
 }
 
 .searchbox {
