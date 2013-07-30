@@ -52,7 +52,11 @@ class MeetingsController < ApplicationController
         "Morgan Hill" => "Morgan Hill", 
         "Mountain View" => "Mountain View", 
         "Palo Alto" => "Palo Alto",
-        "San Jose" => "San Jose", 
+        "SJ, South" => "San Jose, South",
+        "SJ, North" => "San Jose, North", 
+        "SJ, Downtown" => "San Jose, Downtown", 
+        "SJ, Willow Glen" => "San Jose, Willow Glen", 
+        "SJ, East" => "San Jose, East", 
         "San Martin" => "San Martin", 
         "Santa Clara" => "Santa Clara", 
         "Saratoga" => "Saratoga", 
@@ -71,8 +75,10 @@ class MeetingsController < ApplicationController
       }
 
     @q = Meeting.search(params[:q])
-    @meetings = @q.result(:distinct => true)
+
     @search = Meeting.search(params[:q]) 
+    @meetings = @search.result(:distinct => true).order('day asc')
+
     respond_to do |format|
       format.html # index.html.erb
       format.txt { render txt: @meetings.to_csv } # make data render txt in browser -- might work, might not
