@@ -63,11 +63,11 @@ body {
         font-size: 117%;
         text-wrap: wrap;}
         a:link, a:active, a:visited {
-        color: #CE7A1C;
+        color: #C48923;
         background: transparent;
         }
         a:hover {
-        color: #16497A;
+        color: #114577;
         text-decoration: none;
         }
         p img_right {
@@ -143,7 +143,7 @@ form {
  /* search-friendly */
 
 .search-instructions {
-  font-family: Droid Sans, sans-serif;
+  font-family: 'Open Sans', 'Source Sans Pro', Droid Sans, sans-serif;
   font-size: 0.95em;
   ul {
   padding: 2px;
@@ -156,8 +156,11 @@ form {
 
 .searchbox {
   align: left;
+  span: span5;
   justify: left;
+  margin-top: -23px;
   margin-bottom: -7px;
+  margin-left: -7px;
 }
 
 .search-options {

@@ -17,10 +17,10 @@
 
   <div class="search-instructions">
 
-   <strong>&nbsp;&nbsp;How to find meetings:</strong>
+   <strong>How to find meetings:</strong>
    <ul>
-      <li> Click or tap once to add an option to the search; click/tap again to remove it, or use the <div class="btn btn-mini"><%= link_to 'Clear All', 'clear' %></div> button</li>
-      <li> Look-up meeting or group name, building, street name or <%= link_to 'chip', '/meetings?utf8=%E2%9C%93&q[name_or_notes_or_codes_cont]=chip&commit=Search' %> meetings using the search box</li>       
+      <li> Click or tap once to add an option to the search; click/tap again to remove it, or use the <div class="btn btn-mini"><%= link_to 'Clear All', 'clear'%></div> button</li>
+      <li> Look-up meeting or group name, building or street name using the search box</li>       
     
    </ul> 
 
@@ -45,7 +45,7 @@
       <th class="numeric"><%= sort_link @search, :city, "City" %></th>
       <th class="numeric"><%= sort_link @search, :codes, "Codes" %></th>
       <th class="numeric"><%= sort_link @search, :map, "Map"  %> </th>
-      <th class="numeric"><%= sort_link @search, :notes, "Notes" %></th>
+      <th class="numeric"><%= sort_link @search, :notes, "" %></th>
       <% if signed_in? %>
         <th class="numeric"><%= sort_link @search, :created_at, "Added" %></th>
         <th class="numeric"><%= sort_link @search, :updated_at, "Updated" %></th>
@@ -63,7 +63,7 @@
         <td data-title="City"><%= meeting.city %></td>
         <td data-title="Codes"><%= meeting.codes %></td>
         <td data-title="Map"><%= link_to image_tag("gmaps.png", alt: "map", height: "37", width: "37"), url_for(meeting.map), target: "_blank" %></td>
-        <td data-title="Notes"><%= meeting.notes %></td>
+        <td data-title=""><%= meeting.notes %></td>
         <% if signed_in? %>
             <td data-title="Added">          
               <div class="admincol"><%=link_to meeting.created_at %></div></td>
@@ -88,7 +88,7 @@
 
 </div>
 
-<div class="meeting-count"><%= Meeting.find(:all).length %> total meetings</div>
+<div class="meeting-count"><%= Meeting.find(:all).length %> meetings per week in our fellowship</div>
 
 
 <p>
