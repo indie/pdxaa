@@ -72,7 +72,10 @@ class MeetingsController < ApplicationController
         "Lesbian" => "L",
         "Spanish" => "S",
         "Wheelchair Access" => "Wh",
-        "Young People" => "Y"}
+        "Young People" => "Y"},
+
+      "name_or_notes_cont" => {
+        "Chip" => "chip"}  
       }
 
     @q = Meeting.search(params[:q])
