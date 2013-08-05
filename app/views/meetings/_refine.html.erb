@@ -34,11 +34,13 @@
         :style => render_css("name_or_notes_cont", val, @extra_q)  %></li>
         <% end %>
 
-        <li><%= link_to 'recently updated', '/meetings/?q[s]=updated_at+desc', :title => "sorts most recent at top" %></li>
-        <li><%= link_to 'new', '/meetings/?q[s]=created_at+desc', :title => "sorts newest at top" %></li>
+        <% if signed_in? %>
 
-        <li><%#= link_to 'chip meetings', '/meetings?utf8=%E2%9C%93&q[name_or_notes_or_codes_cont]=chip&commit=Search' %></li>
-    </ul>
+        <li><%= link_to 'new', '/meetings/?q[s]=created_at+desc', :title => "sorts newest at top" %></li>
+        <li><%= link_to 'recently updated', '/meetings/?q[s]=updated_at+desc', :title => "sorts most recent at top" %></li>
+        <% end %>
+
+        </ul>
 
     <br />
 
