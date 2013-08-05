@@ -33,13 +33,6 @@
         <li><%= link_to key, render_link("name_or_notes_cont", val, @extra_q), 
         :style => render_css("name_or_notes_cont", val, @extra_q)  %></li>
         <% end %>
-
-        <% if signed_in? %>
-
-        <li><%= link_to 'new', '/meetings/?q[s]=created_at+desc', :title => "sorts newest at top" %></li>
-        <li><%= link_to 'recently updated', '/meetings/?q[s]=updated_at+desc', :title => "sorts most recent at top" %></li>
-        <% end %>
-
         </ul>
 
     <br />
