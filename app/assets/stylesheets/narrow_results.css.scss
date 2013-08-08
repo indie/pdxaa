@@ -1,5 +1,5 @@
 #responsive-shorts { 
-  font-family: 'Open Sans', 'Source Sans Pro', sans-serif;
+  font-family: 'Open Sans', 'Source Sans Pro', 'Lucida Grande', sans, sans-serif;
   width: auto;
   margin-left: 1px;
   margin-right: 1px;
@@ -65,7 +65,37 @@
       -o-transition: all 0.7s ease; 
       } 
     }
+
+     /* search-friendly */
+
+.search-instructions {
+  font-size: 0.95em;
+  ul {
+  padding: 2px;
+  li {
+  padding-top: 2px;
+  btn-mini { size: 75%; }
   }
+  }
+}
+
+.searchbox {
+  align: left;
+  span: span5;
+  justify: left;
+  margin-top: -23px;
+  margin-bottom: -7px;
+  margin-left: -7px;
+}
+
+.search-options {
+  margin-left: 2%;
+  margin-top: -4px;
+  }
+
+}
+
+
 
 
 
