@@ -19,8 +19,7 @@ Aasj::Application.routes.draw do
       # match '/create', to: 'meetings#create'
 
   resources :meetings do 
-    root to: 'meetings#index'
-    collection { post :import }
+      collection { post :import }
    end
 
   # API versioning
