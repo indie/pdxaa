@@ -19,6 +19,7 @@ Aasj::Application.routes.draw do
       match '/signin',  to: 'sessions#new'
       match '/signout', to: 'sessions#destroy', via: :delete
       match '/new', to: 'meetings#new'
+      match '/create', to: 'meetings#create'
 
   resources :meetings do 
     root to: 'meetings#index'

@@ -43,7 +43,7 @@ class Meeting < ActiveRecord::Base
   end
 
   def self.pagination(page, sort = nil, dir = 'ASC')
-    paginate :page => page, :per_page => 200, :order => sort ? "#{sort} #{dir}" : 'day, name ASC'
+    paginate :page => page, :per_page => 700, :order => sort ? "#{sort} #{dir}" : 'day, name ASC'
   end
 
 end

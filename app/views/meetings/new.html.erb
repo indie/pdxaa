@@ -2,14 +2,17 @@
 
 <% if current_user %>
 
-<div class="page-header">
-Add a new meeting
-</div>
+	<div class="page-header">
+		Add a new meeting
+	</div>
 
 
-<%= render :partial => 'form' %>
+	<%= render :partial => 'form' %>
 
-<h3>Import a CSV of Meetings</h3>
+
+<hr>
+
+	<h3>Import a CSV of Meetings</h3>
 
 <%= form_tag import_meetings_path, multipart: true do %>
   <%= file_field_tag :file %>

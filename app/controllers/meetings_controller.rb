@@ -4,9 +4,11 @@ class MeetingsController < ApplicationController
   # GET /meetings.json
   
   def index 
+
     if not session[:meeting_params] 
       session[:meeting_params] = {}
     end
+    
     @meeting_params = session[:meeting_params]
     if params[:q]
       @first = true 
@@ -18,16 +20,16 @@ class MeetingsController < ApplicationController
           session[:meeting_params][key]=value
         end
         @first = false 
-        end
-        if params[:q].include? :name_or_day_or_address_or_city_or_notes_or_codes_cont
+      end
+    
+    if params[:q].include? :name_or_day_or_address_or_city_or_notes_or_codes_cont
           # session.delete(:meeting_params)
           (session[:meeting_params]).each do | key, value | 
             session[:meeting_params].delete key
           end
-        end  
-
+       end   
     end
-
+  
     @extra_q = session[:meeting_params]
 
     @param_data = {
@@ -136,12 +138,15 @@ class MeetingsController < ApplicationController
 
   # POST /meetings
   # POST /meetings.json
+
   def create
+    print "Apple "
+
     @meeting = Meeting.new(params[:meeting])
 
     respond_to do |format|
       if @meeting.save
-        format.html { redirect_to @meeting, notice: 'Meeting was successfully created.' }
+        format.html { redirect_to meetings_path, notice: 'Meeting was successfully created.' }
         format.json { render json: @meeting, status: :created, location: @meeting }
       else
         format.html { render action: "new" }
