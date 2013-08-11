@@ -4,6 +4,7 @@ class MeetingsController < ApplicationController
   # GET /meetings.json
   
   def index 
+    print request.env
 
     if not session[:meeting_params] 
       session[:meeting_params] = {}
@@ -140,8 +141,6 @@ class MeetingsController < ApplicationController
   # POST /meetings.json
 
   def create
-    print "Apple "
-
     @meeting = Meeting.new(params[:meeting])
 
     respond_to do |format|
