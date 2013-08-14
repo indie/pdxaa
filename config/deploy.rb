@@ -4,14 +4,18 @@ server "198.74.48.210", :web, :app, :db, primary: true
 
 set :application, "aasj"
 set :user, "hub"
-set :deploy_to, "/home/hub/public/aasjonline.com/public/meetings/#{application}"
+
+# meetings.aasanjose.org is aasjonline.com
+# aasanjose.org is aasanjose.org/meetings
+
+set :deploy_to, "/home/hub/public/aasanjose.org/public/meetings/#{application}"
 set :deploy_via, :remote_cache
 set :use_sudo, false
 
-#default_environment['PATH'] = '/home/hub/.rbenv/versions/1.9.3-p194/bin:$PATH'
 set :default_environment, { 'PATH' => "/home/hub/.rbenv/versions/1.9.3-p194/bin:$PATH" }
 default_environment['GEM_PATH']= '/home/hub/.gem/ruby/1.9.1'
-#set :default_environment, {
+# default_environment['PATH'] = '/home/hub/.rbenv/versions/1.9.3-p194/bin:$PATH'
+# set :default_environment, {
 #      'PATH' => "home/hub/.rbenv/versions/1.9.3-p194/bin:$PATH"
 #    }
 
