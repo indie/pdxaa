@@ -38,7 +38,10 @@
 <table class="table table-striped">
   <thead>
     <tr>
+
+      <!-- uncomment to debug --> 
       <%#= @search.inspect %>
+      
       <th class="numeric"><%= sort_link @search, :day, "Day & Time", { :controller => 'meetings', action: "index" }  %></th>
       <th class="numeric"><%= sort_link @search, :name, "Meeting Name" %></th>
       <th class="numeric"><%= sort_link @search, :location, "Location"  %></th>

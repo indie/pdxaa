@@ -1,9 +1,8 @@
 source 'https://rubygems.org'
 
 
-gem 'rails', '3.2.13'
-gem 'bcrypt-ruby'
-gem 'rails_autolink'
+gem 'rails', '3.2.14'
+gem 'bcrypt-ruby', '3.0.0'
 gem 'nokogiri'
 gem 'crack'
 gem 'rest-client'

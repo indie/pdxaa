@@ -17,8 +17,8 @@ module MeetingsHelper
     	link += "&q[codes_not_cont]=Wh"
     end
 
-  # if the key value is stored in the param type, don't redundantly include it
-  # in the link 
+  # if the key value is stored in the param type, don't 
+  # redundantly include it in the link 
 
     stored_vals.each do |key, value|
       if key == param_type
