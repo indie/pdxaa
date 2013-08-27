@@ -178,13 +178,18 @@ form {
   float: right;
   color: #414141;
   text-align: right;
-  font-family: 'Droid Sans', sans, Verdana, 'Lucida Grande';
+  font-family: 'Open Sans', 'Source Sans Pro', Droid Sans, sans-serif;
+  font-size: 0.95em;  
   text-transform: small-caps;
   font-size: 137%;
     .helpline {
     font-size: 88%;
     padding-top: 2px;
     font-weight: normal;
+    }
+    .aa {
+    font-size: 79%;
+    text-transform: small-caps;
     }
 }
 
