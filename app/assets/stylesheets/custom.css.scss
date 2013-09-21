@@ -144,7 +144,7 @@ form {
 
 .search-instructions {
   font-family: 'Open Sans', 'Source Sans Pro', Droid Sans, sans-serif;
-  font-size: 0.95em;
+  font-size: 0.91em;
   ul {
   padding: 2px;
   li {
@@ -179,17 +179,18 @@ form {
   color: #414141;
   text-align: right;
   font-family: 'Open Sans', 'Source Sans Pro', Droid Sans, sans-serif;
-  font-size: 0.95em;  
+  font-size: 0.97em;  
   text-transform: small-caps;
-  font-size: 137%;
+  font-size: 133%;
     .helpline {
-    font-size: 88%;
+    font-size: 93%;
     padding-top: 2px;
     font-weight: normal;
     }
     .aa {
-    font-size: 73%;
+    font-size: 79%;
     text-transform: small-caps;
+    font-weight: bold;
     }
 }
 
@@ -216,7 +217,7 @@ form {
     width: 100%;
     margin: 1px;
     float: center;
-    background-color: #e0e0e0;
+    background-color: #fcfcfc;
   }
   #footer {
     width:100%;
@@ -228,7 +229,7 @@ form {
 
 .copyright {
     font-family: monospace;
-    font-size: 91%;
+    font-size: 88%;
     color: #000;
     margin-right: 5%;
     float: right;
@@ -237,17 +238,17 @@ form {
 #colophon {
     font-family: monospace;
     font-size: 73%;
-    color: #b58430;
+    color: #ccba25c;
     margin-right: 1%;
     float: right; 
       a:link {
-        color: #b58430;
+        color: #cba25c;
       a:active {
-        color: #b58430;
+        color: #cba25c;
       a:hover {
-        color: #b58430;
+        color: #fcfcfc;
       a:visited {
-        color: #b58430;
+        color: #cba25c;
           }
         }
       }
