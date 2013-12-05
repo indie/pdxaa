@@ -5,10 +5,13 @@ server "198.74.48.210", :web, :app, :db, primary: true
 set :application, "aasj"
 set :user, "hub"
 
-# meetings.aasanjose.org is aasjonline.com
-# aasanjose.org is aasanjose.org/meetings
+# deploys to meetings.aasanjose.org 
+# set :deploy_to, "/home/hub/public/aasanjose.org/public/meetings/#{application}"
 
-set :deploy_to, "/home/hub/public/aasanjose.org/public/meetings/#{application}"
+# deploys to aasanjose.org/meetings 
+set :deploy_to, "/home/hub/public/aasjonline.com/public/meetings/#{application}"
+
+
 set :deploy_via, :remote_cache
 set :use_sudo, false
 

@@ -1,7 +1,7 @@
-/** 
- This styling is responsive, mobile-friendly awesomeness  
- ; custom code created by s/css superstar lsc@hackeress.com 
- renders lovely on your tablets, iPhone, Android, etc.
+/**
+This styling is responsive, mobile-friendly awesomeness
+; custom code created by s/css superstar lsc@hackeress.com
+renders lovely on your tablets, iPhone, Android, etc.
 **/
 
 
@@ -38,12 +38,12 @@ body {
 }
 
 .outer {
-	width: auto;
+        width: auto;
   height: auto;
   min-height: 90%;
-	font-size:117%;
-	font-weight: 400;
-	text-align: left;
+        font-size:117%;
+        font-weight: 400;
+        text-align: left;
   margin-left: 1%;
   min-width: 10%;
   max-width: 98%;
@@ -93,7 +93,7 @@ h1 {
   color: #16497A;
 }
 
-h2 { 
+h2 {
   font-size: 1.33em;
   padding: 3px;
   margin-top: 10px;
@@ -179,7 +179,7 @@ form {
   color: #414141;
   text-align: right;
   font-family: 'Open Sans', 'Source Sans Pro', Droid Sans, sans-serif;
-  font-size: 0.97em;  
+  font-size: 0.97em;
   text-transform: small-caps;
   font-size: 133%;
     .helpline {
@@ -195,7 +195,7 @@ form {
 }
 
 
-/* tiny mobile device friendly  */
+/* tiny mobile device friendly */
 
 @media handheld {
   #content {
@@ -240,7 +240,7 @@ form {
     font-size: 73%;
     color: #ccba25c;
     margin-right: 1%;
-    float: right; 
+    float: right;
       a:link {
         color: #cba25c;
       a:active {
