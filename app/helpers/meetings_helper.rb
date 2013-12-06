@@ -13,8 +13,8 @@ module MeetingsHelper
 
   def render_link(param_type, link_val, stored_vals)
     link = "/meetings?utf8=%E2%9C%93&q[#{param_type}]=#{link_val}"
-    if link_val == "W" 
-    	link += "&q[codes_not_cont]=Wh"
+     if link_val == "W" 
+    	 link += "&q[codes_not_cont]=Wh"
     end
 
   # if the key value is stored in the param type, don't 
