@@ -6,10 +6,10 @@ set :application, "aasj"
 set :user, "hub"
 
 # deploys to meetings.aasanjose.org 
-set :deploy_to, "/home/hub/public/aasanjose.org/public/meetings/#{application}"
+# set :deploy_to, "/home/hub/public/aasanjose.org/public/meetings/#{application}"
 
 # deploys to aasanjose.org/meetings 
-# set :deploy_to, "/home/hub/public/aasjonline.com/public/meetings/#{application}"
+ set :deploy_to, "/home/hub/public/aasjonline.com/public/meetings/#{application}"
 
 
 set :deploy_via, :remote_cache
