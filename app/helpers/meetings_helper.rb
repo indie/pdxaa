@@ -13,9 +13,10 @@ module MeetingsHelper
 
   def render_link(param_type, link_val, stored_vals)
     link = "/meetings?utf8=%E2%9C%93&q[#{param_type}]=#{link_val}"
-     if link_val == "W" 
-    	 link += "&q[codes_not_cont]=Wh"
-    end
+    #doesn't work because it filters out closed Wheelchair access meetings
+    #if link_val == "C" 
+    #	 link += "&q[codes_not_cont]=Acc"
+    #end
 
   # if the key value is stored in the param type, don't 
   # redundantly include it in the link 

@@ -73,7 +73,7 @@ class MeetingsController < ApplicationController
         "Gay" => "G",
         "Lesbian" => "L",
         "Spanish" => "S",
-        "Wheelchair Access" => "Acc",
+        "Wheelchair Access" => "X",
         "Young People" => "Y"},
 
       "name_or_notes_cont" => {

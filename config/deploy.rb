@@ -11,7 +11,6 @@ set :user, "hub"
 # deploys to aasanjose.org/meetings 
  set :deploy_to, "/home/hub/public/aasjonline.com/public/meetings/#{application}"
 
-
 set :deploy_via, :remote_cache
 set :use_sudo, false
 
