@@ -7,4 +7,7 @@ class InfoPagesController < ApplicationController
 
   def literature
   end
+
+  def legend
+  end
 end

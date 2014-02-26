@@ -40,7 +40,7 @@
     <div class="searchbox">
       <%= search_form_for @q do |f| %>
       <%= f.text_field :name_or_day_or_address_or_city_or_notes_or_codes_cont %>&nbsp;
-      <%= f.submit "Search", class: 'btn btn-small' %>
+      <%= f.submit "Search" %>
       <div class="btn btn-mini"><%= link_to 'Clear All', 'clear' %></div>
 
       <% end %>

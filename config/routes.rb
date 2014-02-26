@@ -6,6 +6,7 @@ Aasj::Application.routes.draw do
   match '/home', to: 'info_pages#home'
   match '/colophon', to: 'info_pages#colophon'
   match '/literature', to: 'info_pages#literature'
+  match '/legend', to: 'info_pages#legend'
   match '/clear', to: 'meetings#clear_options'
 
 
@@ -16,7 +17,6 @@ Aasj::Application.routes.draw do
       match '/signin',  to: 'sessions#new'
       match '/signout', to: 'sessions#destroy', via: :delete
       match '/new', to: 'meetings#new'
-      # match '/create', to: 'meetings#create'
 
   resources :meetings do 
       collection { post :import }

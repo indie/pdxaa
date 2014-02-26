@@ -96,11 +96,13 @@
 
 </div>
 
-<div class="meeting-count"><%= Meeting.find(:all).length %> meetings per week in our fellowship</div>
+<p><div class="meeting-count-bold"><%= Meeting.find(:all).length %> meetings per week in our fellowship </div></p>
 
+<div class="meeting-count"><%= link_to  "Download CSV", meetings_path(format: "csv") %>
+</div>
+<div class="meeting-count"><%= link_to  "Download Excel", meetings_path(format: "xls") %>
+</div>
+<div class="meeting-count"><%= link_to "Daily Reflection", 'http://aa.org/lang/en/aareflections.cfm' %>
+</div>
 
-<p>
-  Download all meetings:
-  <%= link_to "CSV", meetings_path(format: "csv") %> |
-  <%= link_to "Excel", meetings_path(format: "xls") %>
-</p>
+  <%= link_to 'Explanation of meeting codes used on this website', 'legend' %>  
