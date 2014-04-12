@@ -1,12 +1,10 @@
 source 'https://rubygems.org'
 
-
-gem 'rails', '3.2.15'
+gem 'rails', '3.2.17'
 gem 'bcrypt-ruby', '3.0.0'
 gem 'nokogiri'
 gem 'crack'
 gem 'rest-client'
-gem 'simple_form'
 
 # # # # # # # # # # # #
 gem 'ransack'
@@ -46,8 +44,5 @@ group :production do
   gem 'pg'
 end
 
-
 # # # # # # # 
 # # # # # # # 
-
-
