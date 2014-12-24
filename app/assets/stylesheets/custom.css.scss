@@ -1,19 +1,20 @@
 /**
-This styling is responsive, mobile-friendly awesomeness
-; custom code created by s/css superstar lsc@hackeress.com
-renders lovely on your tablets, iPhone, Android, etc.
+This styling is responsive, mobile-friendly awesomeness;
+custom code created by Hackeress Creative Studio.
+Renders lovely on your tablets, iPhone, Android, etc.
 **/
 
 
 body {
   font-family: 'Open Sans', sans;
-  background-color: #c48923;
+  background-image: url('unionstation.png');
+  background-repeat: no-repeat;
   height: 100%;
-  padding-top: 55px;
+  padding-top: 100px;
 }
 
 #storylinks-container {
-   opacity: 0.97337;
+   opacity: 0.95337;
    width: auto;
    height: auto;
    min-height: 81%;
@@ -63,7 +64,7 @@ body {
         font-size: 117%;
         text-wrap: wrap;}
         a:link, a:active, a:visited {
-        color: #C48923;
+        color: #46BDAA;
         background: transparent;
         }
         a:hover {
