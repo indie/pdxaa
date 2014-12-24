@@ -5,11 +5,12 @@ server "50.116.55.80", :web, :app, :db, primary: true
 set :application, "pdxaa"
 set :user, "hub"
 
-# deploys to meetings.aasanjose.org 
-# set :deploy_to, "/home/hub/public/pdxaa.org/public/meetings/#{application}"
+# 50 linode config
+ default_environment['PATH'] = '/home/hub/.rbenv/versions/1.9.3-p194/bin:$PATH'
+ default_environment['GEM_PATH']= '/home/hub/.gem/ruby/1.9.1'
 
-# deploys to aasanjose.org/meetings 
-set :deploy_to, "/home/hub/public/pdxaa.org/public/meetings/#{application}"
+# deploys to findmeetings.org/ 
+set :deploy_to, "/home/hub/public/findmeetings.org/public/pdxaa/#{application}"
 
 set :deploy_via, :remote_cache
 set :use_sudo, false
