@@ -83,19 +83,19 @@ h3 {
         -webkit-border-radius: 7px;
         border-radius: 7px;
         border: 1px ridge #B1BFEB;
-        background: #63B8EE;
-        background: linear-gradient(top,  #B1BFEB,  #114577);
-        background: -ms-linear-gradient(top,  #B1BFEB,  #114577);
-        background: -webkit-gradient(linear, left top, left bottom, from(#B1BFEB), to(#114577));
-        background: -moz-linear-gradient(top,  #B1BFEB,  #114577);
+        background: #82D0CE;
+        background: linear-gradient(top,  #82D0CE,  #114577);
+        background: -ms-linear-gradient(top,  #82D0CE,  #114577);
+        background: -webkit-gradient(linear, left top, left bottom, from(#82D0CE), to(#114577));
+        background: -moz-linear-gradient(top,  #82D0CE,  #114577);
       }
       .button:hover {
         color: #FCFCFC !important;
         background: #468CCF;
-        background: linear-gradient(top,  #114577,  #B1BFEB);
-        background: -ms-linear-gradient(top,  #114577,  #B1BFEB);
-        background: -webkit-gradient(linear, left top, left bottom, from(#114577), to(#B1BFEB));
-        background: -moz-linear-gradient(top,  #114577,  #B1BFEB);
+        background: linear-gradient(top,  #114577,  #82D0CE);
+        background: -ms-linear-gradient(top,  #114577,  #82D0CE);
+        background: -webkit-gradient(linear, left top, left bottom, from(#114577), to(#82D0CE));
+        background: -moz-linear-gradient(top,  #114577,  #82D0CE);
       }
     }  
 
@@ -105,9 +105,9 @@ h3 {
     padding: 3px;
     margin-left: -3px;
     a:link {
-      color: #c48923; }
+      color: #44809A; }
     a:active {
-      color: #c48923;
+      color: #44809A;
     }
     a:hover {
     color: #114577; }
