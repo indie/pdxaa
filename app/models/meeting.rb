@@ -20,7 +20,6 @@ class Meeting < ActiveRecord::Base
   validates_presence_of :name
   validates_presence_of :day
   validates_presence_of :city
-  validates_presence_of :codes
   validates_presence_of :address
   # 
 
