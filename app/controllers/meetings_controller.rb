@@ -104,7 +104,7 @@ class MeetingsController < ApplicationController
         "Transgender" => "T"
         },
 
-      "name_or_notes_or_code_cont" => {
+      "name_or_notes_cont" => {
         "Chip" => "chip",
         "Newcomer" => "newcomer" }  
       }
