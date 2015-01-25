@@ -7,7 +7,7 @@ set :application, "pdxaa"
 set :user, "hub"
 
 # 50 linode config
- default_environment['PATH'] = '/home/hub/.rbenv/versions/1.9.3-p551/bin:$PATH'
+ default_environment['PATH'] = '/home/hub/.rbenv/versions/1.9.3-p551/lib/ruby/gems/1.9.1'
  default_environment['GEM_PATH']= '/home/hub/.gem/ruby/1.9.1'
 
 
