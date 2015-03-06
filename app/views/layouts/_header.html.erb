@@ -17,14 +17,14 @@
             <li><%= link_to "Edit Meetings", meetings_path %></li>
             <li><%= link_to "Add New Meeting", new_path %></li>
             <li><%= link_to "Home", home_path %></li>
-            <li><%= link_to "Events", "http://pdxaa.org/events/" %></li>
-            <li><%= link_to "Service",'http://pdxaa.org/service/' %></li>
+            <li><%= link_to "Events", "http://home.pdxaa.org/events/" %></li>
+            <li><%= link_to "Service",'http://home.pdxaa.org/service/' %></li>
             <li id="fat-menu" class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                 Central Office <b class="caret"></b>
               </a>
                 <ul class="dropdown-menu">
-                <li><%= link_to "Map & Hours", 'http://pdxaa.org/contact/' %></li>  
+                <li><%= link_to "Map & Hours", 'http://home.pdxaa.org/contact/' %></li>  
                 <li><%= link_to "Meeting Update Form", '#' %></li>
                 <li><%= link_to "Literature", '#' %></li>  
                 <li><%= link_to "Treasurer Info", '#' %></li> 
@@ -35,8 +35,8 @@
                 Newsletter <b class="caret"></b>
               </a>
                 <ul class="dropdown-menu">
-                <li><%= link_to "Current Year", 'http://pdxaa.org/newsletter' %>
-                <li><%= link_to "Archives", 'http://pdxaa.org/newsletter' %></li>
+                <li><%= link_to "Current Year", 'http://home.pdxaa.org/newsletter' %>
+                <li><%= link_to "Archives", 'http://home.pdxaa.org/newsletter' %></li>
               </ul>
 
             <li id="fat-menu" class="dropdown">
@@ -58,7 +58,7 @@
 
             <!-- This is the default visitor menu view -->
 
-            <li><%= link_to "Home", 'http://pdxaa.org' %></li>
+            <li><%= link_to "Home", 'http://home.pdxaa.org' %></li>
             <li><%= link_to "Meetings", home_path %></li>
 
             <li id="fat-menu" class="dropdown">    
@@ -66,11 +66,11 @@
                 Intergroup Office <b class="caret"></b>
               </a>
                 <ul class="dropdown-menu">
-                  <li><%= link_to "Map & Hours", '#' %></li>  
+                  <li><%= link_to "Map & Hours", 'home.pdxaa.org' %></li>  
                   <li><%= link_to "Meeting Update Form", '#' %></li>
-                  <li><%= link_to "Literature", '#' %></li>  
-                  <li><%= link_to "Service", 'http://pdxaa.org/service' %></li>
-                  <li><%= link_to "Treasurer Info", '#' %></li> 
+                  <li><%= link_to "Literature", 'home.pdxaa.org/literature' %></li>  
+                  <li><%= link_to "Service", 'http://home.pdxaa.org/service' %></li>
+                  <li><%= link_to "Treasurer Info", 'http://home.pdxaa.org/treasurer' %></li> 
                   <ul class="divider"></ul>
                   <li><%= link_to "Central Office Signin", signin_path %></li>
                 </ul>
@@ -80,11 +80,11 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Newsletter<b class="caret"></b>
               </a>
                 <ul class="dropdown-menu">
-                <li><%= link_to "Current Year", 'http://pdxaa.org/newsletter/' %>
-                <li><%= link_to "Archives", 'http://pdxaa.org/newsletter/' %></li>
+                <li><%= link_to "Current Year", 'http://home.pdxaa.org/newsletter/' %>
+                <li><%= link_to "Archives", 'http://home.pdxaa.org/newsletter/' %></li>
               </ul>
-            <li><%= link_to "Events", 'http://pdxaa.org/events' %></li>  
-            <li><%= link_to "Service", 'http://pdxaa.org/service' %></li>
+            <li><%= link_to "Events", 'http://home.pdxaa.org/events' %></li>  
+            <li><%= link_to "Service", 'http://home.pdxaa.org/service' %></li>
 
           
             <li id="fat-menu" class="dropdown">              
@@ -93,10 +93,10 @@
               </a>
                 <ul class="dropdown-menu">
                   <li id="fat-menu" class="dropdown">
-                  <li><%= link_to "Vancouver AA", '#' %></li>
-                  <li><%= link_to "Salem AA", '#' %></li>
-                  <li><%= link_to "Eugene AA", '#' %></li>
-                  <li><%= link_to "Central Oregon AA", '#' %></li>
+                  <li><%= link_to "Vancouver AA", 'http://www.vanintgrp.com/' %></li>
+                  <li><%= link_to "Salem AA", 'http://www.aa-salem.com/' %></li>
+                  <li><%= link_to "Eugene AA", 'http://www.eviaa.org/' %></li>
+                  <li><%= link_to "Central Oregon AA", 'http://coigaa.org/' %></li>
                  </li>
               </ul>
             <li>
@@ -106,7 +106,7 @@
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">About AA <b class="caret"></b>
             </a>
               <ul class="dropdown-menu">  
-                <li><%= link_to "More About AA", 'http://pdxaa.org/aa-resources/' %></li>
+                <li><%= link_to "More About AA", 'http://www.aa.org/pages/en_US/what-is-aa', target: 'blank' %></li>
                 <li><%= link_to "FAQ for the Newcomer", 'http://pdxaa.org/aa-resources/' %></li>
                 <li><%= link_to "Anonymity Letter", '#' %></li>
                 <li><%= link_to "Alcoholic in Your Life?", '#' %></li>

@@ -24,8 +24,8 @@
    <strong>How to find meetings:</strong>
    <ul>
       <li> Click or touch to select an option; click/touch again to remove it, or use the <div class="btn btn-mini"><%= link_to 'RESET', 'clear'%></div> button;</li>
-      <li> Look-up meeting, group, building or street name using the search box (partial searches work -- <em>Basc</em> for <em>Bascom</em>);</li>
-      <li> More detail about <%= link_to 'meeting codes', 'legend' %> used on this website. </li>       
+      <li> Look-up meeting, group, building or street name using the search box (partial searches work -- <em>Glis</em> for <em>Glisan</em>);</li>
+      <li> Look-up by meeting type <%= link_to 'meeting codes', 'legend' %> used on this website. </li>       
     
    </ul> 
 
@@ -97,12 +97,12 @@
 
 </div>
 
-<p><div class="meeting-count-bold"><%= Meeting.find(:all).length %> meetings per week in our fellowship </div></p>
+<p><div class="meeting-count-bold"><%= Meeting.find(:all).length %> meetings per week in Portland Metro </div></p>
 
 <div class="meeting-count"><%= link_to  "Download CSV", meetings_path(format: "csv") %>
 </div>
 <div class="meeting-count"><%= link_to  "Download Excel", meetings_path(format: "xls") %>
 </div>
-<div class="meeting-count"><%= link_to "Daily Reflection", 'http://aa.org/lang/en/aareflections.cfm' %>
+<div class="meeting-count"><%= link_to "Daily Reflection", 'http://www.aa.org/pages/en_US/daily-reflection' %>
 </div>
 
