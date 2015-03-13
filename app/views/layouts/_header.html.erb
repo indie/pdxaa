@@ -16,7 +16,7 @@
             <% if signed_in? %>
             <li><%= link_to "Edit Meetings", meetings_path %></li>
             <li><%= link_to "Add New Meeting", new_path %></li>
-            <li><%= link_to "Home", home_path %></li>
+            <li><%= link_to "Home", meetings_path %></li>
             <li><%= link_to "Events", "http://home.pdxaa.org/events/" %></li>
             <li><%= link_to "Service",'http://home.pdxaa.org/service/' %></li>
             <li id="fat-menu" class="dropdown">
@@ -57,7 +57,7 @@
             <!-- This is the default visitor menu view -->
 
             <li><%= link_to "Home", 'http://home.pdxaa.org' %></li>
-            <li><%= link_to "Meetings", home_path %></li>
+            <li><%= link_to "Meetings", meetings_path %></li>
 
             <li id="fat-menu" class="dropdown">    
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
