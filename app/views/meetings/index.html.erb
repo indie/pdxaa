@@ -14,7 +14,7 @@
     
     <div class="helpline">
     HELP LINE AVAILABLE 24/7<br/>
-    <%= link_to '1212@pdxaa.org', "mailto:1212@pdxaa.org" %>  </div>
+    <%= link_to '1212@pdxaa.com', "mailto:1212@pdxaa.com" %>  </div>
     
   </div>
 </div>
@@ -25,7 +25,7 @@
    <ul>
       <li> Click or touch to select an option; click/touch again to remove it, or use the <div class="btn btn-mini"><%= link_to 'RESET', 'clear'%></div> button;</li>
       <li> Look-up meeting, group, building or street name using the search box (partial searches work -- <em>Glis</em> for <em>Glisan</em>);</li>
-      <li> Look-up by meeting type <%= link_to 'meeting codes', 'legend' %> used on this website. </li>       
+      <li> Look-up by meeting type and see the <%= link_to 'meeting codes', 'legend' %> used on this website. </li>       
     
    </ul> 
 
@@ -71,9 +71,9 @@
         <td data-title="City"><%= meeting.city %></td>
         <td data-title="Codes"><%= meeting.codes %></td>
         <td data-title="Map"><%= link_to image_tag("gmaps.png", alt: "map", height: "37", width: "37"), url_for(meeting.map), target: "_blank" %></td>
+        <td data-title="Notes"><%= meeting.notes %></td>
         
         <% if signed_in? %>
-            <td data-title="Notes"><%= meeting.notes %></td>
             <td data-title="Added">          
               <div class="admincol"><%=link_to meeting.created_at %></div></td>
             <td data-title="Updated">
