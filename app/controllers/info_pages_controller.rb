@@ -10,4 +10,8 @@ class InfoPagesController < ApplicationController
 
   def legend
   end
+
+  def pai
+  end
+  
 end

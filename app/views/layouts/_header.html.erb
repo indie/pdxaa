@@ -21,11 +21,10 @@
             <li><%= link_to "Service",'http://home.pdxaa.org/service/' %></li>
             <li id="fat-menu" class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                Central Office <b class="caret"></b>
+                PAI Central Office Admin <b class="caret"></b>
               </a>
                 <ul class="dropdown-menu">
-                <li><%= link_to "Map & Hours", 'http://home.pdxaa.org/contact/' %></li>  
-                <li><%= link_to "Meeting Update Form", '#' %></li> 
+                <li><%= link_to "Meeting Update Request Responses", 'https://docs.google.com/a/pdxaa.org/spreadsheets/d/1VMesM0GqyxW1-QCRTPmiI12J-Z_kSTosEuBG8-5Iqyk/edit?usp=sharing' %></li> 
                 </ul>
       
             <li id="fat-menu" class="dropdown">
@@ -45,7 +44,7 @@
                 <li><%= link_to "Profile", current_user %></li>
                 <li><%= link_to "Settings", edit_user_path(current_user) %></li>
                 <li class="divider"></li>
-                <li><%= link_to "Sign out", signout_path, method: "delete" %></li>
+                <li><%= link_to "Sign Out", signout_path, method: "delete" %></li>
                 <li><%= link_to "Sign In", signin_path %></li>
 
               </ul>
@@ -61,16 +60,16 @@
 
             <li id="fat-menu" class="dropdown">    
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                Intergroup Office <b class="caret"></b>
+                PAI Central Office <b class="caret"></b>
               </a>
                 <ul class="dropdown-menu">
                   <li><%= link_to "Map & Hours", 'http://home.pdxaa.org/contact/' %></li>  
-                  <li><%= link_to "Meeting Updates", 'mailto:1212@pdxaa.com' %></li>
+                  <li><%= link_to "Update Meeting Requests", 'pai' %></li> 
                   <li><%= link_to "Literature", 'http://home.pdxaa.org/aa-resources/' %></li>  
                   <li><%= link_to "Service", 'http://home.pdxaa.org/service' %></li>
                   <li><%= link_to "Treasurer Info", 'http://home.pdxaa.org/treasurer' %></li> 
                   <ul class="divider"></ul>
-                  <li><%= link_to "Central Office Signin", signin_path %></li>
+                  <li><%= link_to "PAI Sign In", signin_path %></li>
                 </ul>
             </li>
             
@@ -87,7 +86,7 @@
           
             <li id="fat-menu" class="dropdown">              
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                Local <b class="caret"></b>
+                Other Areas <b class="caret"></b>
               </a>
                 <ul class="dropdown-menu">
                   <li id="fat-menu" class="dropdown">

@@ -7,6 +7,7 @@ Aasj::Application.routes.draw do
   match '/colophon', to: 'info_pages#colophon'
   match '/literature', to: 'info_pages#literature'
   match '/legend', to: 'info_pages#legend'
+  match '/pai', to: 'info_pages#pai'
   match '/clear', to: 'meetings#clear_options'
 
 
