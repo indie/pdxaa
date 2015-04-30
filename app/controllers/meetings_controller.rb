@@ -98,7 +98,7 @@ class MeetingsController < ApplicationController
         "Men" => "M",
         "Women" => "W",
         "Espanol" => "E",
-        "Wheelchair Accessible" => "X",
+        "Wheelchair Accessible" => "H",
         "Book Study" => "B",
         "Young People" => "YP",
         "Gay" => "G",
