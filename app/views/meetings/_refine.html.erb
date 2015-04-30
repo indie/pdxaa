@@ -29,10 +29,12 @@
         :style => render_css("codes_cont", val, @extra_q)  %></li>
         <% end %>
         
-        <% @param_data["name_or_notes_cont"].each do | key, val | %>
-        <li><%= link_to key, render_link("name_or_notes_cont", val, @extra_q), 
+        <!--
+        <#% @param_data["name_or_notes_cont"].each do | key, val | %>
+        <li><%#= link_to key, render_link("name_or_notes_cont", val, @extra_q), 
         :style => render_css("name_or_notes_cont", val, @extra_q)  %></li>
-        <% end %>
+        <#% end %>
+        -->
         </ul>
 
     <br />
@@ -44,7 +46,6 @@
       <%= link_to 'Reset Search', 'clear' %>
 
       <% end %>
-
 
     </div>
   </div>
