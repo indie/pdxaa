@@ -77,8 +77,8 @@ class MeetingsController < ApplicationController
         "SW Portland" => "SW",
         "NE Portland" => "NE Po",
         "SE Portland" => "SE Po",
-        "Sandy" => "Sandy"
-        "Scappoose" => "Scappo",
+        "Sandy" => "Sandy",
+        "Scappoose" => "Scap",
         "Sherwood" => "Sherw",
         "St Benedict" => "Bened",
         "St Helens" => "Helens",
